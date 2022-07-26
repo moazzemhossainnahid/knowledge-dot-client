@@ -12,11 +12,8 @@ const Banner = () => {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-20 lg:mx-44 lg:my-24 my-5 p-5'>
                 <div>
                     <h4 className=' text-lg uppercase font-bold text-[#015ABD] mb-3'>contact us</h4>
-
                     <Animation></Animation>
-
                     <h2 className=' text-4xl font-semibold my-6'>Are You Interested In Online Learning? Contact Us.</h2>
-
                     <p className='mb-4 w-3/4'>Contact our top-notch educationalist in the UK that has huge expertise in providing futuristic solutions to all aspiring students coming for higher education.</p>
 
                     <img src="https://edusphere.radiantthemes.com/wp-content/uploads/2020/06/Signeture-1.png" alt="" />
