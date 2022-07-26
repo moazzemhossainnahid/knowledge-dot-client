@@ -6,7 +6,7 @@ import { BsClock } from 'react-icons/bs';
 
 const Apply = () => {
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-28 lg:mx-44 my-24 '>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-28 lg:mx-44 my-24 mx-6'>
             <div>
                 <h2 className=' text-4xl font-bold my-4'>Get in touch</h2>
                 <Animation></Animation>
@@ -32,7 +32,7 @@ const Apply = () => {
 
                     <input className=' block w-full h-10 pl-2 border-b-2 border-[#d8dada] mb-5' type="number" name="" id="" placeholder="Phone number" />
 
-                    <input className=' block h-10 px-7 bg-[#015abd] text-white uppercase my-4' type="submit" value="Send now" />
+                    <input className=' block h-10 px-7 bg-[#015abd] text-white uppercase mb-4 mt-8' type="submit" value="Send now" />
                 </form>
             </div>
         </div>

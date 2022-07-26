@@ -7,9 +7,9 @@ const Banner = () => {
         <div>
             <div style={{
                 backgroundImage: "url(https://edusphere.radiantthemes.com/wp-content/uploads/2020/08/contact-banner.jpg)"
-            }} className=" bg-cover bg-no-repeat h-[500px] lg:z-0">
+            }} className="bg-cover  bg-no-repeat lg:h-[500px] h-40 lg:z-0">
             </div>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-20 lg:mx-44 my-24 '>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-20 lg:mx-44 lg:my-24 my-5 p-5'>
                 <div>
                     <h4 className=' text-lg uppercase font-bold text-[#015ABD] mb-3'>contact us</h4>
 
@@ -23,7 +23,7 @@ const Banner = () => {
                     <h5 className=' font-semibold'>Brayden Backham</h5>
                     <p>Director</p>
                 </div>
-                <div className=' px-12 pt-10 pb-5 shadow-lg text-[#222222] mt-[-200px] lg:z-40 bg-white'>
+                <div className=' px-12 pt-10 pb-5 shadow-lg text-[#222222] lg:mt-[-220px] lg:z-40 bg-white'>
                     <h2 className=' text-4xl font-semibold mb-4'>Fill Out For Contact</h2>
                     <p>Fill-in the contact form and get immediate assistance from our educational consultant.</p>
                     <form >
