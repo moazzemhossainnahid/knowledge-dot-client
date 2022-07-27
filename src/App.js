@@ -10,6 +10,8 @@ import Reviews from "./Components-Nahid/SingleCourse/nestedTabPage/Reviews";
 import Navbar from "./pages/SharedPages/Navbar";
 import Contact from './component-1/Contact/Contact';
 import Instructors from "./component-I/Instructors/Instructors";
+import Login from "./pages/Authentication/Login/Login";
+import Register from "./pages/Authentication/Register/Register";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         </Route>
         <Route path="/contact" element={<Contact />} />
         <Route path="/instructors" element={<Instructors />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );
