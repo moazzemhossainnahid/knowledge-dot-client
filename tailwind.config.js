@@ -1,13 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
-
- 
 module.exports = ({
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-=======
-module.exports = {
-  content: ["./src/**/*.{html,js}"],
->>>>>>> main
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     screens: {
       sm: "320px",
@@ -27,10 +20,5 @@ module.exports = {
     },
     extend: {},
   },
-<<<<<<< HEAD
   plugins: [require("daisyui")],
 });
-=======
-  plugins: [],
-};
->>>>>>> main
