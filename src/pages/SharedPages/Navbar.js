@@ -46,14 +46,7 @@ export default function Navbar() {
           <li className=" md:ml-8  md:my-0 my-7">
             <Link className=" hover:text-cyan-500 duration-500" to="/courses">
               <span className="hover:text-amber hover:bg-nav-pink p-1 rounded">
-                Courses
-              </span>
-            </Link>
-          </li>
-          <li className=" md:ml-8  md:my-0 my-7">
-            <Link className=" hover:text-cyan-500 duration-500" to="/blog">
-              <span className="hover:text-amber hover:bg-nav-pink p-1 rounded">
-                BLOG
+                COURSES
               </span>
             </Link>
           </li>
