@@ -7,10 +7,15 @@ import Overview from "./Components-Nahid/SingleCourse/nestedTabPage/Overview";
 import Curriculum from "./Components-Nahid/SingleCourse/nestedTabPage/Curriculum";
 import Instructor from "./Components-Nahid/SingleCourse/nestedTabPage/Instructor";
 import Reviews from "./Components-Nahid/SingleCourse/nestedTabPage/Reviews";
+import Navbar from "./pages/SharedPages/Navbar";
+import Contact from './component-1/Contact/Contact';
+import Instructors from "./component-I/Instructors/Instructors";
+import Login from "./pages/Authentication/Login/Login";
+import Register from "./pages/Authentication/Register/Register";
 
 function App() {
   return (
-    <div className="text-blue-500">
+    <div className="text-gray-700">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,9 +25,13 @@ function App() {
           <Route path="curriculum" element={<Curriculum />} />
           <Route path="instructor" element={<Instructor />} />
           <Route path="reviews" element={<Reviews />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/instructors" element={<Instructors />} />
         </Route>
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/instructors" element={<Instructors />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/instructors" element={<Instructors />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );
