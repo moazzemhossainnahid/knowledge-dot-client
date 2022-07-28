@@ -15,7 +15,7 @@ import Register from "./pages/Authentication/Register/Register";
 
 function App() {
   return (
-    <div className="text-blue-500">
+    <div className="text-gray-700">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
