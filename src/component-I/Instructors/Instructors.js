@@ -15,7 +15,7 @@ const Instructors = () => {
       </div>
 
       <div class="carousel w-full mb-20">
-        <div class="card w-96 m-auto">
+        <div data-aos="fade-up" class="card w-96 m-auto">
           <figure><img src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/instructor-img-2.jpg" alt="Shoes" /></figure>
           <div class="card-body flex items-center">
             <h2 class="font-bold text-2xl text-center"> Jacke Masitos</h2>
@@ -30,7 +30,7 @@ const Instructors = () => {
           </div>
 
         </div>
-        <div class="card w-96 m-auto">
+        <div data-aos="fade-up" class="card w-96 m-auto">
           <figure><img src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/instructor-img-3.jpg" alt="Shoes" /></figure>
           <div class="card-body flex items-center">
             <h2 class="font-bold text-2xl text-center"> Richard Dune</h2>
@@ -44,7 +44,7 @@ const Instructors = () => {
             </div>
           </div>
         </div>
-        <div class="card w-96 m-auto">
+        <div data-aos="fade-up" class="card w-96 m-auto">
           <figure><img src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/instructor-img-4.jpg" alt="Shoes" /></figure>
           <div class="card-body flex items-center">
             <h2 class="font-bold text-2xl text-center"> Glen Anders</h2>
