@@ -12,11 +12,13 @@ const ProudMemeber = () => {
                 {
                     ProudMemberData.map((data, idx) => {
                         return(
-                            <div key={idx} className="text-white text-center h-full w-full">
-                                <div style={{backgroundImage: `url(${data?.img})`, width: '100%'}} className={`w-full p-5 h-full bg-cover`}>
+                            <div key={idx} className="text-white group bg-red-500 text-center h-full w-full duration-300">
+                                <div className={`w-full bg-[#0000005e] border border-l-0 border-y-0 p-5 h-full bg-cover`}>
                                 <h3 className="text-2xl py-3">{data?.title}</h3>
+                                <div className="hidden group-hover:block group-hover:-translate-y-10 origin-top duration-300">
                                 <p className="py-3">{data?.desc}</p>
                                 <button className="px-7 py-3 my-3 bg-transparent border rounded">Learn More</button>
+                                </div>
                                 </div>
                             </div>
                         )

@@ -1,4 +1,4 @@
-export const PopulerCoursesData = [
+export const PopulerCategoryData = [
     {
         icon: 'http://edukon.codexcoder.com/assets/images/category/icon/01.jpg',
         title: 'Computer Science',
