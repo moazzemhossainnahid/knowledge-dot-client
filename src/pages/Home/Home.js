@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../Components-Nahid/Footer/Footer";
 import Banner from "../../Components-Nahid/HomePageSection/BannerSection/Banner";
 import LimitedLearningBanner from "../../Components-Nahid/HomePageSection/LimitedLearningBanner/LimitedLearningBanner";
 import PopulerCategory from "../../Components-Nahid/HomePageSection/PopulerCategory/PopulerCategory";
@@ -12,6 +13,7 @@ const Home = () => {
       <PopulerCategory/>
       <PopulerCourses/>
       <LimitedLearningBanner/>
+      <Footer/>
     </div>
   );
 };
