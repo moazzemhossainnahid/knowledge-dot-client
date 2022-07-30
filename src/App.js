@@ -14,6 +14,7 @@ import Login from "./pages/Authentication/Login/Login";
 import Register from "./pages/Authentication/Register/Register";
 import LeftSideMenu from "./Components-Nahid/LeftSideMenu/LeftSideMenu";
 
+
 function App() {
   return (
     <div className="text-gray-700">
@@ -27,6 +28,7 @@ function App() {
           <Route path="instructor" element={<Instructor />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
+        <Route path="/leftmenu" element={<LeftSideMenu />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/instructors" element={<Instructors />} />
         <Route path="/contact" element={<Contact />} />
