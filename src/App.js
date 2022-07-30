@@ -12,6 +12,7 @@ import Contact from './component-1/Contact/Contact';
 import Instructors from "./component-I/Instructors/Instructors";
 import Login from "./pages/Authentication/Login/Login";
 import Register from "./pages/Authentication/Register/Register";
+import LeftSideMenu from "./Components-Nahid/LeftSideMenu/LeftSideMenu";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-    </div>
+    </div> 
   );
 }
 
