@@ -2,9 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faPinterest, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import CountUp from 'react-countup';
+import { useNavigate } from 'react-router-dom';
 
 
 const Instructors = () => {
+  const navigate = useNavigate();
   return (
     <div className='w-full mx-auto py-20  text-slate-800 mb-20'>
       <div className="text-center mb-20">
@@ -15,7 +17,7 @@ const Instructors = () => {
       </div>
 
       <div class="carousel w-full mb-20">
-        <div class="card w-96 m-auto">
+        <div data-aos="fade-up" class="card w-96 m-auto">
           <figure><img src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/instructor-img-2.jpg" alt="Shoes" /></figure>
           <div class="card-body flex items-center">
             <h2 class="font-bold text-2xl text-center"> Jacke Masitos</h2>
@@ -30,7 +32,7 @@ const Instructors = () => {
           </div>
 
         </div>
-        <div class="card w-96 m-auto">
+        <div data-aos="fade-up" class="card w-96 m-auto">
           <figure><img src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/instructor-img-3.jpg" alt="Shoes" /></figure>
           <div class="card-body flex items-center">
             <h2 class="font-bold text-2xl text-center"> Richard Dune</h2>
@@ -44,7 +46,7 @@ const Instructors = () => {
             </div>
           </div>
         </div>
-        <div class="card w-96 m-auto">
+        <div data-aos="fade-up" class="card w-96 m-auto">
           <figure><img src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/instructor-img-4.jpg" alt="Shoes" /></figure>
           <div class="card-body flex items-center">
             <h2 class="font-bold text-2xl text-center"> Glen Anders</h2>
@@ -374,11 +376,10 @@ const Instructors = () => {
             <h2 className='text-primary font-semibold'>Upskill Your Team With World-Class Learning </h2>
             <h2 class="card-title">Become An Instructor Today!</h2>
             <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan. Risus commp commodo lora viverra adipiscing elit. Ut elit tellus,</p>
-            <div class="card-actions mt-5">
-              <button class="btn btn-primary">Join Us for free</button>
-            </div>
+            <div className="card-actions">
+                    <button onClick={()=> navigate(`/becomeinstructor`)} className="btn btn-primary">Become an Instructor</button>
+                </div>
           </div>
-        
       </div>
 
     </div>

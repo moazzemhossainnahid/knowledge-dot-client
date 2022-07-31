@@ -12,6 +12,9 @@ import Contact from './component-1/Contact/Contact';
 import Instructors from "./component-I/Instructors/Instructors";
 import Login from "./pages/Authentication/Login/Login";
 import Register from "./pages/Authentication/Register/Register";
+import BecomeInstructor from "./component-I/Instructors/BecomeInstructor";
+import LeftSideMenu from "./Components-Nahid/LeftSideMenu/LeftSideMenu";
+
 
 function App() {
   return (
@@ -21,17 +24,21 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/course" element={<SingleCourse />} >
-                <Route path="overview" element={<Overview/>}/>
-                <Route path="curriculum" element={<Curriculum/>}/>
-                <Route path="instructor" element={<Instructor/>}/>
-                <Route path="reviews" element={<Reviews/>}/>
+          <Route path="overview" element={<Overview />} />
+          <Route path="curriculum" element={<Curriculum />} />
+          <Route path="instructor" element={<Instructor />} />
+          <Route path="reviews" element={<Reviews />} />
         </Route>
+        <Route path="/leftmenu" element={<LeftSideMenu />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/instructors" element={<Instructors />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/instructors" element={<Instructors />} />
+        <Route path="/becomeinstructor" element={<BecomeInstructor />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-    </div>
+    </div> 
   );
 }
 
