@@ -12,6 +12,7 @@ import Contact from './component-1/Contact/Contact';
 import Instructors from "./component-I/Instructors/Instructors";
 import Login from "./pages/Authentication/Login/Login";
 import Register from "./pages/Authentication/Register/Register";
+import BecomeInstructor from "./component-I/Instructors/BecomeInstructor";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         </Route>
         <Route path="/contact" element={<Contact />} />
         <Route path="/instructors" element={<Instructors />} />
+        <Route path="/becomeinstructor" element={<BecomeInstructor />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
