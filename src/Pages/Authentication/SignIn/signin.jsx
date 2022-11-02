@@ -30,7 +30,7 @@ const SignIn = () => {
           <hr />
           <p className="flex flex-col items-center justify-center mt-10 text-center">
             <span>Don't have an account?</span>
-            <Link to="/register" className="underline">
+            <Link to="/signup" className="underline">
               Sign Up Now!
             </Link>
           </p>

@@ -72,9 +72,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li className=" md:ml-8  md:my-0 my-7">
-            <Link className=" hover:text-cyan-500 duration-500" to="/login">
+            <Link className=" hover:text-cyan-500 duration-500" to="/signin">
               <span className="hover:text-amber hover:bg-nav-pink p-1   rounded">
-                LOGIN
+                SIGNIN
               </span>
             </Link>
           </li>
