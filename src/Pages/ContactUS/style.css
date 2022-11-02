@@ -1,0 +1,17 @@
+.radiant {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    animation: Radiant 1.5s infinite ease-in-out;
+}
+
+@keyframes Radiant {
+    from {
+        left: -12px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
