@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Contact from './Pages/ContactUS/Contact';
 import Home from './Pages/Home/Home';
+import BecomeInstructor from './Pages/Instructors/BecomeInstructor';
+import Instructors from './Pages/Instructors/Instructors';
 import Navbar from './Pages/SharedPages/Header/Navbar';
 
 function App() {
@@ -21,9 +23,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/instructors" element={<Instructors />} /> */}
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/instructors" element={<Instructors />} />
+        <Route path="/instructors" element={<Instructors />} />
         <Route path="/becomeinstructor" element={<BecomeInstructor />} />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} /> */}
       </Routes>
     </div>
