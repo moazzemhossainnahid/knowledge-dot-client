@@ -13,7 +13,7 @@ const Reviews = () => {
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                     </div>
-                    <p className="font-semibold text-xl">Course Rating</p>
+                    <p className="font-semibold text-xl">Course Rating</p>   
                 </div>
                 <div className="w-full md:w-4/5">
                     <div className="flex items-center justify-center gap-3">

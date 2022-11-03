@@ -9,7 +9,7 @@ const Overview = () => {
             <h3 className="text-2xl lg:text-3xl font-bold">Course Description</h3>
             <p className="py-5">See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.</p>
             </div>
-            <div className="">
+            <div className="">   
             <h3 className="text-2xl lg:text-3xl font-bold">Certification</h3>
             <p className="py-5">Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.</p>
             </div>

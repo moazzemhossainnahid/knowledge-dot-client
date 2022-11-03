@@ -4,7 +4,7 @@ import { faClock, faLock } from '@fortawesome/free-solid-svg-icons';
 
 const Curriculum = () => {
     return (
-        <div className='text-left'>
+        <div className='text-left'>  
             <div className="">
                 <h3 className="text-2xl lg:text-3xl font-bold py-7">Section 1</h3>
                 <div className="flex items-center justify-between bg-slate-100 py-3 px-3">

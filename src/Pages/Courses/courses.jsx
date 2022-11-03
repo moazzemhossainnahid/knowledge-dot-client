@@ -1,11 +1,12 @@
 import React from 'react';
+import UnderConstruction from '../UnderConstruction/UnderConstruction';
 
-const courses = () => {
+const Courses = () => {
     return (
         <div>
-            
+            <UnderConstruction/>
         </div>
     );
 };
 
-export default courses;
+export default Courses;

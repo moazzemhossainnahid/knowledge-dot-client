@@ -5,7 +5,7 @@ import { faFacebook, faInstagram, faPinterest, faTwitter } from '@fortawesome/fr
 const Instructor = () => {
     return (
         <div className='container text-left w-full gap-5 flex flex-col md:flex-row'>
-            <div className="w-full md:w-2/6">
+            <div className="w-full md:w-2/6">   
                 <div className="">
                     <img src="https://edusphere.radiantthemes.com/wp-content/uploads/learn-press-profile/1/e1c26e949b56bd80cb5c9ffdab901b4e.jpg" alt="" className="object-cover" />
                     <div className="py-5">

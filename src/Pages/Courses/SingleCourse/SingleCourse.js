@@ -1,7 +1,7 @@
 import React from 'react';
-import MoreCourseSec from './MoreCourseSec';
-import TabSec from './TabSec';
-import TopVideoSec from './TopVideoSec';
+import MoreCourseSec from '../../../Components/Components-Nahid/SingleCourse/MoreCourseSec';
+import TabSec from '../../../Components/Components-Nahid/SingleCourse/TabSec';
+import TopVideoSec from '../../../Components/Components-Nahid/SingleCourse/TopVideoSec';
 
 const SingleCourse = () => {
     return (
