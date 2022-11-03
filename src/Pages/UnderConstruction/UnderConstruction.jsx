@@ -26,7 +26,7 @@ const UnderConstruction = () => {
     const time = new Date();
     time.setSeconds(time.getSeconds() + 650000); // 10 minutes timer
     return (
-        <div className='w-full h-screen mx-auto flex justify-center items-center'>
+        <div className='w-full h-screen text-center mx-auto flex justify-center items-center'>
             <div className='flex flex-col md:flex-row justify-between items-center w-full gap-2'>
                 <div className="w-full md:w-3/6">
                     <h3 style={{fontSize: '50px'}} className="text-primary text-7xl font-bold">Coming Soon...</h3>

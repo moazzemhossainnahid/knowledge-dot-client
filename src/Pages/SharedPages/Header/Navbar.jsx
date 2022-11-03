@@ -12,6 +12,30 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { NavLink } from 'react-router-dom';
+
+const MenuData = [
+  {
+      name: 'Home',
+      href: '/'
+  },
+  {
+      name: 'Courses',
+      href: 'courses'
+  },
+  {
+      name: 'Instructors',
+      href: 'instructors'
+  },
+  {
+      name: 'About US',
+      href: 'about'
+  },
+  {
+      name: 'Contact US',
+      href: 'contact'
+  },
+]
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -37,7 +61,7 @@ const Navbar = () => {
 
   return (
     <AppBar position="sticky">
-      <Container maxWidth="xl">
+      <Container  className="bg-neutral text-black" maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography variant="h6" noWrap component="a" href="/" sx={{
@@ -81,9 +105,9 @@ const Navbar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {MenuData.map((page) => (
+                <MenuItem key={page?.name} onClick={handleCloseNavMenu}>
+                <NavLink className="focus:bg-gray-700 focus:text-white px-3 py-2" to={page?.href} >{page?.name}</NavLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -108,13 +132,14 @@ const Navbar = () => {
             Knowledge Dot
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {MenuData.map((page) => (
               <Button
-                key={page}
+              className='focus:bg-gray-700'
+                key={page.name}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{color: 'black', display: 'block' }}
               >
-                {page}
+                <NavLink className="focus:bg-gray-700 focus:text-white px-3 py-2" to={page?.href} >{page?.name}</NavLink>
               </Button>
             ))}
           </Box>
