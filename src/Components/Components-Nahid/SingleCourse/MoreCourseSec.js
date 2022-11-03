@@ -7,7 +7,7 @@ const MoreCourseSec = () => {
         <div className='py-10'>
             <h3 className="text-2xl font-bold text-center">More courses you might like</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-5">
-                <div class="card group w-full bg-base-100 shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
+                <div class="card group w-full overflow-hidden bg-base-100 shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
                     <div class="card-actions justify-end absolute top-5 right-2">
                         <div class="badge badge-primary px-3 py-2">$99.00</div>
                     </div>
@@ -38,7 +38,7 @@ const MoreCourseSec = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card group w-full bg-base-100 shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
+                <div class="card group w-full bg-base-100 shadow-xl overflow-hidden hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
                     <div class="card-actions justify-end absolute top-5 right-2">
                         <div class="badge badge-primary px-3 py-2">$99.00</div>
                     </div>
@@ -69,7 +69,7 @@ const MoreCourseSec = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card group w-full bg-base-100 shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
+                <div class="card group w-full bg-base-100 shadow-xl overflow-hidden hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
                     <div class="card-actions justify-end absolute top-5 right-2">
                         <div class="badge badge-primary px-3 py-2">$99.00</div>
                     </div>
@@ -100,7 +100,7 @@ const MoreCourseSec = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card group w-full bg-base-100 shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
+                <div class="card group w-full bg-base-100 overflow-hidden shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
                     <div class="card-actions justify-end absolute top-5 right-2">
                         <div class="badge badge-primary px-3 py-2">$99.00</div>
                     </div>

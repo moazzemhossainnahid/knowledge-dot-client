@@ -3,7 +3,7 @@ import { PopulerCoursesData } from '../../Data/PopulerCoursesData';
 
 const PopulerCourses = () => {
     return (
-        <div>  
+        <div>
             <div className='py-10'>
                 <h3 className="text-2xl py-10 font-bold text-center">Populer Courses</h3>
                 <div className='w-[70px] mx-auto h-[3px] bg-[#1584f3] mb-10 relative '>
@@ -20,7 +20,7 @@ const PopulerCourses = () => {
                             {
                                 PopulerCoursesData.map((data, idx) => {
                                     return (
-                                        <div key={idx} class="card rounded hover:rounded-md mx-5 group w-full bg-base-100 shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
+                                        <div key={idx} class="card rounded hover:rounded-md mx-5 group w-full bg-base-100 overflow-hidden shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
                                             <div class="card-actions justify-end absolute top-5 right-2">
                                                 <div class="badge bg-blue-500 px-3 py-2">${data?.price}</div>
                                             </div>

@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const Footer = () => {
-    return (  
-        <div>
+    return (
+        <div className='bg-gray-700'>
             <footer class="footer w-full grid grid-cols-1 lg:grid-cols-5 gap-3 p-10 bg-gray-900 text-gray-300">
                 <div>
                     <span class=" uppercase w-full lg:w-1/5 text-white text-xl font-semibold pb-5">Contact</span>
@@ -58,7 +58,7 @@ const Footer = () => {
                         <div className="flex gap-3 items-center">
                         <div className="flex gap-3 items-center pr-2 border-r-2">
                             <img className='w-10' src="https://demo.createdbycocoon.com/moodle/edumy/2/pluginfile.php/1/theme_edumy/footerlogo1/1583196004/header-logo.png" alt="" />
-                            <h3 className="text-2xl text-white font-bold">Knowledge Dot</h3>
+                            <h3 className="text-2xl text-white font-bold">I Mern Tech</h3>
                         </div>
                         <div className="flex gap-3 text-gray-300">
                             <a href="#!" class=" hover:pl-2 duration-300">Home</a>
@@ -79,7 +79,7 @@ const Footer = () => {
             </footer>
             <footer class="footer px-10 py-4 flex justify-center items-center bg-black">
                 <div class="items-center justify-center grid-flow-col">
-                    <p className="text-gray-300 text-center">Copyright © 2022 Theme by Knowledge Dot. All Rights Reserved.</p>
+                    <p className="text-gray-300 text-center">Copyright © 2022 Theme by I Mern Tech. All Rights Reserved.</p>
                     </div>
             </footer>
         </div>

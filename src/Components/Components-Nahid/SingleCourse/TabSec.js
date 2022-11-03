@@ -15,7 +15,7 @@ const TabSec = () => {
                             {
                                 TabSecData.map( (item, idx) => {
                                     return(
-                                        <li className='rounded'><NavLink to={item?.link}>{item?.label}</NavLink></li>
+                                        <li className='rounded'><NavLink className="" to={item?.link}>{item?.label}</NavLink></li>
                                     )
                                 } )
                             }
