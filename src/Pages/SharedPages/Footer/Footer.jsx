@@ -58,7 +58,7 @@ const Footer = () => {
                         <div className="flex gap-3 items-center">
                         <div className="flex gap-3 items-center pr-2 border-r-2">
                             <img className='w-10' src="https://demo.createdbycocoon.com/moodle/edumy/2/pluginfile.php/1/theme_edumy/footerlogo1/1583196004/header-logo.png" alt="" />
-                            <h3 className="text-2xl text-white font-bold">I Mern Tech</h3>
+                            <h3 className="text-2xl text-white font-bold">Knowledge Dot</h3>
                         </div>
                         <div className="flex gap-3 text-gray-300">
                             <a href="#!" class=" hover:pl-2 duration-300">Home</a>
