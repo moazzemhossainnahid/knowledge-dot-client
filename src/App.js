@@ -15,9 +15,11 @@ import Home from './Pages/Home/Home';
 import BecomeInstructor from './Pages/Instructors/BecomeInstructor';
 import Instructors from './Pages/Instructors/Instructors';
 import NotFound from './Pages/NotFound/NotFound';
+import Footer from './Pages/SharedPages/Footer/Footer';
 import Navbar from './Pages/SharedPages/Header/Navbar';
 
 function App() {
+
   return (
     <div className="">
       <Navbar />
@@ -42,6 +44,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }

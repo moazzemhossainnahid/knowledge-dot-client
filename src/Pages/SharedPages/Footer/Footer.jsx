@@ -2,7 +2,7 @@ import { faApple, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-const Footer = () => {
+const Footer = () => {   
     return (
         <div className='bg-gray-700'>
             <footer class="footer w-full grid grid-cols-1 lg:grid-cols-5 gap-3 p-10 bg-gray-900 text-gray-300">

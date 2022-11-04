@@ -16,29 +16,37 @@ import { NavLink } from 'react-router-dom';
 
 const MenuData = [
   {
-      name: 'Home',
-      href: '/'
+    name: 'Home',
+    href: '/'
   },
   {
-      name: 'Courses',
-      href: 'courses'
+    name: 'Courses',
+    href: 'courses'
   },
   {
-      name: 'Instructors',
-      href: 'instructors'
+    name: 'Instructors',
+    href: 'instructors'
   },
   {
-      name: 'About US',
-      href: 'about'
+    name: 'About US',
+    href: 'about'
   },
   {
-      name: 'Contact US',
-      href: 'contact'
+    name: 'Contact US',
+    href: 'contact'
   },
-]
+];
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const Settings = [
+  {
+    name: 'Profile',
+    href: 'profile'
+  },
+  {
+    name: 'Dashboard',
+    href: 'dashboard'
+  },
+];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -61,18 +69,18 @@ const Navbar = () => {
 
   return (
     <AppBar position="sticky">
-      <Container  className="bg-neutral text-black" maxWidth="xl">
+      <Container className="bg-neutral text-black" maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography variant="h6" noWrap component="a" href="/" sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }} >
+            mr: 2,
+            display: { xs: 'none', md: 'flex' },
+            fontFamily: 'monospace',
+            fontWeight: 700,
+            letterSpacing: '.3rem',
+            color: 'inherit',
+            textDecoration: 'none',
+          }} >
             Knowledge Dot
           </Typography>
 
@@ -89,6 +97,7 @@ const Navbar = () => {
             </IconButton>
             <Menu
               id="menu-appbar"
+              className='mx-auto w-full flex justify-center'
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
@@ -107,7 +116,7 @@ const Navbar = () => {
             >
               {MenuData.map((page) => (
                 <MenuItem key={page?.name} onClick={handleCloseNavMenu}>
-                <NavLink className="focus:bg-gray-700 focus:text-white px-3 py-2" to={page?.href} >{page?.name}</NavLink>
+                  <NavLink className="focus:bg-gray-700 focus:text-white px-3 py-2" to={page?.href} >{page?.name}</NavLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -134,10 +143,10 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {MenuData.map((page) => (
               <Button
-              className='focus:bg-gray-700'
+                className='focus:bg-gray-700'
                 key={page.name}
                 onClick={handleCloseNavMenu}
-                sx={{color: 'black', display: 'block' }}
+                sx={{ color: 'black', display: 'block' }}
               >
                 <NavLink className="focus:bg-gray-700 focus:text-white px-3 py-2" to={page?.href} >{page?.name}</NavLink>
               </Button>
@@ -166,11 +175,17 @@ const Navbar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+              {Settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <NavLink className=" px-3 py-2" to={setting?.href} >{setting?.name}</NavLink>
                 </MenuItem>
               ))}
+              <Button
+                className='w-full mx-auto text-center'
+                onClick={handleCloseNavMenu}
+                sx={{ color: 'black', display: 'block' }} >
+                Sign Out
+              </Button>
             </Menu>
           </Box>
         </Toolbar>

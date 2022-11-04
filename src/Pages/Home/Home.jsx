@@ -4,7 +4,6 @@ import LimitedLearningBanner from '../../Components/Components-Nahid/HomePageSec
 import PopulerCategory from '../../Components/Components-Nahid/HomePageSection/PopulerCategory/PopulerCategory';
 import PopulerCourses from '../../Components/Components-Nahid/HomePageSection/PopulerCourses/PopulerCourses';
 import UpcomingEvent from '../../Components/Components-Nahid/HomePageSection/UpcommingEvents/UpcomingEvent';
-import Footer from '../SharedPages/Footer/Footer';
 
 const Home = () => {
     return (
@@ -14,7 +13,6 @@ const Home = () => {
             <PopulerCourses />
             <UpcomingEvent />
             <LimitedLearningBanner />
-            <Footer />
         </div>
     );
 };
