@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
-        <img src='https://raw.githubusercontent.com/MShafiMS/admission/eeb6c9456e6bec86eeddaf072a43cd089f371637/404.svg' className="max-w-lg rounded-lg" />
+        <img src='https://raw.githubusercontent.com/MShafiMS/admission/eeb6c9456e6bec86eeddaf072a43cd089f371637/404.svg' className="max-w-lg rounded-lg" alt="" />
         <div className="text-center lg:text-left">
           <h1 className="lg:text-5xl md:text-5xl text-4xl font-bold">Page Not Found!</h1>
           <p className="text-lg py-6">

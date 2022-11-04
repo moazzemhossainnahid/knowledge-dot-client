@@ -26,7 +26,6 @@ function App() {
       <div className="">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/course" element={<SingleCourse />} >
             <Route index element={<Overview />} />
@@ -35,10 +34,11 @@ function App() {
             <Route path="instructor" element={<Instructor />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
-          <Route path="/leftmenu" element={<LeftSideMenu />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/instructors" element={<Instructors />} />
           <Route path="/becomeinstructor" element={<BecomeInstructor />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/leftmenu" element={<LeftSideMenu />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />
