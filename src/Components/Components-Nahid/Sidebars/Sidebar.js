@@ -23,15 +23,15 @@ const Sidebar = ({
                     focus:ring-red-400 "
                 name="city"
                 type="text"
-                placeholder="Destination, City"
+                placeholder="Name, Category"
               />
               <select
                 onChange={handleSearchFiltering}
                 id="default"
-                className="shadow appearance-none border border-gray-300 text-gray-700 text-sm rounded focus:ring-red-400 focus:border-red-400 block w-full py-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="shadow appearance-none border border-gray-300 text-gray-700 px-3 text-sm rounded focus:ring-red-400 focus:border-red-400 block w-full py-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option className="hover:bg-red-400" value="default">
-                  Select Name
+                  Select Category
                 </option>
                 {AllCoursesData.length &&
                   AllCoursesData.map((item, index) => (
@@ -40,31 +40,6 @@ const Sidebar = ({
                     </option>
                   ))}
               </select>
-              <div className="relative">
-                <input
-                  type="date"
-                  className="shadow appearance-none py-3 border
-                   border-gray-300 text-gray-700
-                     sm:text-sm rounded focus:ring-red-400 
-                     focus:border-red-400 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="From date"
-                />
-              </div>
-              <div className="relative">
-                <input
-                  type="date"
-                  className="shadow appearance-none py-3 border
-                     border-gray-300 text-gray-700 
-                     sm:text-sm rounded focus:ring-red-400 
-                     focus:border-red-400 block w-full p-2.5  
-                     dark:bg-gray-700 dark:border-gray-600 
-                     dark:placeholder-gray-400 dark:text-white
-                      dark:focus:ring-blue-500 
-                      dark:focus:border-blue-500"
-                  placeholder="End date"
-                />
-              </div>
-
               <br />
             </form>
           </div>
