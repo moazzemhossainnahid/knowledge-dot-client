@@ -77,7 +77,7 @@ export const AllCoursesData = [
         "instructorbimg": "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
         "introvdo": "https://www.youtube.com/embed/vkf4y77jK-k",
         "link": "Introduction",
-        "img": "https://camonk.com/s/store/courses/61cab6ff0cf2acaec8c0be66/cover.jpg?v=2",
+        "img": "https://thevictormind.com/wp-content/uploads/2020/05/How-to-improve-English-communication-skills.png?x42754",
         "list": "communcation",
         "file": [
             {
@@ -104,5 +104,143 @@ export const AllCoursesData = [
             }
         ],
         "price": "4500"
-    }
+    },
+    {
+        "_id": "3",
+        "uname": "web-development",
+        "name": "Web Development",
+        "desc": "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi",
+        "abouta": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
+        "aboutb": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
+        "aboutc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
+        "topica": "Provident cupiditate",
+        "topicb": "Provident cupiditate",
+        "topicc": "Provident cupiditate",
+        "topicd": "Provident cupiditate",
+        "instructor": "Programming Hero",
+        "instructorb": "Programming Hero",
+        "instructorimg": "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
+        "instructorbimg": "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
+        "introvdo": "https://www.youtube.com/embed/vkf4y77jK-k",
+        "link": "Introduction",
+        "img": "https://www.interviewbit.com/blog/wp-content/uploads/2022/03/Web-Development-Frameworks-2048x1000.png",
+        "list": "communcation",
+        "file": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "Basics of Communication Skills",
+                        "fileName": "Basics-of-Communication-Skills"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "What, Why, How, When, Where, Who",
+                        "fileName": "What-Why-How-When-Where-Who"
+                    },
+                    {
+                        "name": "How To Make Simple Sentences",
+                        "fileName": "How-To-Make-Simple-Sentences"
+                    }
+                ]
+            }
+        ],
+        "price": "4500"
+    },
+    {
+        "_id": "4",
+        "uname": "govt-job-preperation",
+        "name": "Govt JOB Preperation",
+        "desc": "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi",
+        "abouta": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
+        "aboutb": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
+        "aboutc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
+        "topica": "Provident cupiditate",
+        "topicb": "Provident cupiditate",
+        "topicc": "Provident cupiditate",
+        "topicd": "Provident cupiditate",
+        "instructor": "Programming Hero",
+        "instructorb": "Programming Hero",
+        "instructorimg": "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
+        "instructorbimg": "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
+        "introvdo": "https://www.youtube.com/embed/vkf4y77jK-k",
+        "link": "Introduction",
+        "img": "https://media.thekashmirmonitor.net/wp-content/uploads/2022/10/Government-job.jpg",
+        "list": "communcation",
+        "file": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "Basics of Communication Skills",
+                        "fileName": "Basics-of-Communication-Skills"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "What, Why, How, When, Where, Who",
+                        "fileName": "What-Why-How-When-Where-Who"
+                    },
+                    {
+                        "name": "How To Make Simple Sentences",
+                        "fileName": "How-To-Make-Simple-Sentences"
+                    }
+                ]
+            }
+        ],
+        "price": "4500"
+    },
+    {
+        "_id": "5",
+        "uname": "university-admission-skills",
+        "name": "University Admission Skills",
+        "desc": "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi",
+        "abouta": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
+        "aboutb": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
+        "aboutc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
+        "topica": "Provident cupiditate",
+        "topicb": "Provident cupiditate",
+        "topicc": "Provident cupiditate",
+        "topicd": "Provident cupiditate",
+        "instructor": "Programming Hero",
+        "instructorb": "Programming Hero",
+        "instructorimg": "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
+        "instructorbimg": "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
+        "introvdo": "https://www.youtube.com/embed/vkf4y77jK-k",
+        "link": "Introduction",
+        "img": "https://admission.aglasem.com/wp-content/uploads/2022/09/Top-Universities-in-Uttarakhand.jpg",
+        "list": "communcation",
+        "file": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "Basics of Communication Skills",
+                        "fileName": "Basics-of-Communication-Skills"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "What, Why, How, When, Where, Who",
+                        "fileName": "What-Why-How-When-Where-Who"
+                    },
+                    {
+                        "name": "How To Make Simple Sentences",
+                        "fileName": "How-To-Make-Simple-Sentences"
+                    }
+                ]
+            }
+        ],
+        "price": "4500"
+    },
 ]

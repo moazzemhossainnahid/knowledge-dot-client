@@ -10,7 +10,7 @@ const CoursesGrid = ({ course }) => {
         className="card bg-base-100 border border-neutral h-full transform transition duration-500 hover:scale-105 hover:shadow-xl hover:bg-[#0B3456] hover:text-white"
       >
         <figure>
-          <img src={img} alt="Shoes" />
+          <img className="h-40 w-full" src={img} alt="Shoes" />
         </figure>
         <div className="card-body p-0">
           <p className="text-xl px-4 py-2 font-header">{name}</p>
