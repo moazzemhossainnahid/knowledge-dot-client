@@ -1,43 +1,59 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
+const Myclass = plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".my-rotate-y-180": {
+      transform: "rotateY(180deg)",
+    },
+    ".preserve-3d": {
+      transformStyle: "preserve-3d",
+    },
+    ".perspective": {
+      perspective: "1000px",
+    },
+    ".backface-hidden": {
+      backfaceVisibility: "hidden",
+    },
+  });
+});
 module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      'sans': ['Qwigley'],
-      'serif': ['ui-serif', 'Georgia'],
-      'mono': ['Francois One'],
-      'header': ['Ubuntu'],
-      'sub': ['Josefin Sans'],
-      'display': ['Oswald'],
-      'body': ['"Open Sans"'],
+      sans: ["Qwigley"],
+      serif: ["ui-serif", "Georgia"],
+      mono: ["Francois One"],
+      header: ["Ubuntu"],
+      sub: ["Josefin Sans"],
+      display: ["Oswald"],
+      body: ['"Open Sans"'],
     },
-screens: {
-  sm: "320px",
-  // => @media (min-width: 640px) { ... }
+    screens: {
+      sm: "320px",
+      // => @media (min-width: 640px) { ... }
 
-  md: "768px",
-  // => @media (min-width: 768px) { ... }
+      md: "768px",
+      // => @media (min-width: 768px) { ... }
 
-  lg: "1024px",
-  // => @media (min-width: 1024px) { ... }
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
 
-  xl: "1280px",
-  // => @media (min-width: 1280px) { ... }
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
 
-  "2xl": "1536px",
-  // => @media (min-width: 1536px) { ... }
-},
+      "2xl": "1536px",
+      // => @media (min-width: 1536px) { ... }
+    },
     extend: {},
     keyframes: {
       wiggle: {
-        '0%, 100%': { transform: 'rotate(-3deg)' },
-        '50%': { transform: 'rotate(3deg)' },
+        "0%, 100%": { transform: "rotate(-3deg)" },
+        "50%": { transform: "rotate(3deg)" },
       },
-
     },
   },
-  plugins: [require("daisyui"), require('tailwind-scrollbar-hide')],
-
+  plugins: [require("daisyui"), require("tailwind-scrollbar-hide"), Myclass],
 
   // daisyUI config (optional)
   daisyui: {
@@ -72,8 +88,7 @@ screens: {
       "dracula",
     ],
   },
-}
-
+};
 
 // /** @type {import('tailwindcss').Config} */
 // module.exports = ({
