@@ -5,12 +5,11 @@ import Curriculum from "./Components/Components-Nahid/SingleCourse/nestedTabPage
 import Instructor from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Instructor";
 import Overview from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Overview";
 import Reviews from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Reviews";
-// import About from './Pages/AboutUS/About';
-import About from "./Pages/AboutUS/about.jsx";
+import About from './Pages/AboutUS/About';
 import Checkout from "./Pages/Checkout/Checkout";
 import SignIn from "./Pages/Authentication/SignIn/signin";
 import SignUp from "./Pages/Authentication/SignUp/signup";
-import Contact from "./Pages/ContactUS/contact.jsx";
+import Contact from "./Pages/ContactUS/Contact";
 import Courses from "./Pages/Courses/courses.jsx";
 import SingleCourse from "./Pages/Courses/SingleCourse/SingleCourse";
 import Home from "./Pages/Home/Home";
