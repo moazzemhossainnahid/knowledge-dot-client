@@ -10,7 +10,7 @@ import Checkout from "./Pages/Checkout/Checkout";
 import SignIn from "./Pages/Authentication/SignIn/signin";
 import SignUp from "./Pages/Authentication/SignUp/signup";
 import Contact from "./Pages/ContactUS/Contact";
-import Courses from "./Pages/Courses/courses.jsx";
+import Courses from "./Pages/Courses/Courses";
 import SingleCourse from "./Pages/Courses/SingleCourse/SingleCourse";
 import Home from "./Pages/Home/Home";
 import BecomeInstructor from "./Pages/Instructors/BecomeInstructor";
