@@ -1,7 +1,7 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { CoursesCategoryData } from "../Data/CoursesCategoryData";
-const Sidebar = ({
+const CoursesSidebar = ({
   handleSearchFiltering,
   handleFilterNum,
 }) => {
@@ -34,7 +34,7 @@ const Sidebar = ({
               <h2 class="accordion-header mb-0" id="headingOne5">
                 <button class=" accordion-button relative flex justify-between font-bold items-center w-full py-4 px-5 text-xl text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true"
                   aria-controls="collapseOne5">
-                  <span className="text-gray-600 pr-32">Category</span>
+                  <span className="text-gray-600 pr-28">Category</span>
                 </button>
               </h2>
               <div id="collapseOne5" class="accordion-collapse collapse show" aria-labelledby="headingOne5">
@@ -44,7 +44,7 @@ const Sidebar = ({
                       {
                         CoursesCategoryData.map(course => (
                           <div class="form-check w-full flex justify-between items-center py-1 gap-2">
-                            <div className="pr-10">
+                            <div className="pr-7">
                               <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckChecked" />
                               <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked">
                                 {course.name}
@@ -63,15 +63,15 @@ const Sidebar = ({
         </div>
         {/* Review */}
         <div className="flex items-center">
-          <div class="accordion pt-3" id="accordionExample5">
+          <div class="accordion pt-3" id="accordionExample6">
             <div class="accordion-item bg-white ">
-              <h2 class="accordion-header mb-0" id="headingOne5">
-                <button class=" accordion-button relative flex justify-between font-bold items-center w-full py-4 px-5 text-xl text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true"
-                  aria-controls="collapseOne5">
+              <h2 class="accordion-header mb-0" id="headingTwo5">
+                <button class=" accordion-button relative flex justify-between font-bold items-center w-full py-4 px-5 text-xl text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo5" aria-expanded="true"
+                  aria-controls="collapseTwo5">
                   <span className="text-gray-600 pr-32">Ratings</span>
                 </button>
               </h2>
-              <div id="collapseOne5" class="accordion-collapse collapse show" aria-labelledby="headingOne5">
+              <div id="collapseTwo5" class="accordion-collapse collapse show" aria-labelledby="headingTwo5">
                 <div class="accordion-body py-4 px-5">
                   <div class="flex justify-center">
                     <div>
@@ -199,4 +199,4 @@ const Sidebar = ({
   );
 };
 
-export default Sidebar;
+export default CoursesSidebar;

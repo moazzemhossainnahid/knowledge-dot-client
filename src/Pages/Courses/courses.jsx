@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { AllCoursesData } from '../../Components/Components-Nahid/Data/CoursesData';
-import Sidebar from '../../Components/Components-Nahid/Sidebars/Sidebar';
+import CoursesSidebar from '../../Components/Components-Nahid/Sidebars/CoursesSidebar';
 import CoursesGrid from '../Courses/CoursesGrid';
 
 const Courses = () => {
@@ -19,7 +19,7 @@ const Courses = () => {
                                 <div className="sticky top-20">
                                     <aside>
                                         <div className="md:mb-3">
-                                            <Sidebar />
+                                            <CoursesSidebar />
                                         </div>
                                     </aside>
                                 </div>
