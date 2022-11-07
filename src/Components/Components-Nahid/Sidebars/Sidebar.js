@@ -1,9 +1,6 @@
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { CoursesCategoryData } from "../Data/CoursesCategoryData";
-import { AllCoursesData } from "../Data/CoursesData";
 const Sidebar = ({
   handleSearchFiltering,
   handleFilterNum,
@@ -65,120 +62,135 @@ const Sidebar = ({
           </div>
         </div>
         {/* Review */}
-        <div>
-          <h3 className="text-xl text-gray-800 mb-3 uppercase font-medium pt-5">
-            Review Rate
-          </h3>
-          <div className="space-y-2">
-            <div className="flex items-center">
-              <input
-                type="radio"
-                onChange={() => handleFilterNum(5)}
-                name="default-radio"
-                id="cat-5"
-                className="text-primary focus:ring-0 rounded-sm cursor-pointer"
-              />
-              <label
-                htmlFor="cat-5"
-                className="text-gray-600 ml-3 cursor-pointer"
-              >
-                <ReactStars
-                  size={20}
-                  color="gray"
-                  activeColor="red"
-                  edit={false}
-                  value={5}
-                />
-              </label>
-              <div className="ml-auto text-gray-600 text-sm">(5)</div>
-            </div>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                onChange={() => handleFilterNum(4)}
-                name="default-radio"
-                id="cat-4"
-                className="text-primary focus:ring-0 rounded-sm cursor-pointer"
-              />
-              <label
-                htmlFor="cat-4"
-                className="text-gray-600 ml-3 cursor-pointer"
-              >
-                <ReactStars
-                  size={20}
-                  color="gray"
-                  activeColor="red"
-                  edit={false}
-                  value={4}
-                />
-              </label>
-              <div className="ml-auto text-gray-600 text-sm">(4)</div>
-            </div>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                onChange={() => handleFilterNum(3)}
-                name="default-radio"
-                id="cat-3"
-                className="text-primary focus:ring-0 rounded-sm cursor-pointer"
-              />
-              <label
-                htmlFor="cat-3"
-                className="text-gray-600 ml-3 cursor-pointer"
-              >
-                <ReactStars
-                  size={20}
-                  color="gray"
-                  activeColor="red"
-                  edit={false}
-                  value={3}
-                />
-              </label>
-              <div className="ml-auto text-gray-600 text-sm">(3)</div>
-            </div>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                onChange={() => handleFilterNum(2)}
-                name="default-radio"
-                id="cat-2"
-                className="text-primary focus:ring-0 rounded-sm cursor-pointer"
-              />
-              <label
-                htmlFor="cat-2"
-                className="text-gray-600 ml-3 cursor-pointer"
-              >
-                <ReactStars
-                  size={20}
-                  color="gray"
-                  activeColor="red"
-                  edit={false}
-                  value={2}
-                />
-              </label>
-              <div className="ml-auto text-gray-600 text-sm">(2)</div>
-            </div>
-            <div className="flex items-center">
-              <input
-                type="radio"
-                onChange={() => handleFilterNum(1)}
-                name="default-radio"
-                id="cat-1"
-                className="text-primary focus:ring-0 rounded-sm cursor-pointer"
-              />
-              <label
-                htmlFor="cat-1"
-                className="text-gray-600 ml-3 cursor-pointer"
-              >
-                <ReactStars
-                  size={20}
-                  color="gray"
-                  activeColor="red"
-                  edit={false}
-                  value={1}
-                />
-              </label>
-              <div className="ml-auto text-gray-600 text-sm">(1)</div>
+        <div className="flex items-center">
+          <div class="accordion pt-3" id="accordionExample5">
+            <div class="accordion-item bg-white ">
+              <h2 class="accordion-header mb-0" id="headingOne5">
+                <button class=" accordion-button relative flex justify-between font-bold items-center w-full py-4 px-5 text-xl text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true"
+                  aria-controls="collapseOne5">
+                  <span className="text-gray-600 pr-32">Ratings</span>
+                </button>
+              </h2>
+              <div id="collapseOne5" class="accordion-collapse collapse show" aria-labelledby="headingOne5">
+                <div class="accordion-body py-4 px-5">
+                  <div class="flex justify-center">
+                    <div>
+                      <div className="space-y-2">
+                        <div className="flex items-center">
+                          <input
+                            type="radio"
+                            onChange={() => handleFilterNum(5)}
+                            name="default-radio"
+                            id="cat-5"
+                            className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+                          />
+                          <label
+                            htmlFor="cat-5"
+                            className="text-gray-600 ml-3 cursor-pointer"
+                          >
+                            <ReactStars
+                              size={20}
+                              color="gray"
+                              activeColor="red"
+                              edit={false}
+                              value={5}
+                            />
+                          </label>
+                          <div className="ml-auto pl-10 text-gray-600 text-sm">(5)</div>
+                        </div>
+                        <div className="flex items-center">
+                          <input
+                            type="radio"
+                            onChange={() => handleFilterNum(4)}
+                            name="default-radio"
+                            id="cat-4"
+                            className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+                          />
+                          <label
+                            htmlFor="cat-4"
+                            className="text-gray-600 ml-3 cursor-pointer"
+                          >
+                            <ReactStars
+                              size={20}
+                              color="gray"
+                              activeColor="red"
+                              edit={false}
+                              value={4}
+                            />
+                          </label>
+                          <div className="ml-auto text-gray-600 text-sm">(4)</div>
+                        </div>
+                        <div className="flex items-center">
+                          <input
+                            type="radio"
+                            onChange={() => handleFilterNum(3)}
+                            name="default-radio"
+                            id="cat-3"
+                            className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+                          />
+                          <label
+                            htmlFor="cat-3"
+                            className="text-gray-600 ml-3 cursor-pointer"
+                          >
+                            <ReactStars
+                              size={20}
+                              color="gray"
+                              activeColor="red"
+                              edit={false}
+                              value={3}
+                            />
+                          </label>
+                          <div className="ml-auto text-gray-600 text-sm">(3)</div>
+                        </div>
+                        <div className="flex items-center">
+                          <input
+                            type="radio"
+                            onChange={() => handleFilterNum(2)}
+                            name="default-radio"
+                            id="cat-2"
+                            className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+                          />
+                          <label
+                            htmlFor="cat-2"
+                            className="text-gray-600 ml-3 cursor-pointer"
+                          >
+                            <ReactStars
+                              size={20}
+                              color="gray"
+                              activeColor="red"
+                              edit={false}
+                              value={2}
+                            />
+                          </label>
+                          <div className="ml-auto text-gray-600 text-sm">(2)</div>
+                        </div>
+                        <div className="flex items-center">
+                          <input
+                            type="radio"
+                            onChange={() => handleFilterNum(1)}
+                            name="default-radio"
+                            id="cat-1"
+                            className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+                          />
+                          <label
+                            htmlFor="cat-1"
+                            className="text-gray-600 ml-3 cursor-pointer"
+                          >
+                            <ReactStars
+                              size={20}
+                              color="gray"
+                              activeColor="red"
+                              edit={false}
+                              value={1}
+                            />
+                          </label>
+                          <div className="ml-auto text-gray-600 text-sm">(1)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
