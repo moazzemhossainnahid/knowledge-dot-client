@@ -18,7 +18,7 @@ export const AllCoursesData = [
         "img": "https://static.vecteezy.com/system/resources/thumbnails/003/266/872/small/career-business-work-concept-with-business-goals-team-free-vector.jpg",
         "list": "design",
         "category": "Web Design",
-        "ratings": 4.5,
+        "ratings": 5,
         "file": [
             {
                 "title": "Lesson 01",
@@ -74,7 +74,7 @@ export const AllCoursesData = [
         "instructorimg": "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
         "introvdo": "https://www.youtube.com/embed/vkf4y77jK-k",
         "category": "Spoken English",
-        "ratings": 3.5,
+        "ratings": 3,
         "img": "https://thevictormind.com/wp-content/uploads/2020/05/How-to-improve-English-communication-skills.png?x42754",
         "list": "communcation",
         "file": [
@@ -121,7 +121,7 @@ export const AllCoursesData = [
         "img": "https://www.interviewbit.com/blog/wp-content/uploads/2022/03/Web-Development-Frameworks-2048x1000.png",
         "list": "development",
         "category": "Web Development",
-        "ratings": 4.5,
+        "ratings": 4,
         "file": [
             {
                 "title": "Lesson 01",
@@ -166,7 +166,7 @@ export const AllCoursesData = [
         "img": "https://media.thekashmirmonitor.net/wp-content/uploads/2022/10/Government-job.jpg",
         "list": "communcation",
         "category": "IELTS Preperation",
-        "ratings": 4.5,
+        "ratings": 2,
         "file": [
             {
                 "title": "Lesson 01",
@@ -211,7 +211,7 @@ export const AllCoursesData = [
         "img": "https://admission.aglasem.com/wp-content/uploads/2022/09/Top-Universities-in-Uttarakhand.jpg",
         "list": "education",
         "category": "IELTS Preperation",
-        "ratings": 4.5,
+        "ratings": 5,
         "file": [
             {
                 "title": "Lesson 01",

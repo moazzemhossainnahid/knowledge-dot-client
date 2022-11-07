@@ -1,34 +1,97 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const CoursesGrid = ({ course }) => {
   const { name, img } = course;
   return (
     <div className="mb-8 lg:w-11/12">
-      <Link
-        to={`/course/${course?.uname}`}
-        className="card bg-base-100 border border-neutral h-full transform transition duration-500 hover:scale-105 hover:shadow-xl hover:bg-[#0B3456] hover:text-white"
-      >
-        <figure>
-          <img className="h-40 w-full" src={img} alt="Shoes" />
-        </figure>
-        <div className="card-body p-0">
-          <p className="text-xl px-4 py-2 font-header">{name}</p>
-          <div className="px-4 text-md">
-            <p>
-              <i className="fa-solid text-red-400 fa-house-signal"></i> Live
-              classes, with model tests
-            </p>
-            <p>
-              <i className="fa-solid text-primary fa-circle-play"></i> Recorded
-              Videos
-            </p>
+
+      <div className="h-44 relative overflow-hidden rounded-xl">
+        <img className="h-44 w-full relative rounded-xl hover:scale-110 duration-200" src={img} alt="Shoes" />
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full opacity-0 hover:opacity-40 transition duration-300 ease-in-out bg-indigo-700"></div>
+      </div>
+      <div className="card-body p-0">
+        <div className="flex items-center justify-between gap-2 px-4 py-2">
+          <div className="flex gap-2 items-center">
+            <h3 className="text-md font-semibold text-gray-400">{course.ratings}.5</h3>
+            {
+
+              course?.ratings === 1 &&
+              <div className="rating">
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" checked />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+              </div>
+
+            }
+            {
+
+              course?.ratings === 2 &&
+              <div className="rating">
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" checked />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+              </div>
+
+            }
+            {
+
+              course?.ratings === 3 &&
+              <div className="rating">
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" checked />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+              </div>
+
+            }
+            {
+
+              course?.ratings === 4 &&
+              <div className="rating">
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" checked />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
+              </div>
+
+            }
+            {
+
+              course?.ratings === 5 &&
+              <div className="rating">
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
+                <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" checked />
+              </div>
+
+            }
           </div>
-          <button className="border-t text-primary border-neutral p-2 text-lg">
-            Enroll Course
-          </button>
+          <h3 className="text-gray-500">(17)</h3>
+
         </div>
-      </Link>
+        <p className="text-xl px-4 font-header">{name}</p>
+        <div className="px-4 text-md">
+          <p>
+            <i className="fa-solid text-red-400 fa-house-signal"></i> Live
+            classes, with model tests
+          </p>
+          <p>
+            <i className="fa-solid text-primary fa-circle-play"></i> Recorded
+            Videos
+          </p>
+        </div>
+        <button className="border-t text-primary border-neutral p-2 text-lg">
+          Enroll Course
+        </button>
+      </div>
     </div>
   );
 };
