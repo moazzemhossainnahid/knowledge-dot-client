@@ -1,12 +1,15 @@
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import ReactStars from "react-rating-stars-component";
+import { CoursesCategoryData } from "../Data/CoursesCategoryData";
 import { AllCoursesData } from "../Data/CoursesData";
 const Sidebar = ({
   handleSearchFiltering,
   handleFilterNum,
 }) => {
   return (
-    <div className=" bh-white px-4 pb-6 mt-3 shadow-lg border rounded-md overflow-hidden">
+    <div className=" bg-white px-4 pb-6 mt-3 shadow-lg border rounded-md overflow-hidden">
       <div className="divide-y divide-gray-200 space-y-5">
         <div>
           <h3 className="text-xl text-gray-800 mb-3 uppercase font-bold pt-5">
@@ -23,25 +26,26 @@ const Sidebar = ({
                     focus:ring-red-400 "
                 name="city"
                 type="text"
-                placeholder="Name, Category"
-              />
-              <select
-                onChange={handleSearchFiltering}
-                id="default"
-                className="shadow appearance-none border border-gray-300 text-gray-700 px-3 text-sm rounded focus:ring-red-400 focus:border-red-400 block w-full py-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              >
-                <option className="hover:bg-red-400" value="default">
-                  Select Category
-                </option>
-                {AllCoursesData.length &&
-                  AllCoursesData.map((item, index) => (
-                    <option key={index} value={item?.name}>
-                      {item?.name}
-                    </option>
-                  ))}
-              </select>
-              <br />
+                placeholder="Find By Name" />
             </form>
+          </div>
+        </div>
+        {/* Category */}
+        <div className="flex items-center">
+          <div class="accordion pt-3" id="accordionExample5">
+            <div class="accordion-item bg-white ">
+              <h2 class="accordion-header mb-0" id="headingOne5">
+                <button class=" accordion-button relative flex justify-between font-bold items-center w-full py-4 px-5 text-xl text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true"
+                  aria-controls="collapseOne5">
+                  <span className="text-gray-600 pr-32">Category</span>
+                </button>
+              </h2>
+              <div id="collapseOne5" class="accordion-collapse collapse show" aria-labelledby="headingOne5">
+                <div class="accordion-body py-4 px-5">
+                  
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         {/* Review */}
