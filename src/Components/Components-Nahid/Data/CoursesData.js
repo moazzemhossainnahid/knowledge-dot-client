@@ -60,8 +60,8 @@ export const AllCoursesData = [
     },
     {
         "_id": "2",
-        "uname": "improve-english-communcation-skills",
-        "name": "Improve English Communication Skills",
+        "uname": "english-communcation",
+        "name": "English Communication",
         "desc": "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi",
         "abouta": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
         "aboutb": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
