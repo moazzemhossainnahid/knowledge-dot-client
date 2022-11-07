@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { AllCoursesData } from '../../Components/Components-Nahid/Data/CoursesData';
 import Sidebar from '../../Components/Components-Nahid/Sidebars/Sidebar';
-import CoursesGrid from './CoursesGrid';
+import CoursesGrid from '../Courses/CoursesGrid';
 
 const Courses = () => {
     return (
@@ -19,15 +19,29 @@ const Courses = () => {
                                 <div className="sticky top-20">
                                     <aside>
                                         <div className="md:mb-3">
-                                            <Sidebar/>
+                                            <Sidebar />
                                         </div>
                                     </aside>
                                 </div>
                             </div>
                             <div className="col-span-3">
                                 <Outlet />
+                                <div className="flex justify-between items-center gap-2 pb-5">
+                                    <h3 className="text-gray-400 font-bold">Showing <span className="text-gray-500">250</span> Total Results.</h3>
+                                    <div className="flex justify-between items-center gap-2 px-7">
+                                        <h3 className="text-gray-700 font-bold">Sort By:</h3>
+                                        <select className="select bg-gray-300 max-w-xs">
+                                            <option disabled selected>Select Course</option>
+                                            <option>Web Design</option>
+                                            <option>Spoken English</option>
+                                            <option>Learn Figma</option>
+                                            <option>Web Development</option>
+                                            <option>Wordpress Design</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-                                    {AllCoursesData?.length &&  AllCoursesData.map((data, index) => <CoursesGrid course={data} key={index} />)}
+                                    {AllCoursesData?.length && AllCoursesData.map((data, index) => <CoursesGrid course={data} key={index} />)}
                                 </div>
                             </div>
                         </div>
