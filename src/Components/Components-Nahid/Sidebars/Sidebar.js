@@ -42,7 +42,23 @@ const Sidebar = ({
               </h2>
               <div id="collapseOne5" class="accordion-collapse collapse show" aria-labelledby="headingOne5">
                 <div class="accordion-body py-4 px-5">
-                  
+                  <div class="flex justify-center">
+                    <div>
+                      {
+                        CoursesCategoryData.map(course => (
+                          <div class="form-check w-full flex justify-between items-center py-1 gap-2">
+                            <div className="pr-10">
+                              <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckChecked" />
+                              <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked">
+                                {course.name}
+                              </label>
+                            </div>
+                            <h3 className="text-gray-500 font-semibold">(15)</h3>
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
