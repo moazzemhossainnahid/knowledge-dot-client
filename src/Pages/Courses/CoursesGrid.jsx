@@ -1,4 +1,4 @@
-import { faBook, faChartColumn, faClock, faInr, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faChartColumn, faClock, faInr } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
