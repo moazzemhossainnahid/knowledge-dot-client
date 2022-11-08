@@ -1,7 +1,9 @@
 import React from "react";
 import UnderConstruction from "../UnderConstruction/UnderConstruction";
+import AboutCounter from "./AboutCounter";
 import AboutHero from "./AboutHero";
 import AboutLearning from "./AboutLearning";
+import AboutMission from "./AboutMission";
 
 const About = () => {
   return (
@@ -9,6 +11,8 @@ const About = () => {
       {/* <UnderConstruction/>  */}
       <AboutHero />
       <AboutLearning />
+      <AboutCounter />
+      <AboutMission />
     </div>
   );
 };
