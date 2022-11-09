@@ -2,7 +2,7 @@ export const UPEventData = [
     {
         id: 1,
         img: "https://edusphere.radiantthemes.com/wp-content/uploads/2020/06/Course-16-new-768x450.jpg",
-        name: "College Redesign In Action",
+        name: "College Redesign Action",
         description: "Lorem ipsum dolor lipsum er sit amet, consectetur adipiscing",
         date: "27",
         month: "July"
@@ -34,7 +34,7 @@ export const UPEventData = [
     {
         id: 5,
         img: "https://edusphere.radiantthemes.com/wp-content/uploads/2020/06/New-Course-06-768x450.jpg",
-        name: "School Redesign In Action",
+        name: "School Redesign",
         description: "Lorem ipsum dolor lipsum er sit amet, consectetur adipiscing",
         date: "08 ",
         month: "June"
@@ -50,7 +50,7 @@ export const UPEventData = [
     {
         id: 7,
         img: "https://edusphere.radiantthemes.com/wp-content/uploads/2020/06/New-Course-04-768x450.jpg",
-        name: "Diversity Abroad Conference",
+        name: "Diversity Conference",
         description: "Lorem ipsum dolor lipsum er sit amet, consectetur adipiscing",
         date: "08",
         month: " March"
