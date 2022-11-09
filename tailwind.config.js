@@ -1,15 +1,40 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
+const Myclass = plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".my-rotate-y-180": {
+      transform: "rotateY(180deg)",
+    },
+    ".preserve-3d": {
+      transformStyle: "preserve-3d",
+    },
+    ".perspective": {
+      perspective: "1000px",
+    },
+    ".backface-hidden": {
+      backfaceVisibility: "hidden",
+    },
+  });
+});
 module.exports = {
+<<<<<<< HEAD
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+=======
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
+>>>>>>> ee480d551947f756d7cabe6c0fb0d5beb87bf9bf
   theme: {
     fontFamily: {
-      'sans': ['Qwigley'],
-      'serif': ['ui-serif', 'Georgia'],
-      'mono': ['Francois One'],
-      'header': ['Ubuntu'],
-      'sub': ['Josefin Sans'],
-      'display': ['Oswald'],
-      'body': ['"Open Sans"'],
+      sans: ["Qwigley"],
+      serif: ["ui-serif", "Georgia"],
+      mono: ["Francois One"],
+      header: ["Ubuntu"],
+      sub: ["Josefin Sans"],
+      display: ["Oswald"],
+      body: ['"Open Sans"'],
     },
 screens: {
   sm: "320px",
@@ -30,14 +55,17 @@ screens: {
     extend: {},
     keyframes: {
       wiggle: {
-        '0%, 100%': { transform: 'rotate(-3deg)' },
-        '50%': { transform: 'rotate(3deg)' },
+        "0%, 100%": { transform: "rotate(-3deg)" },
+        "50%": { transform: "rotate(3deg)" },
       },
-
     },
   },
+<<<<<<< HEAD
   plugins: [require("daisyui"), require('tailwind-scrollbar-hide')],
 
+=======
+  plugins: [require("daisyui"), require("tailwind-scrollbar-hide"), Myclass],
+>>>>>>> ee480d551947f756d7cabe6c0fb0d5beb87bf9bf
 
   // daisyUI config (optional)
   daisyui: {
@@ -72,8 +100,7 @@ screens: {
       "dracula",
     ],
   },
-}
-
+};
 
 // /** @type {import('tailwindcss').Config} */
 // module.exports = ({
