@@ -3,11 +3,11 @@ import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import auth from "../../../Firebase/Firebase.init";
 import { useForm } from "react-hook-form";
-import Loading from "../../SharedPages/Loading";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import auth from "../../../Firebase/Firebase.init";
 import useToken from "../../../Hooks/useToken";
+import Loading from "../../SharedPages/Loading";
 
 const SignIn = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
