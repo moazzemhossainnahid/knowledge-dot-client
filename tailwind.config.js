@@ -18,7 +18,10 @@ const Myclass = plugin(function ({ addUtilities }) {
   });
 });
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
   theme: {
     fontFamily: {
       sans: ["Qwigley"],

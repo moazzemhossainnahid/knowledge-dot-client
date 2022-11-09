@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { AllCoursesData } from "../../Components/Components-Nahid/Data/CoursesData";
-import Sidebar from "../../Components/Components-Nahid/Sidebars/Sidebar";
+import Sidebar from "../../Components/Components-Nahid/Sidebars/CoursesSidebar";
 import CoursesGrid from "./CoursesGrid";
 
 const Courses = () => {

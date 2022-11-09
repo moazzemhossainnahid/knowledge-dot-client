@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMission = () => {
   return (
-    <div className="border-2 mt-14">
+    <div className="  pt-14">
       <div className=" lg:container my-20 md:my-20 mx-auto  ">
         <div className="grid grid-cols-1 md:grid-cols-12 grid-flow-row md:gap-5 ">
           <div className="col-span-7  flex  md:flex-row flex-col ">
@@ -36,10 +36,10 @@ const AboutMission = () => {
           <div className=" col-span-5  bg-base-100  flex justify-center items-center p-5 ">
             <div className=" card shadow-lg lg:px-8">
               <div className="card-body">
-                <h1 className="my-4 text-3xl font-semibold sm:text-center	leading-6 ">
+                <h1 className="my-4 text-3xl font-semibold md:text-left sm:text-center	leading-6 ">
                   Our Mission
                 </h1>
-                <p className="text-slate-900 sm:text-center text-lg">
+                <p className="text-slate-900  md:text-left sm:text-center text-lg">
                   Our mission is to democratize education through the offering
                   of world-className higher education opportunities that are
                   accessible, flexible, and economical. Virtually anyone on the

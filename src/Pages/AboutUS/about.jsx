@@ -4,6 +4,7 @@ import AboutCounter from "./AboutCounter";
 import AboutHero from "./AboutHero";
 import AboutLearning from "./AboutLearning";
 import AboutMission from "./AboutMission";
+import AboutSlide from "./AboutSlide";
 
 const About = () => {
   return (
@@ -13,6 +14,7 @@ const About = () => {
       <AboutLearning />
       <AboutCounter />
       <AboutMission />
+      <AboutSlide />
     </div>
   );
 };
