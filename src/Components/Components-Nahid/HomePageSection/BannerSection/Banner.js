@@ -8,12 +8,12 @@ const Banner = () => {
     return (
         <div className=''>
             <div className="z-0">
-            <Slider autoplay='true' duration="5000" previousButton="" nextButton="">
+            <Slider className=" h-[65vh] md:h-[85vh] w-full overflow-hidden" autoplay='true' duration="5000" previousButton="" nextButton="">
                 {
                     SliderData.map((data, idx) => {
                         return (
-                            <div key={idx} className={` w-full h-full`}>
-                                <img src={data?.img} alt="" className="h-full w-full relative" />
+                            <div key={idx} className={` w-full h-[65vh] md:h-[85vh]`}>
+                                <img src={data?.img} alt="" className=" h-[65vh] md:h-[85vh] w-full relative object-cover" />
                                 <div className="absolute top-16 left-7">
                                     <h3 data-aos="fade-up" data-aos-duration="1500" className="text-3xl md:text-6xl font-bold py-2 text-white">{data?.title}</h3>
                                     <p data-aos="fade-up" data-aos-duration="1700" className="text-white font-semibold py-2 text-xl">{data?.desc}</p>

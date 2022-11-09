@@ -16,7 +16,7 @@ const PopulerCourses = () => {
                         <img className='object-cover mx-auto p-10' src="https://themes-themegoods.b-cdn.net/coursector/wp-content/uploads/2019/08/signature.png" alt="" />
                     </div>
                     <div className="w-full md:w-4/6 mx-auto">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
                             {
                                 PopulerCoursesData.map((data, idx) => {
                                     return (
