@@ -55,11 +55,13 @@ const SignUp = () => {
     <div className="flex h-screen justify-center items-center">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="text-center text-2xl font-bold">Sign Up</h2>
+          <h2 className="text-center text-2xl font-bold">
+            Knowledge Dot User Sign Up
+          </h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control w-full max-w-xs">
               <label className="label">
-                <span className="label-text">Name</span>
+                <span className="label-text">Full Name</span>
               </label>
               <input
                 type="text"
@@ -83,7 +85,7 @@ const SignUp = () => {
 
             <div className="form-control w-full max-w-xs">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text">Email Address</span>
               </label>
               <input
                 type="email"
