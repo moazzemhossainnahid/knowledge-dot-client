@@ -225,7 +225,7 @@ export const AllCoursesData = [
             {
                 "title": "Lesson 02",
                 "details": [
-                    {
+                    {    
                         "name": "What, Why, How, When, Where, Who",
                         "fileName": "What-Why-How-When-Where-Who"
                     },

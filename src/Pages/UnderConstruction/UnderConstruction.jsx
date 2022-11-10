@@ -40,7 +40,7 @@ const UnderConstruction = () => {
                         <MyTimer expiryTimestamp={time} />
                     </div>
                 </div>
-
+   
                 <div className="w-full md:w-3/6">
                     <img src="https://svgshare.com/i/npQ.svg" alt="" className="object-cover" />
                 </div>

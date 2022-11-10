@@ -1,76 +1,175 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/Firebase.init";
+import { useForm } from "react-hook-form";
+import Loading from "../../SharedPages/Loading";
+import { Link, useNavigate } from "react-router-dom";
+import useToken from "../../../Hooks/useToken";
 
 const SignUp = () => {
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  const [token] = useToken(user || gUser);
+
+  const navigate = useNavigate();
+
+  let signInError;
+
+  if (loading || gLoading || updating) {
+    return <Loading></Loading>;
+  }
+
+  if (error || gError || updateError) {
+    signInError = (
+      <p className="text-red-500">
+        <small>
+          {error?.message || gError?.message || updateError?.message}
+        </small>
+      </p>
+    );
+  }
+
+  if (token) {
+    navigate("/appointment");
+  }
+
+  const onSubmit = async (data) => {
+    await createUserWithEmailAndPassword(data.email, data.password);
+    await updateProfile({ displayName: data.name });
+    console.log("update done");
+  };
   return (
-    <div class="bg-grey-lighter min-h-screen flex flex-col">
-      <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-        <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-          <h1 class="mb-8 text-3xl text-center">Sign up</h1>
-          <input
-            type="text"
-            class="block border border-grey-light w-full p-3 rounded mb-4"
-            name="fullname"
-            placeholder="Full Name"
-          />
+    <div className="flex h-screen justify-center items-center">
+      <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card-body">
+          <h2 className="text-center text-2xl font-bold">
+            Knowledge Dot User Sign Up
+          </h2>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Full Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="input input-bordered w-full max-w-xs"
+                {...register("name", {
+                  required: {
+                    value: true,
+                    message: "Name is Required",
+                  },
+                })}
+              />
+              <label className="label">
+                {errors.name?.type === "required" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.name.message}
+                  </span>
+                )}
+              </label>
+            </div>
 
-          <input
-            type="text"
-            class="block border border-grey-light w-full p-3 rounded mb-4"
-            name="email"
-            placeholder="Email"
-          />
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Email Address</span>
+              </label>
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="input input-bordered w-full max-w-xs"
+                {...register("email", {
+                  required: {
+                    value: true,
+                    message: "Email is Required",
+                  },
+                  pattern: {
+                    value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                    message: "Provide a valid Email",
+                  },
+                })}
+              />
+              <label className="label">
+                {errors.email?.type === "required" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
+                )}
+                {errors.email?.type === "pattern" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
+                )}
+              </label>
+            </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+              <input
+                type="password"
+                placeholder="Password"
+                className="input input-bordered w-full max-w-xs"
+                {...register("password", {
+                  required: {
+                    value: true,
+                    message: "Password is Required",
+                  },
+                  minLength: {
+                    value: 6,
+                    message: "Must be 6 characters or longer",
+                  },
+                })}
+              />
+              <label className="label">
+                {errors.password?.type === "required" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.password.message}
+                  </span>
+                )}
+                {errors.password?.type === "minLength" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.password.message}
+                  </span>
+                )}
+              </label>
+            </div>
 
-          <input
-            type="password"
-            class="block border border-grey-light w-full p-3 rounded mb-4"
-            name="password"
-            placeholder="Password"
-          />
-          <input
-            type="password"
-            class="block border border-grey-light w-full p-3 rounded mb-4"
-            name="confirm_password"
-            placeholder="Confirm Password"
-          />
-
-          {/* <button
-            type="submit"
-            class="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1"
-          >
-            Create Account
-          </button> */}
+            {signInError}
+            <input
+              className="btn w-full max-w-xs text-white"
+              type="submit"
+              value="Sign Up"
+            />
+          </form>
+          <p>
+            <small>
+              Already have an account?{" "}
+              <Link className="text-primary" to="/signin">
+                Please login
+              </Link>
+            </small>
+          </p>
+          <div className="divider">OR</div>
           <button
-            type="submit"
-            class="w-full bg-blue-500 text-white p-3 rounded-lg font-semibold text-lg"
+            onClick={() => signInWithGoogle()}
+            className="btn btn-outline"
           >
-            Signup
+            Continue with Google
           </button>
-
-          <div class="text-center text-sm text-grey-dark mt-4">
-            By signing up, you agree to the
-            <a
-              class="no-underline border-b border-grey-dark text-grey-dark"
-              href="#"
-            >
-              Terms of Service
-            </a>{" "}
-            and
-            <a
-              class="no-underline border-b border-grey-dark text-grey-dark"
-              href="#"
-            >
-              Privacy Policy
-            </a>
-          </div>
-        </div>
-
-        <div class="text-grey-dark mt-6">
-          Already have an account?
-          <Link to="/signin" className="underline">
-              Sign In
-            </Link>
-          .
         </div>
       </div>
     </div>

@@ -4,57 +4,71 @@ const AboutSlide = () => {
   return (
     <div>
       <div
-        id="carouselExampleControls"
-        class="carousel slide relative"
-        data-bs-ride="carousel"
+        className="hero"
+        style={{
+          backgroundImage:
+            "url(https://esmarts.qodeinteractive.com/wp-content/uploads/2017/09/testimonials-background-1.jpg)",
+          height: "480px",
+          width: "100%",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
       >
-        <div class="carousel-inner relative w-full overflow-hidden">
-          <div class="carousel-item active relative float-left w-full">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-              class="block w-full"
-              alt="Wild Landscape"
-            />
+        <div class="carousel w-full">
+          <div
+            id="item1"
+            class="carousel-item w-full flex flex-col justify-center  "
+          >
+            <div className=" dark:text-slate-200 text-white">
+              <div className="h-auto w-72 m-auto pb-5 ">
+                <img
+                  src="https://themes-themegoods.b-cdn.net/coursector/wp-content/uploads/2019/04/creative-team-meet-at-a-table-in-an-office-one-PWP9HT6.jpg"
+                  alt="t"
+                  className="rounded-lg "
+                />
+              </div>
+              <div>
+                <p className="text-lg  my-4 text-center max-w-xl  mx-auto">
+                  People who build their own home tend to be very courageous.
+                  These people are curious about life. They're thinking about
+                  what it means to live in a house, rather than just buying a
+                  commodity.
+                </p>
+                <h1 className="text-center text-accent text-2xl font-bold">
+                  Jessica Smith -Graphic design
+                </h1>
+              </div>
+            </div>
           </div>
-          <div class="carousel-item relative float-left w-full">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-              class="block w-full"
-              alt="Camera"
-            />
-          </div>
-          <div class="carousel-item relative float-left w-full">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-              class="block w-full"
-              alt="Exotic Fruits"
-            />
+          <div
+            id="item2"
+            class="carousel-item w-full flex flex-col justify-center  "
+          >
+            <div className=" dark:text-slate-200 text-white">
+              <div className="h-auto w-72 m-auto pb-5 ">
+                <img
+                  src="https://themes-themegoods.b-cdn.net/coursector/wp-content/uploads/2019/04/exercising-outdoors-7VSUZMN.jpg"
+                  alt="t"
+                  className="rounded-lg "
+                />
+              </div>
+              <div>
+                <p className="text-lg  my-4 text-center max-w-xl  mx-auto">
+                  Statement buttons cover-up tweaks patch pockets perennial
+                  lapel collar flap chest pockets topline stitching cropped
+                  jacket. Effortless comfortable full leather lining.
+                </p>
+                <h1 className="text-center text-accent text-2xl font-bold">
+                  Brie Larsson - Software Engineer
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
-        >
-          <span
-            class="carousel-control-prev-icon inline-block bg-no-repeat"
-            aria-hidden="true"
-          ></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
-        >
-          <span
-            class="carousel-control-next-icon inline-block bg-no-repeat"
-            aria-hidden="true"
-          ></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="flex justify-center w-full py-2 gap-2 mt-[446px]">
+          <a href="#item1" class="btn btn-circle bg-white h-[50]"></a>
+          <a href="#item2" class="btn btn-circle bg-white"></a>
+        </div>
       </div>
     </div>
   );
