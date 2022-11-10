@@ -28,6 +28,20 @@ const Courses = () => {
               </div>
               <div className="col-span-3">
                 <Outlet />
+                <div className="flex flex-col md:flex-row justify-between items-center gap-2 py-5">
+                  <h3 className="text-gray-400 font-bold">Showing <span className="text-gray-500">250</span> Total Results.</h3>
+                  <div className="flex justify-between items-center gap-2 px-7">
+                    <h3 className="text-gray-700 font-bold">Sort By:</h3>
+                    <select className="select bg-gray-300 max-w-xs">
+                      <option disabled selected>Select Course</option>
+                      <option>Web Design</option>
+                      <option>Spoken English</option>
+                      <option>Learn Figma</option>
+                      <option>Web Development</option>
+                      <option>Wordpress Design</option>
+                    </select>
+                  </div>
+                </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
                   {AllCoursesData?.length &&
                     AllCoursesData.map((data, index) => (
