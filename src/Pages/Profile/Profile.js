@@ -8,7 +8,8 @@ import auth from "../../Firebase/Firebase.init";
 import Loading from "../SharedPages/Loading";
 import { useQuery } from "@tanstack/react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPhoneAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Profile = () => {
   const [{ email }] = useAuthState(auth);
   const [isEdit, setIsEdit] = useState(null);
@@ -127,13 +128,13 @@ const Profile = () => {
               </div>
             </div>
             <div className="card-body py-2 gap-0">
-              <h1><i className="fa-solid fa-user-tie mr-1 text-red-500"></i>About Me</h1>
+              <h1><FontAwesomeIcon className="mr-1 text-red-500" icon={faUserTie} />About Me</h1>
               <p>{user?.data?.bio ? user?.data?.bio : "- - -"}</p>
             </div>
             <div className="card-body flex-row gap-5 justify-center py-5 text-2xl">
-              <a href={user?.data?.facebookLink ? user?.data?.facebookLink : "- - -"} target='_blank'><i className="fa-brands fa-facebook"></i></a>
-              <a href={user?.data?.instaLink ? user?.data?.instaLink : "- - -"} target='_blank'><i className="fa-brands fa-instagram"></i></a>
-              <a href={user?.data?.linkedInLink ? user?.data?.linkedInLink : "- - -"} target='_blank'><i className="fa-brands fa-linkedin"></i></a>
+              <a href={user?.data?.facebookLink ? user?.data?.facebookLink : "- - -"} target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
+              <a href={user?.data?.instaLink ? user?.data?.instaLink : "- - -"} target='_blank'><FontAwesomeIcon icon={faInstagram} /></a>
+              <a href={user?.data?.linkedInLink ? user?.data?.linkedInLink : "- - -"} target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
             </div>
           </div>
         </div>
