@@ -7,6 +7,8 @@ import "./Profile.css";
 import auth from "../../Firebase/Firebase.init";
 import Loading from "../SharedPages/Loading";
 import { useQuery } from "@tanstack/react-query";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 const Profile = () => {
   const [{ email }] = useAuthState(auth);
   const [isEdit, setIsEdit] = useState(null);
@@ -100,12 +102,12 @@ const Profile = () => {
             </div>
             <div className="card-body py-2 flex-row">
               <div>
-                <h1><i className="fa-solid fa-clock"></i></h1>
-                <h1><i className="fa-solid fa-square-phone"></i></h1>
-                <h1><i className="fa-solid fa-location-dot"></i></h1>
-                <h1><i className="fa-solid fa-graduation-cap"></i></h1>
-                <h1><i className="fa-solid fa-heart text-red-500"></i></h1>
-                <h1><i className="fa-solid text-yellow-600 fa-bookmark"></i></h1>
+                <h1><FontAwesomeIcon icon={faClock} /></h1>
+                <h1><FontAwesomeIcon icon={faPhoneAlt} /></h1>
+                <h1><FontAwesomeIcon icon={faLocationDot} /></h1>
+                <h1><FontAwesomeIcon icon={faGraduationCap} /></h1>
+                <h1><FontAwesomeIcon className="text-red-500" icon={faHeart} /></h1>
+                <h1><FontAwesomeIcon className="text-yellow-600" icon={faBookmark} /></h1>
               </div>
               <div>
                 <h1>Joined</h1>
