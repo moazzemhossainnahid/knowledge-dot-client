@@ -18,14 +18,7 @@ const Myclass = plugin(function ({ addUtilities }) {
   });
 });
 module.exports = {
-<<<<<<< HEAD
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
-=======
-  content: [
-    "./src/**/*.{html,js,jsx,ts,tsx}",
-    "./node_modules/tw-elements/dist/js/**/*.js",
-  ],
->>>>>>> ee480d551947f756d7cabe6c0fb0d5beb87bf9bf
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}", './node_modules/tw-elements/dist/js/**/*.js'],
   theme: {
     fontFamily: {
       sans: ["Qwigley"],
@@ -36,22 +29,22 @@ module.exports = {
       display: ["Oswald"],
       body: ['"Open Sans"'],
     },
-screens: {
-  sm: "320px",
-  // => @media (min-width: 640px) { ... }
+    screens: {
+      sm: "320px",
+      // => @media (min-width: 640px) { ... }
 
-  md: "768px",
-  // => @media (min-width: 768px) { ... }
+      md: "768px",
+      // => @media (min-width: 768px) { ... }
 
-  lg: "1024px",
-  // => @media (min-width: 1024px) { ... }
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
 
-  xl: "1280px",
-  // => @media (min-width: 1280px) { ... }
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
 
-  "2xl": "1536px",
-  // => @media (min-width: 1536px) { ... }
-},
+      "2xl": "1536px",
+      // => @media (min-width: 1536px) { ... }
+    },
     extend: {},
     keyframes: {
       wiggle: {
@@ -60,12 +53,8 @@ screens: {
       },
     },
   },
-<<<<<<< HEAD
-  plugins: [require("daisyui"), require('tailwind-scrollbar-hide')],
 
-=======
-  plugins: [require("daisyui"), require("tailwind-scrollbar-hide"), Myclass],
->>>>>>> ee480d551947f756d7cabe6c0fb0d5beb87bf9bf
+  plugins: [require("daisyui"), require('tw-elements/dist/plugin'), Myclass],
 
   // daisyUI config (optional)
   daisyui: {

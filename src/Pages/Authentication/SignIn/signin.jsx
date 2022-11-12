@@ -5,8 +5,8 @@ import {
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import useToken from "../../../Hooks/useToken";
 import auth from "../../../Firebase/Firebase.init";
+import useToken from "../../../Hooks/useToken";
 import Loading from "../../SharedPages/Loading";
 
 const SignIn = () => {
