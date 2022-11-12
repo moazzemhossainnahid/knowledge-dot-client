@@ -33,7 +33,7 @@ const SignIn = () => {
   }, [token, from, navigate]);
 
   if (loading || gLoading) {
-    return <Loading></Loading>;
+    return <Loading/>;
   }
 
   if (error || gError) {
