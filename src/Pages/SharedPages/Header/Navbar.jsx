@@ -37,10 +37,6 @@ const MenuData = [
     name: "Contact US",
     href: "contact",
   },
-  {
-    name: "Login",
-    href: "signin",
-  },
 ];
 
 const Navbar = () => {
@@ -239,11 +235,11 @@ const Navbar = () => {
         ) : (
           <div className="flex">
             <button className="btn-accent btn-sm btn rounded-md text-white font-thin">
-              <Link to="Login">SignIn</Link>
+              <Link to="signin">SignIn</Link>
             </button>
             <div className="divider lg:divider-horizontal"></div>
             <button className="bg-red-500 hover:bg-red-700 btn-sm btn rounded-md text-white font-thin">
-              <Link to="SignUp">SignOut</Link>
+              <Link to="signup">SignUp</Link>
             </button>
           </div>
         )}
