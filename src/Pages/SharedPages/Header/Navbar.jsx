@@ -7,12 +7,14 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/Firebase.init";
+import { Link } from "react-router-dom";
+import { signOut } from "firebase/auth";
 
 const MenuData = [
   {
@@ -41,34 +43,22 @@ const MenuData = [
   },
 ];
 
-const Settings = [
-  {
-    name: "Profile",
-    href: "profile",
-  },
-  {
-    name: "Dashboard",
-    href: "dashboard",
-  },
-];
-
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [user] = useAuthState(auth);
+
+  const logout = () => {
+    signOut(auth);
+    //Token Remove
+    localStorage.removeItem("accessToken");
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -173,44 +163,90 @@ const Navbar = () => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+          {user ? (
+          <div className="dropdown dropdown-end">
+            <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
+              <div className="w-9 rounded-full">
+                <img
+                  src={`${
+                    user?.photoURL
+                      ? user?.photoURL
+                      : "https://github.com/MShafiMS/admission/blob/gh-pages/profile.png?raw=true"
+                  }`}
+                alt="" />
+              </div>
+            </label>
+            <ul
+              tabIndex="0"
+              className="mt-3 shadow menu menu-compact dropdown-content rounded-md w-56 bg-base-100 text-warning"
             >
-              {Settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <NavLink className=" px-3 py-2" to={setting?.href}>
-                    {setting?.name}
-                  </NavLink>
-                </MenuItem>
-              ))}
-              <Button
-                className="w-full mx-auto text-center"
-                onClick={handleCloseNavMenu}
-                sx={{ color: "black", display: "block" }}
-              >
-                Sign Out
-              </Button>
-            </Menu>
-          </Box>
+              <div className="mx-auto mt-3">
+                <div className="avatar">
+                  <div className="w-20 rounded-full">
+                    <img
+                      src={`${
+                        user?.photoURL
+                          ? user?.photoURL
+                          : "https://github.com/MShafiMS/admission/blob/gh-pages/profile.png?raw=true"
+                      }`}
+                   alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="border-b border-neutral">
+                <h1 className="text-lg text-center">
+                  {user?.displayName ? user?.displayName.slice(0, 14) : "User"}
+                </h1>
+                <p className="text-xs mb-2 text-center">Student</p>
+              </div>
+              <li>
+                <NavLink to={"profile"} className=" hover:rounded-none">
+                  <i className="ml-4 fa-solid fa-user" />
+                  Profile
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"mycourse"} className="hover:rounded-none">
+                  <i className="ml-4 fa-solid fa-bolt"></i>My Courses
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="hover:rounded-none" to={"mybooks"}>
+                  <i className="ml-4 fa-solid fa-book"></i>My Books
+                </NavLink>
+              </li>
+              {/* <li>
+                <NavLink to={"dashboard"} className="hover:rounded-none">
+                  <i className="ml-4 fa-solid fa-chart-line"></i>Dashboard
+                </NavLink>
+              </li> */}
+              <li>
+                <NavLink to={"/orders"} className="hover:rounded-none">
+                  <i className="ml-4 fa-solid fa-clock"></i>Payment History
+                </NavLink>
+              </li>
+              <li>
+                <button
+                  onClick={logout}
+                  className="hover:rounded-b-md hover:rounded-none text-red-600"
+                >
+                  <i className="ml-4 fa-solid fa-right-from-bracket"></i>
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <div className="flex">
+            <button className="btn-accent btn-sm btn rounded-md text-white font-thin">
+              <Link to="Login">SignIn</Link>
+            </button>
+            <div className="divider lg:divider-horizontal"></div>
+            <button className="bg-red-500 hover:bg-red-700 btn-sm btn rounded-md text-white font-thin">
+              <Link to="SignUp">SignOut</Link>
+            </button>
+          </div>
+        )}
         </Toolbar>
       </Container>
     </AppBar>

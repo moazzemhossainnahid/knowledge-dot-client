@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPhoneAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Profile = () => {
-  const [{ email }] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const [isEdit, setIsEdit] = useState(null);
   // const [role, roleLoading] = useRole();
   const [updateProfile, updating, error] = useUpdateProfile(auth);
@@ -22,7 +22,6 @@ const Profile = () => {
     formState: { errors },
   } = useForm();
 
-  const user = [];
 
   // if ( isLoading || updating ) {
   //   return <Loading></Loading>;
