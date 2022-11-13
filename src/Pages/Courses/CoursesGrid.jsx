@@ -4,7 +4,8 @@ import React from "react";
 
 const CoursesGrid = ({ course }) => {
   console.log(course);
-  const { name, thumb_img, instructor, price } = course;
+  const { name, thumb_img, instructor, price, rating } = course;
+  const ratings = Math.ceil(rating?.total_rating / rating?.total_people);
   return (
     <div className="mb-8 border rounded-xl lg:w-11/12">
 
@@ -15,10 +16,10 @@ const CoursesGrid = ({ course }) => {
       <div className="card-body p-0">
         <div className="flex items-center justify-between gap-2 px-4 py-2">
           <div className="flex gap-2 items-center">
-            <h3 className="text-md font-semibold text-gray-400">{course.ratings}.5</h3>
+            <h3 className="text-md font-semibold text-gray-400">{ratings}</h3>
             {
 
-              course?.ratings === 1 &&
+              ratings === 1 &&
               <div className="rating">
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" checked />
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-gray-300" />
@@ -30,7 +31,7 @@ const CoursesGrid = ({ course }) => {
             }
             {
 
-              course?.ratings === 2 &&
+              ratings === 2 &&
               <div className="rating">
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" checked />
@@ -42,7 +43,7 @@ const CoursesGrid = ({ course }) => {
             }
             {
 
-              course?.ratings === 3 &&
+              ratings === 3 &&
               <div className="rating">
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
@@ -54,7 +55,7 @@ const CoursesGrid = ({ course }) => {
             }
             {
 
-              course?.ratings === 4 &&
+              ratings === 4 &&
               <div className="rating">
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
@@ -66,7 +67,7 @@ const CoursesGrid = ({ course }) => {
             }
             {
 
-              course?.ratings === 5 &&
+              ratings === 5 &&
               <div className="rating">
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
                 <input name="rating-1" className="mask mask-star w-4 md:w-4  bg-green-500" />
