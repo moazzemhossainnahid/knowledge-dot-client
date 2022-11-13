@@ -9,7 +9,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/Firebase.init";
@@ -169,7 +168,7 @@ const Navbar = () => {
                   src={`${
                     user?.photoURL
                       ? user?.photoURL
-                      : "https://github.com/MShafiMS/admission/blob/gh-pages/profile.png?raw=true"
+                      : "https://i.ibb.co/Gscbzh5/profile.png"
                   }`}
                 alt="" />
               </div>
@@ -185,7 +184,7 @@ const Navbar = () => {
                       src={`${
                         user?.photoURL
                           ? user?.photoURL
-                          : "https://github.com/MShafiMS/admission/blob/gh-pages/profile.png?raw=true"
+                          : "https://i.ibb.co/Gscbzh5/profile.png"
                       }`}
                    alt="" />
                   </div>

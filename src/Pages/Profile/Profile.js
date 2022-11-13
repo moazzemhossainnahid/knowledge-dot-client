@@ -1,31 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { useAuthState, useUpdateProfile } from "react-firebase-hooks/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { NavHashLink } from "react-router-hash-link";
 import "./Profile.css";
 import auth from "../../Firebase/Firebase.init";
-import Loading from "../SharedPages/Loading";
-import { useQuery } from "@tanstack/react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPhoneAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Profile = () => {
   const [user] = useAuthState(auth);
-  const [isEdit, setIsEdit] = useState(null);
-  // const [role, roleLoading] = useRole();
-  const [updateProfile, updating, error] = useUpdateProfile(auth);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-
-  // if ( isLoading || updating ) {
-  //   return <Loading></Loading>;
-  // }
   return (
     <div className="mb-10">
       <div
@@ -73,7 +56,7 @@ const Profile = () => {
                         : "https://cdn3d.iconscout.com/3d/premium/thumb/profile-5590850-4652486.png"
                       }`}
                       className="w-32 h-32 rounded-full m-2"
-                    />
+                    alt=""/>
                 </div>
                 <h1 className="text-2xl font-bold">{user?.data?.name ? user?.data?.name : "- - -"}{user?.data?.gender === 'Male' && (<i className="fa-solid fa-mars text-primary ml-2"></i>)}{user?.data?.gender === 'Female' && (<i className="fa-solid fa-venus text-secondary ml-2"></i>)}</h1>
                 <h1 className="text-sm opacity-60">{user?.data?.email ? user?.data?.email : "- - -"}</h1>
