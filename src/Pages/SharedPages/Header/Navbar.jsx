@@ -230,7 +230,7 @@ const Navbar = () => {
               <Link to="signin">SignIn</Link>
             </button>
             <div className="divider lg:divider-horizontal"></div>
-            <button className="bg-red-500 hover:bg-red-700 btn-sm btn rounded-md text-white font-thin">
+            <button className="bg-red-500 hidden md:block hover:bg-red-700 btn-sm btn rounded-md text-white font-thin">
               <Link to="signup">SignUp</Link>
             </button>
           </div>
