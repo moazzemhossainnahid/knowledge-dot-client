@@ -63,7 +63,7 @@ const Navbar = () => {
     <AppBar position="sticky">
       <Container className="bg-gray-700 text-white" maxWidth="xl">
         <Toolbar disableGutters>
-          <img src="https://demo.createdbycocoon.com/moodle/edumy/2/pluginfile.php/1/theme_edumy/footerlogo1/1583196004/header-logo.png" alt="" className="object-cover " />
+          <img src="https://demo.createdbycocoon.com/moodle/edumy/2/pluginfile.php/1/theme_edumy/footerlogo1/1583196004/header-logo.png" alt="" className="object-cover hidden md:block w-10" />
           <Typography
             variant="h6"
             noWrap
@@ -124,14 +124,14 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <img src="https://demo.createdbycocoon.com/moodle/edumy/2/pluginfile.php/1/theme_edumy/footerlogo1/1583196004/header-logo.png" alt="" className="object-cover block md:hidden w-10" />
           <Typography
             variant="h5"
             noWrap
             component="a"
             href=""
             sx={{
-              mr: 2,
+              mx: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
