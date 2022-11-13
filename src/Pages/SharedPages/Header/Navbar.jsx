@@ -61,16 +61,16 @@ const Navbar = () => {
 
   return (
     <AppBar position="sticky">
-      <Container className="bg-neutral text-black" maxWidth="xl">
+      <Container className="bg-gray-700 text-white" maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <img src="https://demo.createdbycocoon.com/moodle/edumy/2/pluginfile.php/1/theme_edumy/footerlogo1/1583196004/header-logo.png" alt="" className="object-cover" />
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mx: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
@@ -152,7 +152,7 @@ const Navbar = () => {
                 sx={{ color: "black", display: "block" }}
               >
                 <NavLink
-                  className="focus:bg-gray-700 focus:text-white px-3 py-2"
+                  className="focus:bg-gray-700 focus:text-white text-white px-3 py-2"
                   to={page?.href}
                 >
                   {page?.name}
