@@ -3,12 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const CoursesGrid = ({ course }) => {
-  const { name, img } = course;
+  console.log(course);
+  const { name, thumb_img, instructor, price } = course;
   return (
     <div className="mb-8 border rounded-xl lg:w-11/12">
 
       <div className="h-44 relative overflow-hidden rounded-xl">
-        <img className="h-44 w-full relative rounded-xl hover:scale-110 duration-200" src={img} alt="Shoes" />
+        <img className="h-44 w-full relative rounded-xl hover:scale-110 duration-200" src={thumb_img} alt="Shoes" />
         {/* <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full opacity-0 hover:opacity-40 transition duration-300 ease-in-out bg-indigo-700"></div> */}
       </div>
       <div className="card-body p-0">
@@ -101,10 +102,10 @@ const CoursesGrid = ({ course }) => {
         <div className="flex justify-between items-center gap-2 p-2 border-t-2 ">
           <div className="flex justify-center items-center gap-2">
             <img src={course.instructorimg} alt="" className="rounded-full w-8 h-8" />
-            <h3 className="text-gray-600 text-sm font-semibold">{course.instructor}</h3>
+            <h3 className="text-gray-600 text-sm font-semibold">{instructor}</h3>
           </div>
           <div className="flex justify-center items-center gap-2">
-            <h3 className="text-gray-700 font-bold"> <FontAwesomeIcon icon={faInr} /> {course.price}</h3>
+            <h3 className="text-gray-700 font-bold"> <FontAwesomeIcon icon={faInr} /> {price}</h3>
           </div>
         </div>
       </div>
