@@ -15,6 +15,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/Firebase.init";
 import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBolt, faClock, faSignOutAlt, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 
 const MenuData = [
   {
@@ -197,28 +199,18 @@ const Navbar = () => {
               </div>
               <li>
                 <NavLink to={"profile"} className=" hover:rounded-none">
-                  <i className="ml-4 fa-solid fa-user" />
+                <FontAwesomeIcon icon={faUserAlt} />
                   Profile
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"mycourse"} className="hover:rounded-none">
-                  <i className="ml-4 fa-solid fa-bolt"></i>My Courses
+                <FontAwesomeIcon icon={faBolt} />My Courses
                 </NavLink>
               </li>
               <li>
-                <NavLink className="hover:rounded-none" to={"mybooks"}>
-                  <i className="ml-4 fa-solid fa-book"></i>My Books
-                </NavLink>
-              </li>
-              {/* <li>
-                <NavLink to={"dashboard"} className="hover:rounded-none">
-                  <i className="ml-4 fa-solid fa-chart-line"></i>Dashboard
-                </NavLink>
-              </li> */}
-              <li>
-                <NavLink to={"/orders"} className="hover:rounded-none">
-                  <i className="ml-4 fa-solid fa-clock"></i>Payment History
+                <NavLink to={"/phistory"} className="hover:rounded-none">
+                <FontAwesomeIcon icon={faClock} />Payment History
                 </NavLink>
               </li>
               <li>
@@ -226,7 +218,7 @@ const Navbar = () => {
                   onClick={logout}
                   className="hover:rounded-b-md hover:rounded-none text-red-600"
                 >
-                  <i className="ml-4 fa-solid fa-right-from-bracket"></i>
+                  <FontAwesomeIcon icon={faSignOutAlt} />
                   Logout
                 </button>
               </li>
