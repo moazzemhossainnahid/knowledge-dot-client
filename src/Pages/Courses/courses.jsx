@@ -1,10 +1,22 @@
+import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { AllCoursesData } from "../../Components/Components-Nahid/Data/CoursesData";
 import Sidebar from "../../Components/Components-Nahid/Sidebars/CoursesSidebar";
+import BaseURL from "../../Hooks/BaseURL";
 import CoursesGrid from "../Courses/CoursesGrid";
+import Loading from "../SharedPages/Loading";
 
 const Courses = () => {
+  const { data: AllCoursesData, isLoading } = useQuery(["AllCoursesData"], () =>
+  BaseURL.get(`/api/v1/courses`)
+);
+
+const Courses = AllCoursesData && AllCoursesData?.data;
+
+if (isLoading) {
+  return <Loading/>;
+}
+
   return (
     <div className="">
       <div className="py-5">
@@ -43,8 +55,8 @@ const Courses = () => {
                   </div>
                 </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-                  {AllCoursesData?.length &&
-                    AllCoursesData.map((data, index) => (
+                  {Courses?.length &&
+                    Courses.map((data, index) => (
                       <CoursesGrid course={data} key={index} />
                     ))}
                 </div>

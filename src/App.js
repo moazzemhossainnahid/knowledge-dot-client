@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./Pages/Home/Home";
 import LeftSideMenu from "./Components/Components-Nahid/LeftSideMenu/LeftSideMenu";
 import Curriculum from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Curriculum";
 import Instructor from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Instructor";
@@ -11,7 +12,6 @@ import SignUp from "./Pages/Authentication/SignUp/Signup";
 import Contact from "./Pages/ContactUS/Contact";
 import Courses from "./Pages/Courses/Courses";
 import SingleCourse from "./Pages/Courses/SingleCourse/SingleCourse";
-import Home from "./Pages/Home/Home";
 import BecomeInstructor from "./Pages/Instructors/BecomeInstructor";
 import Instructors from "./Pages/Instructors/Instructors";
 import NotFound from "./Pages/NotFound/NotFound";

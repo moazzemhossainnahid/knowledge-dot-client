@@ -63,7 +63,7 @@ const Navbar = () => {
     <AppBar position="sticky">
       <Container className="bg-gray-700 text-white" maxWidth="xl">
         <Toolbar disableGutters>
-          <img src="https://demo.createdbycocoon.com/moodle/edumy/2/pluginfile.php/1/theme_edumy/footerlogo1/1583196004/header-logo.png" alt="" className="object-cover" />
+          <img src="https://demo.createdbycocoon.com/moodle/edumy/2/pluginfile.php/1/theme_edumy/footerlogo1/1583196004/header-logo.png" alt="" className="object-cover " />
           <Typography
             variant="h6"
             noWrap
@@ -115,7 +115,7 @@ const Navbar = () => {
               {MenuData.map((page) => (
                 <MenuItem key={page?.name} onClick={handleCloseNavMenu}>
                   <NavLink
-                    className="focus:bg-gray-700 focus:text-white px-3 py-2"
+                    className="focus:bg-base-200 focus:text-white px-3 py-2"
                     to={page?.href}
                   >
                     {page?.name}
