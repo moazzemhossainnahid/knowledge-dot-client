@@ -5,11 +5,11 @@ import { useNavigate } from "react-router-dom";
 
 const CoursesGrid = ({ course }) => {
   // console.log(course);
-  const { _id, name, thumb_img, instructor, price, rating } = course;
+  const { _id, name, thumb_img, instructor, price, rating,level } = course;
   const ratings = Math.ceil(rating?.total_rating / rating?.total_people);
   const navigate = useNavigate();
   return (
-    <div onClick={() => navigate(`/course/${_id}`)} className="mb-8 border rounded-xl lg:w-11/12">
+    <div onClick={() => navigate(`/course/${_id}`)} className="mb-8 border cursor-pointer hover:shadow-md rounded-xl">
 
       <div className="h-44 relative overflow-hidden rounded-xl">
         <img className="h-44 w-full relative rounded-xl hover:scale-110 duration-200" src={thumb_img} alt="Shoes" />
@@ -97,7 +97,7 @@ const CoursesGrid = ({ course }) => {
               </div>
               <div className="flex text-sm items-center justify-center gap-1 ">
                 <FontAwesomeIcon icon={faChartColumn} />
-                <h3 className="text-sm">Beginners</h3>
+                <h3 className="text-sm">{level}</h3>
               </div>
             </div>
           </div>
