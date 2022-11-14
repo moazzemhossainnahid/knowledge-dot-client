@@ -13,7 +13,7 @@ const SingleCourse = () => {
     // console.log(course);
 
     return (
-        <div className='container w-full px-5 mx-auto py-20'>
+        <div className='w-full h-full px-5 mx-auto py-10'>
             <TopVideoSec course={course} />
             <TabSec  course={course} />
             <MoreCourseSec  course={course} />

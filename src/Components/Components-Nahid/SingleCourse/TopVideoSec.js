@@ -6,17 +6,14 @@ import { faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 
 
 const TopVideoSec = ({ course }) => {
-    console.log(course);
+    // console.log(course);
 
     return (
-        <div className='container'>
-
-            <div className="">
-                <h3 className="text-3xl md:text-5xl font-semibold text-left">{course?.name}</h3>
-            </div>
+        <div className='container w-full'>
+            <h3 className="text-xl md:text-3xl lg:text-5xl font-semibold text-left">{course?.name}</h3>
             <div className="flex flex-col lg:flex-row justify-center items-center gap-5 w-full h-full p-5">
                 <div className="w-full lg:w-4/6 mx-auto">
-                    <div className="lg:h-[450px] h-48 md:h-96 w-full">
+                    <div className="lg:h-[450px] h-56 md:h-96 w-full rounded-xl">
                         {course?.trailer_video ? (
                             <ReactPlayer
                                 width={"100%"}
@@ -34,20 +31,20 @@ const TopVideoSec = ({ course }) => {
                                     alt="error"
                                 />
                                 <h1 className="text-xl font-bold flex justify-center items-center text-center">
-                                    The module is not cooked yet!
+                                    The Module is not Cooked Yet!
                                 </h1>
                             </div>
                         )}
                     </div>
                 </div>
                 <div className=" w-full lg:w-2/6 text-left p-5">
-                    <div className="">
+                    <div className="w-full">
                         <h3 className="text-3xl md:text-4xl font-bold"><FontAwesomeIcon icon={faInr} />{course?.price.toLocaleString("en")} </h3>
-                        <button className="border-orange-600 text-md border-2 px-7 py-2 rounded font-semibold bg-orange-600 text-white hover:bg-white hover:text-orange-600 my-5 duration-300">Enroll This Course</button>
+                        <button className="border-orange-600 w-full text-sm border-2 px-7 mx-auto py-2 rounded font-semibold bg-orange-600 text-white hover:bg-white hover:text-orange-600 my-5 duration-300">Enroll This Course</button>
                     </div>
                     <div className="py-5">
                         <h3 className="text-2xl font-semibold pb-3">This course include</h3>
-                        <div className="text-left grid grid-cols-2 lg:grid-cols-1">
+                        <div className="text-left grid grid-cols-1">
 
                             <div className="flex justify-start items-center py-3">
                                 <span className="pr-2"><FontAwesomeIcon icon={faClock} /></span>
