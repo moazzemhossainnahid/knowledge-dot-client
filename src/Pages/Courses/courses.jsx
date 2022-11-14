@@ -1,21 +1,13 @@
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { Outlet } from "react-router-dom";
+import useCourses from "../../Apis/useCourses";
 import Sidebar from "../../Components/Components-Nahid/Sidebars/CoursesSidebar";
-import BaseURL from "../../Hooks/BaseURL";
 import CoursesGrid from "../Courses/CoursesGrid";
-import Loading from "../SharedPages/Loading";
 
 const Courses = () => {
-  const { data: AllCoursesData, isLoading } = useQuery(["AllCoursesData"], () =>
-  BaseURL.get(`/api/v1/courses`)
-);
 
-const Courses = AllCoursesData && AllCoursesData?.data;
+const {Courses} = useCourses();
 
-if (isLoading) {
-  return <Loading/>;
-}
 
   return (
     <div className="">

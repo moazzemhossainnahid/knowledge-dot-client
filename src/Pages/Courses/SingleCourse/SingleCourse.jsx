@@ -6,6 +6,7 @@ import TopVideoSec from '../../../Components/Components-Nahid/SingleCourse/TopVi
 
 const SingleCourse = () => {
     const {id} = useParams();
+    
     console.log(id);
     return (
         <div className='container w-full px-5 mx-auto py-20'>

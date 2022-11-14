@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const CoursesGrid = ({ course }) => {
   // console.log(course);
-  const { _id, name, thumb_img, instructor, price, rating,level } = course;
+  const { _id, name, thumb_img, instructor, price, rating, level, instructorimg } = course;
   const ratings = Math.ceil(rating?.total_rating / rating?.total_people);
   const navigate = useNavigate();
   return (
@@ -104,7 +104,7 @@ const CoursesGrid = ({ course }) => {
         </div>
         <div className="flex justify-between items-center gap-2 p-2 border-t-2 ">
           <div className="flex justify-center items-center gap-2">
-            <img src={course.instructorimg} alt="" className="rounded-full w-8 h-8" />
+            <img src={instructorimg} alt="" className="rounded-full w-8 h-8" />
             <h3 className="text-gray-600 text-sm font-semibold">{instructor}</h3>
           </div>
           <div className="flex justify-center items-center gap-2">
