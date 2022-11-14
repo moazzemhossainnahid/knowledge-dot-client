@@ -1,7 +1,10 @@
 import React from 'react';
 import { SingleCSidebarData } from './Data.Nahid';
 
-const TopVideoSec = () => {
+const TopVideoSec = ({ course }) => {
+    const { _id, name, thumb_img, instructor, price, rating, level, instructorimg, trailer_video } = course;
+    console.log(course);
+
     return (
         <div>
             <div className="">
