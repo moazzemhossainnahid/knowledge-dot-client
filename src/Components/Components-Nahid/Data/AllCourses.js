@@ -1,31 +1,35 @@
 export const AllCoursesData = [
     {
         "_id": "1",
-        "uname": "web-design",
+        "uname": "mern-stack-development",
         "name": "MERN Stack Development",
         "badge": "TOP",
-        "desc": "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi",
-        "abouta": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
-        "aboutb": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
-        "aboutc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis recusandae asperiores molestias esse minima quam placeat animi, aperiam officia adipisci pariatur laboriosam eum facilis.",
-        "topica": "Provident cupiditate",
-        "topicb": "Provident cupiditate",
-        "topicc": "Provident cupiditate",
-        "topicd": "Provident cupiditate",
+        "level": "Beginner",
+        "duration": 12,
+        "language": "English",
+        "accessibility": "Lifetime",
         "instructor": "Programming Hero",
         "instructorimg": "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
         "introvdo": "https://www.youtube.com/embed/RhRJh4oCySU",
-        "img": "https://static.vecteezy.com/system/resources/thumbnails/003/266/872/small/career-business-work-concept-with-business-goals-team-free-vector.jpg",
-        "list": "design",
-        "category": "Web Design",
-        "ratings": 5,
-        "file": [
+        "thumbimg": "https://static.vecteezy.com/system/resources/thumbnails/003/266/872/small/career-business-work-concept-with-business-goals-team-free-vector.jpg",
+        "list": "development",
+        "category": "Web Development",
+        "rating": {
+            "total_rating": 20,
+            "total_people": 5
+        },
+        "details": {
+            "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
+            "certificate_details": "Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.",
+            "for_whom": "Anyone interested in learning about business (only practical concepts that you can use and no boring theory + we won’t cover business topics that are common sense).",
+        },
+        "files": [
             {
                 "title": "Lesson 01",
                 "details": [
                     {
-                        "name": "Intro to Eng. for Career Development",
-                        "fileName": "Intro-to-Eng.-for-Career-Development",
+                        "name": "Intro to MERN Stack Development",
+                        "fileName": "Intro-to-MERN-Stack-Development",
                         "vurl": "https://www.youtube.com/embed/DRbhTPEDRbA"
                     },
                     {
@@ -56,7 +60,10 @@ export const AllCoursesData = [
                 ]
             }
         ],
-        "price": "6500"
+        "price": "6500",
+        "createdAt": "2022-11-14T10:42:39.867Z",
+        "updatedAt": "2022-11-14T10:42:39.867Z",
+        "__v": 0
     },
 
 ]
