@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 const CoursesGrid = ({ course }) => {
   // console.log(course);
-  const { _id, name, thumb_img, instructor, price, rating, level, instructorimg } = course;
+  const { _id, name, thumbimg, instructor, price, rating, level, instructorimg } = course;
   const ratings = Math.ceil(rating?.total_rating / rating?.total_people);
   const navigate = useNavigate();
   return (
     <div onClick={() => navigate(`/course/${_id}`)} className="mb-8 border cursor-pointer hover:shadow-md rounded-xl">
 
       <div className="h-44 relative overflow-hidden rounded-xl">
-        <img className="h-44 w-full relative rounded-xl hover:scale-110 duration-200" src={thumb_img} alt="Shoes" />
+        <img className="h-44 w-full relative rounded-xl hover:scale-110 duration-200" src={thumbimg} alt="Shoes" />
         {/* <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full opacity-0 hover:opacity-40 transition duration-300 ease-in-out bg-indigo-700"></div> */}
       </div>
       <div className="card-body p-0">
@@ -83,7 +83,7 @@ const CoursesGrid = ({ course }) => {
           <h3 className="text-gray-500">(17)</h3>
 
         </div>
-        <p className="text-xl px-4 font-header">{name}</p>
+        <p className="text-xl px-4 font-header h-20">{name}</p>
         <div className="px-4 text-md">
           <div class="card-actions flex-col mx-auto gap-3 justify-center py-5">
             <div className="flex justify-around items-center gap-2">
