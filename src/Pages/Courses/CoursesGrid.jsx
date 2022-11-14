@@ -1,13 +1,15 @@
 import { faBook, faChartColumn, faClock, faInr } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const CoursesGrid = ({ course }) => {
-  console.log(course);
-  const { name, thumb_img, instructor, price, rating } = course;
+  // console.log(course);
+  const { _id, name, thumb_img, instructor, price, rating } = course;
   const ratings = Math.ceil(rating?.total_rating / rating?.total_people);
+  const navigate = useNavigate();
   return (
-    <div className="mb-8 border rounded-xl lg:w-11/12">
+    <div onClick={() => navigate(`/course/${_id}`)} className="mb-8 border rounded-xl lg:w-11/12">
 
       <div className="h-44 relative overflow-hidden rounded-xl">
         <img className="h-44 w-full relative rounded-xl hover:scale-110 duration-200" src={thumb_img} alt="Shoes" />
