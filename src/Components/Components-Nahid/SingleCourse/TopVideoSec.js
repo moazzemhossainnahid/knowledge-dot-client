@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarDays, faCertificate, faChartColumn, faClock, faInr, faLanguage, faUsersBetweenLines } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarDays, faCertificate, faChartColumn, faClock, faHeadphonesAlt, faInr, faLanguage, faUsersBetweenLines } from '@fortawesome/free-solid-svg-icons';
 import { faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -74,6 +74,11 @@ const TopVideoSec = ({ course }) => {
                             <div className="flex justify-start items-center py-3">
                                 <span className="pr-2"><FontAwesomeIcon icon={faAccessibleIcon} /></span>
                                 <p className="text-md font-semibold">Accessibility - Lifetime</p>
+                            </div>
+
+                            <div className="flex justify-start items-center py-3">
+                                <span className="pr-2"><FontAwesomeIcon icon={faHeadphonesAlt} /></span>
+                                <p className="text-md font-semibold">Mentor Support</p>
                             </div>
 
                             <div className="flex justify-start items-center py-3">

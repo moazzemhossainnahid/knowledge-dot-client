@@ -33,7 +33,7 @@ const {Courses} = useCourses();
               <div className="col-span-3">
                 <Outlet />
                 <div className="flex flex-col md:flex-row justify-between items-center gap-2 py-5">
-                  <h3 className="text-gray-400 font-bold">Showing <span className="text-gray-500">250</span> Total Results.</h3>
+                  <h3 className="text-gray-400 font-bold">Showing <span className="text-gray-500">{Courses?.length}</span> Total Results.</h3>
                   <div className="flex justify-between items-center gap-2 px-7">
                     <h3 className="text-gray-700 font-bold">Sort By:</h3>
                     <select className="select bg-gray-300 max-w-xs">
