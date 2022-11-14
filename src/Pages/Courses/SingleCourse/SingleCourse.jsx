@@ -9,7 +9,7 @@ const SingleCourse = () => {
     const {id} = useParams();
     const {Courses} = useCourses();
 
-    const course = Courses?.find(course => course._id === id);
+    const course = Courses?.find(course => course?._id === id);
     // console.log(course);
 
     return (
