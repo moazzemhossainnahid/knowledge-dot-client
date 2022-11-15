@@ -4,8 +4,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const CoursesGrid = ({ course }) => {
-  // console.log(course);
-  const { _id, name, thumbimg, instructor, price, rating, level, instructorimg } = course;
+  console.log(course);
+  const { _id, name, thumbimg, instructor, price, rating, level, instructorimg, files } = course;
   const ratings = Math.ceil(rating?.total_rating / rating?.total_people);
   const navigate = useNavigate();
   return (
@@ -89,7 +89,7 @@ const CoursesGrid = ({ course }) => {
             <div className="flex justify-around items-center gap-2">
               <div className="flex text-sm items-center justify-center gap-1 ">
                 <FontAwesomeIcon icon={faBook} />
-                <h3 className="text-sm">6 Lesson</h3>
+                <h3 className="text-sm">{files?.length} Lessons</h3>
               </div>
               <div className="flex text-sm items-center justify-center gap-1 ">
                 <FontAwesomeIcon icon={faClock} />

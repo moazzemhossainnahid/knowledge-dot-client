@@ -250,5 +250,77 @@ export const AllCoursesData = [
         ],
         "price": 7500
     },
+    {
+        "uname": "ielts_course_by_munzereen_shahid",
+        "name": "ঘরে বসে IELTS-এর প্রস্তুতি নিন | IELTS 100% Preparation Guaranteed",
+        "level": "Expert",
+        "badge": "Top",
+        "duration": 15,
+        "language": "Bengali",
+        "accessibility": "Lifetime",
+        "instructor": "Munzereen Shahid ",
+        "instructorimg": "https://yt3.ggpht.com/ytc/AMLnZu8KJFJ3jMafPIqfjNbJGPsORFk4Np8rj9sysZU-=s176-c-k-c0x00ffffff-no-rj",
+        "thumbimg": "https://cdn.10minuteschool.com/images/thumbnails/ielts_course_by_munzereen_shahid_16_9.jpg",
+        "introvdo": "https://www.youtube.com/watch?v=_CQTvyUsTF0",
+        "list": "Learning",
+        "category": "Spoken English",
+        "rating": {
+            "total_rating": 79,
+            "total_people": 18
+        },
+        "details": {
+            "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
+            "certificate_details": "Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.",
+            "for_whom": "Anyone interested in learning about business (only practical concepts that you can use and no boring theory + we won’t cover business topics that are common sense)."
+        },
+        "files": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "IELTS Reading: Sentence Completion সহজে উত্তর করার সেরা Techniques!",
+                        "fileName": "Sentence-Completion",
+                        "vurl": "https://www.youtube.com/watch?v=pJRrsoqzBgk&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ"
+                    },
+                    {
+                        "name": "IELTS Reading: Gap Fill প্রশ্নের উত্তর করুন মিনিটেই! Solve IELTS Gap Fill Questions Easily",
+                        "fileName": "IELTS-Gap-Fill-Questions-Easily",
+                        "vurl": "https://www.youtube.com/watch?v=dp5HWUOIFMk&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=2"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "IELTS Reading 7+ Strategies | Matching Paragraph Information এর উত্তর দেওয়ার Easy উপায়!",
+                        "fileName": "Matching-Paragraph-Information",
+                        "vurl": "https://www.youtube.com/watch?v=2nj8GS9fYpw&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=3"
+                    },
+                    {
+                        "name": "IELTS Reading Test এ MCQ-এর সহজ সমাধান 🔥 Solve IELTS MCQ Questions in Minutes!",
+                        "fileName": "Solve-IELTS-MCQ-Questions",
+                        "vurl": "https://www.youtube.com/watch?v=OjWoAp8KCdI&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=4"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 03",
+                "details": [
+                    {
+                        "name": "IELTS Reading - True/False/Not Given প্রশ্ন আর ভুল হবে না",
+                        "fileName": "True/False/Not-Given",
+                        "vurl": "https://www.youtube.com/watch?v=XrLHcUQpWek&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=5"
+                    },
+                    {
+                        "name": "IELTS Reading Test এ Paragraph Heading Questions আর ভুল হবে না ",
+                        "fileName": "Paragraph-Heading-Questions",
+                        "vurl": "https://www.youtube.com/watch?v=Bo7KK-5PHy8&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=6"
+                    }
+                ]
+            }
+        ],
+        "price": 7500
+    },
 
 ]
