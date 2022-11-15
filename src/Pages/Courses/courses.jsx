@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import useCourses from "../../Apis/useCourses";
 import Sidebar from "../../Components/Components-Nahid/Sidebars/CoursesSidebar";
@@ -6,8 +6,32 @@ import CoursesGrid from "./CoursesGrid";
 
 const Courses = () => {
 
-const {Courses} = useCourses();
+  const { Courses } = useCourses();
+  const [search, setSearch] = useState([]);
+  const [categoryCourse, setCategoryCourse] = useState();
+  const [nameFilter, setNamefilter] = useState([]);
+  // Filter By Courses Category
 
+  const filterByCategory = (e) => {
+    const Category = e.target.value;
+    const result = Courses?.filter(course => course?.category === Category)
+    setCategoryCourse(result)
+  };
+
+  let loadCourses;
+
+  if (categoryCourse?.length > 0) {
+    loadCourses = categoryCourse
+  }
+  else if (nameFilter?.length > 0) {
+    loadCourses = nameFilter
+  }
+  else if (search?.length > 0) {
+    loadCourses = search
+  }
+  else {
+    loadCourses = Courses
+  }
 
   return (
     <div className="">
@@ -33,10 +57,10 @@ const {Courses} = useCourses();
               <div className="col-span-3">
                 <Outlet />
                 <div className="flex flex-col md:flex-row justify-between items-center gap-2 py-5">
-                  <h3 className="text-gray-400 font-bold">Showing <span className="text-gray-500">{Courses?.length}</span> Total Results.</h3>
+                  <h3 className="text-gray-400 font-bold">Showing <span className="text-gray-500">{loadCourses?.length}</span> Total Results.</h3>
                   <div className="flex justify-between items-center gap-2 px-7">
                     <h3 className="text-gray-700 font-bold">Sort By:</h3>
-                    <select className="select bg-gray-300 max-w-xs">
+                    <select onChange={filterByCategory} className="select bg-gray-300 max-w-xs">
                       <option disabled selected>Select Course</option>
                       <option>Web Development</option>
                       <option>Graphics Design</option>
@@ -47,8 +71,8 @@ const {Courses} = useCourses();
                   </div>
                 </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                  {Courses?.length &&
-                    Courses.map((data, index) => (
+                  {loadCourses?.length &&
+                    loadCourses?.map((data, index) => (
                       <CoursesGrid course={data} key={index} />
                     ))}
                 </div>
