@@ -8921,6 +8921,11 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
+"react-spinners@^0.13.6":
+  "integrity" "sha512-+VoSs1wN6oMhJy7PzCPiHUt6zUi9fvnGQizem8q/NzXhGovbdXFDWNhspk6KEKXQEafInUtpvtDlp/zJ5sES/A=="
+  "resolved" "https://registry.npmjs.org/react-spinners/-/react-spinners-0.13.6.tgz"
+  "version" "0.13.6"
+
 "react-stars@^2.2.5":
   "integrity" "sha512-O//KS6Z9RZnUOU/r+3+wxCzNalVn/wEWIcbAQFRV3dw8WbV+ys/kgcpBPijqTiNpHGrcwZdtb/7wF/UVem20CQ=="
   "resolved" "https://registry.npmjs.org/react-stars/-/react-stars-2.2.5.tgz"

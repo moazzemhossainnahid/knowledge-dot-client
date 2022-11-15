@@ -33,6 +33,7 @@
     "react-router-dom": "^6.4.3",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.13.6",
     "react-stars": "^2.2.5",
     "react-timer-hook": "^3.0.5",
     "sweetalert2": "^11.6.5",

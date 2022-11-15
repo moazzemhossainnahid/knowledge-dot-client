@@ -1,12 +1,12 @@
 import { faBook, faInr, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const MoreCoursesDetails = ({ course }) => {
     const navigate = useNavigate();
-    console.log(course);
     const ratings = Math.ceil(course?.rating?.total_rating / course?.rating?.total_people);
+    // console.log(course);
 
     return (
         <div key={course?._id} onClick={() => navigate(`/course/${course?._id}`)} class="card cursor-pointer group w-full overflow-hidden bg-base-100 shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
