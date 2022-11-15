@@ -2,8 +2,9 @@ import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { CoursesCategoryData } from "../Data/CoursesCategoryData";
 const CoursesSidebar = ({
-  searchResult,
-  handleFilterNum,
+  handleSearchResult,
+  handleFilterByCheckbox,
+  handleReviewFilter
 }) => {
   return (
     <div className=" bg-white px-4 pb-6 mt-3 shadow-lg border rounded-md overflow-hidden">
@@ -16,7 +17,7 @@ const CoursesSidebar = ({
           <div className="flex items-center">
             <form className="w-full space-y-5">
               <input
-                onChange={searchResult}
+                onChange={handleSearchResult}
                 className="shadow appearance-none rounded w-full py-3 px-3
                    text-gray-700 leading-tight border border-slate-300 
                    focus:outline-none focus:border-red-400 focus:ring-1
@@ -42,12 +43,12 @@ const CoursesSidebar = ({
                   <div class="flex justify-center">
                     <div>
                       {
-                        CoursesCategoryData.map(course => (
-                          <div class="form-check w-full flex justify-between items-center py-1 gap-2">
+                        CoursesCategoryData?.map(course => (
+                          <div key={course?.index} class="form-check w-full flex justify-between items-center py-1 gap-2">
                             <div className="pr-7">
-                              <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckChecked" />
-                              <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked">
-                                {course.name}
+                              <input onChange={handleFilterByCheckbox} value={course?.name} class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" id={course?.index} />
+                              <label class="form-check-label inline-block text-gray-800" for={course?.index}>
+                                {course?.name}
                               </label>
                             </div>
                             <h3 className="text-gray-500 font-semibold">(15)</h3>
@@ -79,7 +80,7 @@ const CoursesSidebar = ({
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(5)}
+                            onChange={() => handleReviewFilter(5)}
                             name="default-radio"
                             id="cat-5"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"
@@ -101,7 +102,7 @@ const CoursesSidebar = ({
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(4)}
+                            onChange={() => handleReviewFilter(4)}
                             name="default-radio"
                             id="cat-4"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"
@@ -123,7 +124,7 @@ const CoursesSidebar = ({
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(3)}
+                            onChange={() => handleReviewFilter(3)}
                             name="default-radio"
                             id="cat-3"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"
@@ -145,7 +146,7 @@ const CoursesSidebar = ({
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(2)}
+                            onChange={() => handleReviewFilter(2)}
                             name="default-radio"
                             id="cat-2"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"
@@ -167,7 +168,7 @@ const CoursesSidebar = ({
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(1)}
+                            onChange={() => handleReviewFilter(1)}
                             name="default-radio"
                             id="cat-1"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"

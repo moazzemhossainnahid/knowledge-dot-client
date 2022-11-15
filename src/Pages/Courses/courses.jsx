@@ -2,31 +2,60 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import useCourses from "../../Apis/useCourses";
 import Sidebar from "../../Components/Components-Nahid/Sidebars/CoursesSidebar";
+import Loading from "../SharedPages/Loading";
 import CoursesGrid from "./CoursesGrid";
 
 const Courses = () => {
 
   const { Courses } = useCourses();
   const [search, setSearch] = useState([]);
-  const [categoryCourse, setCategoryCourse] = useState();
-  const [nameFilter, setNamefilter] = useState([]);
+  const [categoryCourse, setCategoryCourse] = useState([]);
+  const [checkboxFilter, setCheckboxFilter] = useState([]);
+  const [reviewFilter, setReviewFilter] = useState([]);
+  const [err, setErr] = useState(false);
 
 
 
-  // Filter By Courses Category
+  /* ----------------------------------------------------------------*/
+  /*                     Filter By Name Search                       */
+  /* ----------------------------------------------------------------*/
+  const handleSearchResult = (e) => {
+    const searchText = e.target.value;
+    const result = Courses?.filter((course) =>
+      course?.name?.toLowerCase().includes(searchText.toLowerCase()));
+    setSearch(result);
+  }
+
+  /* ----------------------------------------------------------------*/
+  /*                   Filter By Courses Category                    */
+  /* ----------------------------------------------------------------*/
   const filterByCategory = (e) => {
     const Category = e.target.value;
     const result = Courses?.filter(course => course?.category === Category)
     setCategoryCourse(result)
   };
 
-  // Filter by search
-  const searchResult = (e) => {
-    const searchText = e.target.value;
-    const result = Courses?.filter((course) =>
-      course?.name?.toLowerCase().includes(searchText.toLowerCase()));
-    setSearch(result);
-  }
+  /* ----------------------------------------------------------------*/
+  /*                  Filter By Checkboy Category                    */
+  /* ----------------------------------------------------------------*/
+  const handleFilterByCheckbox = (e) => {
+    const Category = e.target.value;
+    const result = Courses?.filter(course => course?.category === Category);
+    // console.log(result);
+    setCheckboxFilter(result)
+  };
+
+
+  /* ----------------------------------------------------------------*/
+  /*                       Filter By Ratings                         */
+  /* ----------------------------------------------------------------*/
+  const handleReviewFilter = (num) => {
+    if (num) {
+      const filterData = Courses?.filter((cData) => Math.ceil(cData?.rating?.total_rating / cData?.rating?.total_people) === parseInt(num));
+      setReviewFilter(filterData);
+    }
+  };
+
 
 
   // Load Courses By Filter Type
@@ -35,15 +64,18 @@ const Courses = () => {
   if (categoryCourse?.length > 0) {
     loadCourses = categoryCourse
   }
-  else if (nameFilter?.length > 0) {
-    loadCourses = nameFilter
+  else if (checkboxFilter?.length > 0) {
+    loadCourses = checkboxFilter
   }
   else if (search?.length > 0) {
     loadCourses = search
   }
+  else if (reviewFilter?.length > 0) {
+    loadCourses = reviewFilter
+  }
   else {
     loadCourses = Courses
-  }
+  };
 
   return (
     <div className="">
@@ -61,7 +93,7 @@ const Courses = () => {
                 <div className="sticky top-20">
                   <aside>
                     <div className="md:mb-3 pb-10">
-                      <Sidebar searchResult={searchResult} />
+                      <Sidebar handleSearchResult={handleSearchResult} handleFilterByCheckbox={handleFilterByCheckbox} handleReviewFilter={handleReviewFilter} />
                     </div>
                   </aside>
                 </div>
@@ -83,10 +115,11 @@ const Courses = () => {
                   </div>
                 </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                  {loadCourses?.length &&
+                  {loadCourses?.length ?
                     loadCourses?.map((data, index) => (
                       <CoursesGrid course={data} key={index} />
-                    ))}
+                    )) :
+                    <Loading/>}
                 </div>
               </div>
             </div>

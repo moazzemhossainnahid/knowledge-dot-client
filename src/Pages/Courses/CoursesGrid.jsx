@@ -4,7 +4,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const CoursesGrid = ({ course }) => {
-  console.log(course);
+  // console.log(course);
   const { _id, name, thumbimg, instructor, price, rating, level, instructorimg, files } = course;
   const ratings = Math.ceil(rating?.total_rating / rating?.total_people);
   const navigate = useNavigate();
