@@ -18,6 +18,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Pages/SharedPages/Footer/Footer";
 import Navbar from "./Pages/SharedPages/Header/Navbar";
 import ForgetPassword from "./Pages/Authentication/SignIn/ForgetPassword";
+import Checkout from "./Pages/Checkout/Checkout";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

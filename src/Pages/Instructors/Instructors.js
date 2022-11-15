@@ -1,15 +1,21 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faPinterest,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import React, { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import BestInstructor from "./BestInstructor";
+import GeneralTeacher from "./GeneralTeacher";
 
 const Instructors = () => {
+  const [instructors, setInstructors] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        "https://knowledge-dot-server-production.up.railway.app/api/v1/instructors"
+      )
+      .then((data) => setInstructors(data.data));
+  }, []);
+  // console.log(instructors);
+
   const navigate = useNavigate();
   return (
     <div className="w-full mx-auto py-20  text-slate-800 mb-20">
@@ -25,74 +31,14 @@ const Instructors = () => {
           </p>
         </div>
       </div>
-
+      <div></div>
+      {/* dh */}
       <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full mb-20">
-        <div data-aos="fade-up" class="card w-96 m-auto">
-          <figure>
-            <img
-              src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/instructor-img-2.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <div class="card-body flex items-center">
-            <h2 class="font-bold text-2xl text-center"> Jacke Masitos</h2>
-            <h3 className="text-center  mb-5">Special Assistant</h3>
-            <p className="text-center">
-              Donec iaculis mi eget tempus lobortis. Maecenas vitae velit neque.
-              Pellentesque suscipit facilisis sapien. Suspen auctor…
-            </p>
-            <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-              <FontAwesomeIcon icon={faFacebook} />
-              <FontAwesomeIcon icon={faTwitter} />
-              <FontAwesomeIcon icon={faPinterest} />
-              <FontAwesomeIcon icon={faInstagram} />
-            </div>
-          </div>
-        </div>
-        <div data-aos="fade-up" class="card w-96 m-auto">
-          <figure>
-            <img
-              src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/instructor-img-3.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <div class="card-body flex items-center">
-            <h2 class="font-bold text-2xl text-center"> Richard Dune</h2>
-            <h3 className="text-center  mb-5">Special Assistant</h3>
-            <p className="text-center">
-              Donec iaculis mi eget tempus lobortis. Maecenas vitae velit neque.
-              Pellentesque suscipit facilisis sapien. Suspen auctor…
-            </p>
-            <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-              <FontAwesomeIcon icon={faFacebook} />
-              <FontAwesomeIcon icon={faTwitter} />
-              <FontAwesomeIcon icon={faPinterest} />
-              <FontAwesomeIcon icon={faInstagram} />
-            </div>
-          </div>
-        </div>
-        <div data-aos="fade-up" class="card w-96 m-auto">
-          <figure>
-            <img
-              src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/instructor-img-4.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <div class="card-body flex items-center">
-            <h2 class="font-bold text-2xl text-center"> Glen Anders</h2>
-            <h3 className="text-center  mb-5">Special Assistant</h3>
-            <p className="text-center">
-              Donec iaculis mi eget tempus lobortis. Maecenas vitae velit neque.
-              Pellentesque suscipit facilisis sapien. Suspen auctor…
-            </p>
-            <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-              <FontAwesomeIcon icon={faFacebook} />
-              <FontAwesomeIcon icon={faTwitter} />
-              <FontAwesomeIcon icon={faPinterest} />
-              <FontAwesomeIcon icon={faInstagram} />
-            </div>
-          </div>
-        </div>
+        {instructors.map((instructor) => {
+          if (instructor.teacherCategory == "best") {
+            return <BestInstructor instructor={instructor}></BestInstructor>;
+          }
+        })}
       </div>
 
       <div className="text-center mb-20">
@@ -298,168 +244,11 @@ const Instructors = () => {
         </div>
 
         <div className="grid md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 sm:gap-16 md:gap-8 my-12 mt-20 ">
-          <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center">
-            <div className="h-40 w-40">
-              <img
-                src="https://academist.qodeinteractive.com/wp-content/uploads/2018/06/main-home-team-big-1.jpg?"
-                alt="t"
-              />
-            </div>
-            <div className="">
-              <h1 className="text-xl font-bold">Mark Hook</h1>
-              <p className="text-sm  my-4">Teacher </p>
-              <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faPinterest} />
-                <FontAwesomeIcon icon={faInstagram} />
-              </div>
-            </div>
-          </div>
-          <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center">
-            <div className="h-40 w-40">
-              <img
-                src="https://academist.qodeinteractive.com/wp-content/uploads/2018/06/main-home-team-big-4.jpg?"
-                alt="t"
-              />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">Tom Ander</h1>
-              <p className="text-sm  my-4">Teacher</p>
-              <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faPinterest} />
-                <FontAwesomeIcon icon={faInstagram} />
-              </div>
-            </div>
-          </div>
-          <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center">
-            <div className="h-40 w-40">
-              <img
-                src="https://academist.qodeinteractive.com/wp-content/uploads/2018/06/main-home-team-big-5.jpg?"
-                alt="t"
-              />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">Neil Falynn</h1>
-              <p className="text-sm  my-4">Teacher</p>
-              <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faPinterest} />
-                <FontAwesomeIcon icon={faInstagram} />
-              </div>
-            </div>
-          </div>
-          <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center">
-            <div className="h-40 w-40">
-              <img
-                src="https://academist.qodeinteractive.com/wp-content/uploads/2018/06/main-home-team-big-2.jpg?"
-                alt="t"
-              />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">Neil Falynn</h1>
-              <p className="text-sm  my-4">Teacher</p>
-              <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faPinterest} />
-                <FontAwesomeIcon icon={faInstagram} />
-              </div>
-            </div>
-          </div>
-          <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center">
-            <div className="h-40 w-40">
-              <img
-                src="https://academist.qodeinteractive.com/wp-content/uploads/2018/06/main-home-team-big-3.jpg?"
-                alt="t"
-              />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">Neil Falynn</h1>
-              <p className="text-sm  my-4">Teacher</p>
-              <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faPinterest} />
-                <FontAwesomeIcon icon={faInstagram} />
-              </div>
-            </div>
-          </div>
-          <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center">
-            <div className="h-40 w-40">
-              <img
-                src="https://academist.qodeinteractive.com/wp-content/uploads/2018/06/main-home-team-big-6.jpg?"
-                alt="t"
-              />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">Neil Falynn</h1>
-              <p className="text-sm  my-4">Teacher</p>
-              <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faPinterest} />
-                <FontAwesomeIcon icon={faInstagram} />
-              </div>
-            </div>
-          </div>
-          <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center">
-            <div className="h-40 w-40">
-              <img
-                src="https://academist.qodeinteractive.com/wp-content/uploads/2018/06/main-home-team-big-7.jpg?"
-                alt="t"
-              />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">Neil Falynn</h1>
-              <p className="text-sm  my-4">Teacher</p>
-              <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faPinterest} />
-                <FontAwesomeIcon icon={faInstagram} />
-              </div>
-            </div>
-          </div>
-          <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center">
-            <div className="h-40 w-40">
-              <img
-                src="https://academist.qodeinteractive.com/wp-content/uploads/2018/06/main-home-team-big-8.jpg?"
-                alt="t"
-              />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">Neil Falynn</h1>
-              <p className="text-sm  my-4">Teacher</p>
-              <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faPinterest} />
-                <FontAwesomeIcon icon={faInstagram} />
-              </div>
-            </div>
-          </div>
-          <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center">
-            <div className="h-40 w-40">
-              <img
-                src="https://academist.qodeinteractive.com/wp-content/uploads/2018/06/main-home-team-big-9.jpg?"
-                alt="t"
-              />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">Neil Falynn</h1>
-              <p className="text-sm  my-4">Teacher</p>
-              <div className="flex items-center gap-4 text-gray-500 mt-5 text-xl">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faPinterest} />
-                <FontAwesomeIcon icon={faInstagram} />
-              </div>
-            </div>
-          </div>
+          {instructors.map((instructor) => {
+            if (instructor.teacherCategory == "normal") {
+              return <GeneralTeacher instructor={instructor}></GeneralTeacher>;
+            }
+          })}
         </div>
       </div>
 

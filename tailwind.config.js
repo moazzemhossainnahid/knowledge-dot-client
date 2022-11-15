@@ -4,7 +4,7 @@ const plugin = require("tailwindcss/plugin");
 const Myclass = plugin(function ({ addUtilities }) {
   addUtilities({
     ".my-rotate-y-180": {
-      transform: "rotateY(180deg)",
+      transform: "rotateY(-180deg)",
     },
     ".preserve-3d": {
       transformStyle: "preserve-3d",
@@ -18,7 +18,10 @@ const Myclass = plugin(function ({ addUtilities }) {
   });
 });
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}", './node_modules/tw-elements/dist/js/**/*.js'],
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
   theme: {
     fontFamily: {
       sans: ["Qwigley"],
