@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import useCourses from "../../Apis/useCourses";
 import Sidebar from "../../Components/Components-Nahid/Sidebars/CoursesSidebar";
-import CoursesGrid from "../Courses/CoursesGrid";
+import CoursesGrid from "./CoursesGrid";
 
 const Courses = () => {
 
@@ -38,11 +38,11 @@ const {Courses} = useCourses();
                     <h3 className="text-gray-700 font-bold">Sort By:</h3>
                     <select className="select bg-gray-300 max-w-xs">
                       <option disabled selected>Select Course</option>
-                      <option>Web Design</option>
-                      <option>Spoken English</option>
-                      <option>Learn Figma</option>
                       <option>Web Development</option>
+                      <option>Graphics Design</option>
                       <option>Wordpress Design</option>
+                      <option>Spoken English</option>
+                      <option>Others</option>
                     </select>
                   </div>
                 </div>

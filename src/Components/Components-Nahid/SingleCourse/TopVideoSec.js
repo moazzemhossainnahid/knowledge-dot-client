@@ -6,7 +6,8 @@ import { faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 
 
 const TopVideoSec = ({ course }) => {
-    // console.log(course);
+    // console.log(course); 
+    console.log(course?.files.length);
 
     return (
         <div className='container w-full'>
@@ -48,17 +49,17 @@ const TopVideoSec = ({ course }) => {
 
                             <div className="flex justify-start items-center py-3">
                                 <span className="pr-2"><FontAwesomeIcon icon={faClock} /></span>
-                                <p className="text-md font-semibold">Duration - 10 Weeks</p>
+                                <p className="text-md font-semibold">Duration - {course?.duration} Weeks</p>
                             </div>
 
                             <div className="flex justify-start items-center py-3">
                                 <span className="pr-2"><FontAwesomeIcon icon={faChartColumn} /></span>
-                                <p className="text-md font-semibold">Skill Level - Beginners</p>
+                                <p className="text-md font-semibold">Skill Level - {course?.level}</p>
                             </div>
 
                             <div className="flex justify-start items-center py-3">
                                 <span className="pr-2"><FontAwesomeIcon icon={faCalendarDays} /></span>
-                                <p className="text-md font-semibold">Lectures - 10 Lessons</p>
+                                <p className="text-md font-semibold">Lectures - {course?.files?.length} Lessons</p>
                             </div>
 
                             <div className="flex justify-start items-center py-3">
@@ -68,12 +69,12 @@ const TopVideoSec = ({ course }) => {
 
                             <div className="flex justify-start items-center py-3">
                                 <span className="pr-2"><FontAwesomeIcon icon={faLanguage} /></span>
-                                <p className="text-md font-semibold">Language - English</p>
+                                <p className="text-md font-semibold">Language - {course?.language}</p>
                             </div>
 
                             <div className="flex justify-start items-center py-3">
                                 <span className="pr-2"><FontAwesomeIcon icon={faAccessibleIcon} /></span>
-                                <p className="text-md font-semibold">Accessibility - Lifetime</p>
+                                <p className="text-md font-semibold">Accessibility - {course?.accessibility}</p>
                             </div>
 
                             <div className="flex justify-start items-center py-3">
