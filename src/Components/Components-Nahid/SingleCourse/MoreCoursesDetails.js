@@ -1,13 +1,15 @@
 import { faBook, faInr, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const MoreCoursesDetails = ({ course }) => {
+    const navigate = useNavigate();
     console.log(course);
     const ratings = Math.ceil(course?.rating?.total_rating / course?.rating?.total_people);
 
     return (
-        <div key={course?._id} class="card group w-full overflow-hidden bg-base-100 shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
+        <div key={course?._id} onClick={() => navigate(`/course/${course?._id}`)} class="card cursor-pointer group w-full overflow-hidden bg-base-100 shadow-xl hover:text-white hover:bg-gradient-to-tr from-[#090909bb] to-[#0000008f] bg-cover bg-center duration-300">
             <div class="card-actions justify-end absolute top-5 right-2">
                 <div class="badge badge-primary px-3 py-2"><FontAwesomeIcon icon={faInr} /> {course?.price} </div>
             </div>
