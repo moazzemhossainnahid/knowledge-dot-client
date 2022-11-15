@@ -10,14 +10,26 @@ const Courses = () => {
   const [search, setSearch] = useState([]);
   const [categoryCourse, setCategoryCourse] = useState();
   const [nameFilter, setNamefilter] = useState([]);
-  // Filter By Courses Category
 
+
+
+  // Filter By Courses Category
   const filterByCategory = (e) => {
     const Category = e.target.value;
     const result = Courses?.filter(course => course?.category === Category)
     setCategoryCourse(result)
   };
 
+  // Filter by search
+  const searchResult = (e) => {
+    const searchText = e.target.value;
+    const result = Courses?.filter((course) =>
+      course?.name?.toLowerCase().includes(searchText.toLowerCase()));
+    setSearch(result);
+  }
+
+
+  // Load Courses By Filter Type
   let loadCourses;
 
   if (categoryCourse?.length > 0) {
@@ -49,7 +61,7 @@ const Courses = () => {
                 <div className="sticky top-20">
                   <aside>
                     <div className="md:mb-3 pb-10">
-                      <Sidebar />
+                      <Sidebar searchResult={searchResult} />
                     </div>
                   </aside>
                 </div>

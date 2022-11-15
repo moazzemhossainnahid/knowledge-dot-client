@@ -2,7 +2,7 @@ import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { CoursesCategoryData } from "../Data/CoursesCategoryData";
 const CoursesSidebar = ({
-  handleSearchFiltering,
+  searchResult,
   handleFilterNum,
 }) => {
   return (
@@ -16,7 +16,7 @@ const CoursesSidebar = ({
           <div className="flex items-center">
             <form className="w-full space-y-5">
               <input
-                onChange={handleSearchFiltering}
+                onChange={searchResult}
                 className="shadow appearance-none rounded w-full py-3 px-3
                    text-gray-700 leading-tight border border-slate-300 
                    focus:outline-none focus:border-red-400 focus:ring-1
