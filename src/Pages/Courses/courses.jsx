@@ -106,9 +106,9 @@ const Courses = () => {
                     <h3 className="text-gray-700 font-bold">Sort By:</h3>
                     <select onChange={filterByCategory} className="select bg-gray-300 max-w-xs">
                       <option disabled selected>Select Course</option>
+                      <option>Web Design</option>
                       <option>Web Development</option>
                       <option>Graphics Design</option>
-                      <option>Wordpress Design</option>
                       <option>Spoken English</option>
                       <option>Others</option>
                     </select>

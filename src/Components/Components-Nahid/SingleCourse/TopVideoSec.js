@@ -15,7 +15,7 @@ const TopVideoSec = ({ course }) => {
             <div className="flex flex-col lg:flex-row justify-center items-center gap-5 w-full h-full p-5">
                 <div className="w-full lg:w-4/6 mx-auto">
                     <div className="lg:h-[450px] h-56 md:h-96 w-full rounded-xl">
-                        {course?.introvd ? (
+                        {course?.introvdo ? (
                             <ReactPlayer
                                 width={"100%"}
                                 height={"100%"}
