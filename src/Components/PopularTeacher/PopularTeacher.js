@@ -3,7 +3,7 @@ import React from 'react';
 const PopularTeacher = () => {
     return (
         <div>
-            this is teacher
+            This is teacher
         </div>
     );
 };
