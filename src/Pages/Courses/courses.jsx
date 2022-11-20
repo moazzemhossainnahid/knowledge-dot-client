@@ -24,7 +24,7 @@ const Courses = () => {
       course?.name?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.category?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.list?.toLowerCase().includes(searchText.toLowerCase()) ||
-      course?.language?.toLowerCase().includes(searchText.toLowerCase())
+      course?.language?.toLowerCase().includes(searchText.toLowerCase()) 
     );
     setSearch(result);
   }
@@ -85,7 +85,7 @@ const Courses = () => {
 
   return (
     <div className="">
-      <div className="py-5">
+      <div className="py-3">
         <h3 className="text-4xl font-bold text-center py-4">
           User Interface Courses
         </h3>
