@@ -666,6 +666,103 @@ export const AllCoursesData = [
         ],
         "price": 5500
     },
+    {
+        "uname": "become-an-seo-expert-by-khalid-farhan",
+        "name": "আপনি কি একজন এসইও এক্সপার্ট হতে চান? - Become an SEO Expert Today! | course with Khalid Farhan",
+        "level": "Beginner",
+        "badge": "Popular",
+        "duration": 12,
+        "language": "Bengali",
+        "accessibility": "Lifetime",
+        "instructor": "Khalid Farhan",
+        "instructorimg": "https://i.ibb.co/5Rdp7rW/1643913840352.jpg",
+        "thumbimg": "https://i.ytimg.com/vi/30NBngoINVI/maxresdefault.jpg",
+        "introvdo": "https://www.youtube.com/watch?v=n-KTPBu0GNA",
+        "list": "Learning",
+        "category": "Others",
+        "rating": {
+            "total_rating": 45,
+            "total_people": 40
+        },
+        "details": {
+            "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
+            "certificate_details": "Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.",
+            "for_whom": "Anyone interested in learning about business (only practical concepts that you can use and no boring theory + we won’t cover business topics that are common sense)."
+        },
+        "files": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "Introducing to Lead Gen Organic Local",
+                        "fileName": "introducing-to-led-generation",
+                        "vurl": "https://www.youtube.com/watch?v=P4D1093hdoc&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=1"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "Industry Market Reasearch | Local SEO Course by Khalid Farhan",
+                        "fileName": "industry-market-research",
+                        "vurl": "https://www.youtube.com/watch?v=Z0eJi15pKn4&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=2"
+                    },
+                    {
+                        "name": "Finalizing Nice | Local SEO Course by Khalid Farhan",
+                        "fileName": "finalize-nice",
+                        "vurl": "https://www.youtube.com/watch?v=y8ihiC-sIxk&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=3"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 03",
+                "details": [
+                    {
+                        "name": "Buying Domain | Local SEO Course by Khalid Farhan",
+                        "fileName": "buying-domain",
+                        "vurl": "https://www.youtube.com/watch?v=thglGl_c0IQ&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=4"
+                    },
+                    {
+                        "name": "GMB Listing | Local SEO Course by Khalid Farhan",
+                        "fileName": "gmb-learning",
+                        "vurl": "https://www.youtube.com/watch?v=w8uD7YApqxM&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=5"
+                    },
+                    {
+                        "name": "Installing Theme | Local SEO Course by Khalid Farhan",
+                        "fileName": "installing-theme",
+                        "vurl": "https://www.youtube.com/watch?v=VXjL6LKp3d0&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=6"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 04",
+                "details": [
+                    {
+                        "name": "Insatlling Plugins | Local SEO Course by Khalid Farhan",
+                        "fileName": "installing-plugin",
+                        "vurl": "https://www.youtube.com/watch?v=BF1MALsb5UQ&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=7"
+                    },
+                    {
+                        "name": "Site Desing | Local SEO Course by Khalid Farhan",
+                        "fileName": "site-designing",
+                        "vurl": "https://www.youtube.com/watch?v=BueVLWBWzIw&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=8"
+                    },
+                    {
+                        "name": "How To Rank A Lead Gen Site | Local SEO Course by Khalid Farhan",
+                        "fileName": "how-to-rank-site",
+                        "vurl": "https://www.youtube.com/watch?v=L6KDWvwbpTo&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=9"
+                    },
+                    {
+                        "name": "SEO Agency VS SEO Consultant | Local SEO Course by Khalid Farhan",
+                        "fileName": "seo-agency-vs-seo-consultant",
+                        "vurl": "https://www.youtube.com/watch?v=sjSl_ZN1_cc&list=PL1KjJob0fDsCtlw5XvUwRMlOohg3GgAs1&index=10"
+                    }
+                ]
+            },
+        ],
+        "price": 5100
+    },
 
 
 ]
