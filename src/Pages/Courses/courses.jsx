@@ -39,7 +39,7 @@ const Courses = () => {
   };
 
   /* ----------------------------------------------------------------*/
-  /*                  Filter By Checkboy Category                    */
+  /*                  Filter By Checkbox Category                    */
   /* ----------------------------------------------------------------*/
   const handleFilterByCheckbox = (e) => {
     const Category = e.target.value;
