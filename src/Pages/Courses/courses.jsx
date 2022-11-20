@@ -31,8 +31,11 @@ const Courses = () => {
   /* ----------------------------------------------------------------*/
   const filterByCategory = (e) => {
     const Category = e.target.value;
-    const result = Courses?.filter(course => course?.category === Category)
-    setCategoryCourse(result)
+    if (Category === "All Courses") {
+      setCategoryCourse(Courses)
+    };
+    const result = Courses?.filter(course => course?.category === Category);
+    setCategoryCourse(result);
   };
 
   /* ----------------------------------------------------------------*/
@@ -106,6 +109,7 @@ const Courses = () => {
                     <h3 className="text-gray-700 font-bold">Sort By:</h3>
                     <select onChange={filterByCategory} className="select bg-gray-300 max-w-xs">
                       <option disabled selected>Select Course</option>
+                      <option>All Courses</option>
                       <option>Web Design</option>
                       <option>Web Development</option>
                       <option>Graphics Design</option>
@@ -119,7 +123,7 @@ const Courses = () => {
                     loadCourses?.map((data, index) => (
                       <CoursesGrid course={data} key={index} />
                     )) :
-                    <Loading/>}
+                    <Loading />}
                 </div>
               </div>
             </div>
