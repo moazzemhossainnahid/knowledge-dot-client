@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import { PacmanLoader } from "react-spinners";
 
 const Loading = () => {
-    return (
-        <div className="flex items-center justify-center ">
-            <div className="w-16 h-16 border-b-2 border-gray-900 rounded-full animate-spin"></div>
-        </div>
-    );
+  return (
+    <div className="flex justify-center items-center mt-2 w-full h-screen py-10">
+      <PacmanLoader color="#137c38" size={70} cssOverride />
+    </div>
+  );
 };
 
-export default Loading;      
+export default Loading;

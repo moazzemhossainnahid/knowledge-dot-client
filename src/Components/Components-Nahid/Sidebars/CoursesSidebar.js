@@ -1,7 +1,11 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { CoursesCategoryData } from "../Data/CoursesCategoryData";
-const CoursesSidebar = ({ handleSearchFiltering, handleFilterNum }) => {
+const CoursesSidebar = ({
+  handleSearchResult,
+  handleFilterByCheckbox,
+  handleReviewFilter
+}) => {
   return (
     <div className=" bg-white px-4 pb-6 mt-3 shadow-lg border rounded-md overflow-hidden">
       <div className="divide-y divide-gray-200 space-y-5">
@@ -13,7 +17,7 @@ const CoursesSidebar = ({ handleSearchFiltering, handleFilterNum }) => {
           <div className="flex items-center">
             <form className="w-full space-y-5">
               <input
-                onChange={handleSearchFiltering}
+                onChange={handleSearchResult}
                 className="shadow appearance-none rounded w-full py-3 px-3
                    text-gray-700 leading-tight border border-slate-300 
                    focus:outline-none focus:border-red-400 focus:ring-1
@@ -103,7 +107,7 @@ const CoursesSidebar = ({ handleSearchFiltering, handleFilterNum }) => {
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(5)}
+                            onChange={() => handleReviewFilter(5)}
                             name="default-radio"
                             id="cat-5"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"
@@ -127,7 +131,7 @@ const CoursesSidebar = ({ handleSearchFiltering, handleFilterNum }) => {
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(4)}
+                            onChange={() => handleReviewFilter(4)}
                             name="default-radio"
                             id="cat-4"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"
@@ -151,7 +155,7 @@ const CoursesSidebar = ({ handleSearchFiltering, handleFilterNum }) => {
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(3)}
+                            onChange={() => handleReviewFilter(3)}
                             name="default-radio"
                             id="cat-3"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"
@@ -175,7 +179,7 @@ const CoursesSidebar = ({ handleSearchFiltering, handleFilterNum }) => {
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(2)}
+                            onChange={() => handleReviewFilter(2)}
                             name="default-radio"
                             id="cat-2"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"
@@ -199,7 +203,7 @@ const CoursesSidebar = ({ handleSearchFiltering, handleFilterNum }) => {
                         <div className="flex items-center">
                           <input
                             type="radio"
-                            onChange={() => handleFilterNum(1)}
+                            onChange={() => handleReviewFilter(1)}
                             name="default-radio"
                             id="cat-1"
                             className="text-primary focus:ring-0 rounded-sm cursor-pointer"

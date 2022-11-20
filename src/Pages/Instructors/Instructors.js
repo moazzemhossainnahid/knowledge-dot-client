@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import BestInstructor from "./BestInstructor";
 import GeneralTeacher from "./GeneralTeacher";
+import InstructorCarousel from "./InstructorCarousel";
 
 const Instructors = () => {
   const [instructors, setInstructors] = useState([]);
@@ -24,7 +25,7 @@ const Instructors = () => {
           <h1 className="te mb-5 text-4xl md:text-5xl font-bold">
             The Best Tutors
           </h1>
-          <p className="mb-5 text-2xl lg:w-[820px] mx-auto">
+          <p className="mb-5 text-2xl lg:w-[780px] mx-auto text-justify">
             Proin ac lobortis arcu, a vestibulum augue. Vivamus ipsum neque,
             facilisis vel mollis vitae, mollis nec ante. Quisque aliquam dictum
             condim.
@@ -32,7 +33,7 @@ const Instructors = () => {
         </div>
       </div>
       <div></div>
-      {/* dh */}
+      {/* Best Instructor Page */}
       <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full mb-20">
         {instructors.map((instructor) => {
           if (instructor.teacherCategory == "best") {
@@ -98,7 +99,7 @@ const Instructors = () => {
         </div>
       </div>
 
-      <div class="divider"></div>
+      <div className="divider"></div>
 
       <div className="hero text-center font-thin mt-16 mb-20">
         <div class="flex lg:flex-row sm:flex-col md:flex-row w-full">
@@ -139,92 +140,9 @@ const Instructors = () => {
           </div>
         </div>
       </div>
+      <div className="divider"></div>
 
-      <div
-        className="hero"
-        style={{
-          backgroundImage:
-            "url(https://esmarts.qodeinteractive.com/wp-content/uploads/2017/09/testimonials-background-1.jpg)",
-          height: "420px",
-          width: "100%",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div class="carousel w-full">
-          <div
-            id="item1"
-            class="carousel-item w-full flex flex-col justify-center "
-          >
-            <div className="p-10 rounden dark:text-slate-200 text-white">
-              <div className="h-40 w-40 m-auto">
-                <img
-                  src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/h1-t6.png?"
-                  alt="t"
-                />
-              </div>
-              <div>
-                <h1 className="text-center text-xl font-bold">Anniy Page </h1>
-                <h2 className="text-center">Student</h2>
-                <p className="text-sm  my-4 text-center">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore edolore magna
-                  aliquyam erat, sed diam voluptua.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            id="item2"
-            class="carousel-item w-full flex flex-col justify-center "
-          >
-            <div className="p-10 rounden dark:text-slate-200 text-white">
-              <div className="h-40 w-40 m-auto">
-                <img
-                  src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/h1-t5-150x150.png?"
-                  alt="t"
-                />
-              </div>
-              <div>
-                <h1 className="text-center text-xl font-bold">John Evan</h1>
-                <h2 className="text-center">Student</h2>
-                <p className="text-sm  my-4 text-center">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore edolore magna
-                  aliquyam erat, sed diam voluptua.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            id="item3"
-            class="carousel-item w-full flex flex-col justify-center "
-          >
-            <div className="p-10 rounden dark:text-slate-200 text-white">
-              <div className="h-40 w-40 m-auto">
-                <img
-                  src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/h1-t4-150x150.png?"
-                  alt="t"
-                />
-              </div>
-              <div>
-                <h1 className="text-center text-xl font-bold">Barbara Mori</h1>
-                <h2 className="text-center">Student</h2>
-                <p className="text-sm  my-4 text-center">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore edolore magna
-                  aliquyam erat, sed diam voluptua.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-center w-full py-2 gap-2 mt-96">
-          <a href="#item1" class="btn btn-circle bg-white h-[50]"></a>
-          <a href="#item2" class="btn btn-circle bg-white"></a>
-          <a href="#item3" class="btn btn-circle bg-white"></a>
-        </div>
-      </div>
+      <InstructorCarousel />
 
       <div className="mt-28 ml-10">
         <div className="flex flex-col items-center ">
@@ -262,7 +180,7 @@ const Instructors = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div class="card-bod lg:w-2/4 md:w-3/4 w-full sm:bottom-5 right-0 absolute">
+        <div class="card-body tracking-wide lg:w-2/4 md:w-3/4 w-full sm:bottom-5 right-0 absolute">
           <h2 className="text-primary font-semibold">
             Upskill Your Team With World-Class Learning{" "}
           </h2>

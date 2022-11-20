@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./Pages/Home/Home";
 import LeftSideMenu from "./Components/Components-Nahid/LeftSideMenu/LeftSideMenu";
 import Curriculum from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Curriculum";
 import Instructor from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Instructor";
@@ -11,7 +12,6 @@ import SignUp from "./Pages/Authentication/SignUp/Signup";
 import Contact from "./Pages/ContactUS/Contact";
 import Courses from "./Pages/Courses/Courses";
 import SingleCourse from "./Pages/Courses/SingleCourse/SingleCourse";
-import Home from "./Pages/Home/Home";
 import BecomeInstructor from "./Pages/Instructors/BecomeInstructor";
 import Instructors from "./Pages/Instructors/Instructors";
 import NotFound from "./Pages/NotFound/NotFound";
@@ -19,6 +19,8 @@ import Footer from "./Pages/SharedPages/Footer/Footer";
 import Navbar from "./Pages/SharedPages/Header/Navbar";
 import ForgetPassword from "./Pages/Authentication/SignIn/ForgetPassword";
 import Checkout from "./Pages/Checkout/Checkout";
+import Profile from "./Pages/Profile/Profile";
+import BookingSuccess from "./Pages/Checkout/BookingSuccess";
 
 function App() {
   return (
@@ -28,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/course" element={<SingleCourse />}>
+          <Route path="/course/:id" element={<SingleCourse />}>
             <Route index element={<Overview />} />
             <Route path="overview" element={<Overview />} />
             <Route path="curriculum" element={<Curriculum />} />
@@ -43,7 +45,9 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout/:id" element={<Checkout />} />
+          <Route path="/booking/:id" element={<BookingSuccess />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
