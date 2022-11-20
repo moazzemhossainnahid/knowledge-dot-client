@@ -595,22 +595,22 @@ export const AllCoursesData = [
         "price": 6790
     },
     {
-        "uname": "how-to-become",
-        "name": "How to become a graphic designer with full information | course with MD.NAHID",
+        "uname": "ui/ux-design-course-by-md.nahid",
+        "name": "Best New UX/UI Courses + Google's New UX Certificate! | course with MD.NAHID",
         "level": "Beginner",
         "badge": "Normal",
         "duration": 12,
-        "language": "Bengali",
+        "language": "English",
         "accessibility": "Lifetime",
         "instructor": "MD. NAHID",
         "instructorimg": "https://i.ibb.co/dMgYbwW/nahid.jpg",
-        "thumbimg": "https://uylab.org/wp-content/uploads/2020/08/GD-869x439.png",
-        "introvdo": "https://www.youtube.com/watch?v=hqhVxEEK9g4",
+        "thumbimg": "http://toptelmultimedia.com/wp-content/uploads/2022/01/uiux-design.jpg",
+        "introvdo": "https://www.youtube.com/watch?v=gO-I0d-w2Jo",
         "list": "Design",
         "category": "Graphics Design",
         "rating": {
-            "total_rating": 47,
-            "total_people": 22
+            "total_rating": 45,
+            "total_people": 32
         },
         "details": {
             "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
@@ -622,14 +622,9 @@ export const AllCoursesData = [
                 "title": "Lesson 01",
                 "details": [
                     {
-                        "name": "Graphic Design Bangla Tutorial | Graphic Design Full Course | গ্রাফিক্স ডিজাইন টিউটোরিয়াল ",
-                        "fileName": "gd-full-course",
-                        "vurl": "https://www.youtube.com/watch?v=mBkvMgBYJ90&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ"
-                    },
-                    {
-                        "name": "Clipping Path Bangla Tutorial | Background Remove Photoshop Bangla Tutorial | Freelancing",
-                        "fileName": "background-removal",
-                        "vurl": "https://www.youtube.com/watch?v=2aYPlxXLUFw&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=2"
+                        "name": "UI/UX Development Introduction | UI/UX Design Tutorials",
+                        "fileName": "ui/ux-introduction",
+                        "vurl": "https://www.youtube.com/watch?v=qDUYIQZVQDE&list=PLVlQHNRLflP_5_vCknMsxLS-mTJgq1QzH"
                     }
                 ]
             },
@@ -637,14 +632,14 @@ export const AllCoursesData = [
                 "title": "Lesson 02",
                 "details": [
                     {
-                        "name": "Business Card Design Bangla Tutorial | বিজনেস কার্ড ডিজাইন | Visiting Card Design",
-                        "fileName": "business-card-design",
-                        "vurl": "https://www.youtube.com/watch?v=SXRAKTb1LyM&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=3"
+                        "name": "Development Environment Setup For UI Development | UI/UX Design Tutorials",
+                        "fileName": "development-env-setup",
+                        "vurl": "https://www.youtube.com/watch?v=nG1ztgEJeXM&list=PLVlQHNRLflP_5_vCknMsxLS-mTJgq1QzH&index=2"
                     },
                     {
-                        "name": "ID Card Design Bangla Tutorial | আইডি কার্ড ডিজাইন | How to Make Company ID Card In Illustrator",
-                        "fileName": "id-card-design",
-                        "vurl": "https://www.youtube.com/watch?v=dwcX7VNtCEQ&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=4"
+                        "name": "Introduction to HTML | UI/UX Design Tutorials | UI Technologies",
+                        "fileName": "introduction-to-html",
+                        "vurl": "https://www.youtube.com/watch?v=LhyS25uv5eo&list=PLVlQHNRLflP_5_vCknMsxLS-mTJgq1QzH&index=3"
                     }
                 ]
             },
@@ -652,24 +647,24 @@ export const AllCoursesData = [
                 "title": "Lesson 03",
                 "details": [
                     {
-                        "name": "Letterhead Design in Photoshop Tutorial For GraphicRiver | How to Design A Letterhead Template",
-                        "fileName": "latterhead-design",
-                        "vurl": "https://www.youtube.com/watch?v=i2MsnWVFK4Y&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=5"
+                        "name": "Header and Paragraph Tags | UI/UX Design Tutorials",
+                        "fileName": "header-paragraph-tag",
+                        "vurl": "https://www.youtube.com/watch?v=ggZSE-JHgbg&list=PLVlQHNRLflP_5_vCknMsxLS-mTJgq1QzH&index=4"
                     },
                     {
-                        "name": "Wall Calendar Design 2020 Bangla Tutorial | ক্যালেন্ডার ডিজাইন | Design A Calendar For GraphicRiver",
-                        "fileName": "wall-calender-design",
-                        "vurl": "https://www.youtube.com/watch?v=QxvkSsga1Gc&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=6"
+                        "name": "HTML Div, Span and Text Formatting Tags | UI/UX Design Tutorials",
+                        "fileName": "text-formetting-tag",
+                        "vurl": "https://www.youtube.com/watch?v=4SoSkcgf-xI&list=PLVlQHNRLflP_5_vCknMsxLS-mTJgq1QzH&index=5"
                     },
                     {
-                        "name": "How to Make Rubber Stamp Seal Design in Bangla Tutorial | সিল/স্টাম্প Illustrator Tutorial",
-                        "fileName": "make-rubber-stamp",
-                        "vurl": "https://www.youtube.com/watch?v=mMkVTgAXIKA&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=7"
+                        "name": "HTML Ordered List, Unordered List | UI/UX Design Tutorials",
+                        "fileName": "html-order/unorder-list",
+                        "vurl": "https://www.youtube.com/watch?v=kwsG0_EU0Cs&list=PLVlQHNRLflP_5_vCknMsxLS-mTJgq1QzH&index=6"
                     }
                 ]
             },
         ],
-        "price": 6790
+        "price": 5500
     },
 
 
