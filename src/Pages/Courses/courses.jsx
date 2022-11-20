@@ -15,14 +15,17 @@ const Courses = () => {
   const [err, setErr] = useState(false);
 
 
-
   /* ----------------------------------------------------------------*/
   /*                     Filter By Name Search                       */
   /* ----------------------------------------------------------------*/
   const handleSearchResult = (e) => {
     const searchText = e.target.value;
     const result = Courses?.filter((course) =>
-      course?.name?.toLowerCase().includes(searchText.toLowerCase()));
+      course?.name?.toLowerCase().includes(searchText.toLowerCase()) ||
+      course?.category?.toLowerCase().includes(searchText.toLowerCase()) ||
+      course?.list?.toLowerCase().includes(searchText.toLowerCase()) ||
+      course?.language?.toLowerCase().includes(searchText.toLowerCase())
+      );
     setSearch(result);
   }
 
