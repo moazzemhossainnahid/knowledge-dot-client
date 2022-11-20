@@ -280,14 +280,16 @@ export const AllCoursesData = [
                     {
                         "name": "IELTS Reading: Sentence Completion সহজে উত্তর করার সেরা Techniques!",
                         "fileName": "Sentence-Completion",
-                        "vurl": "https://www.youtube.com/watch?v=pJRrsoqzBgk&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ"
+                        "vurl": "https://www.youtube.com/watch?v=pJRrsoqzBgk&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ",
+                        "_id": "6373293050141026ab15b8aa"
                     },
                     {
                         "name": "IELTS Reading: Gap Fill প্রশ্নের উত্তর করুন মিনিটেই! Solve IELTS Gap Fill Questions Easily",
                         "fileName": "IELTS-Gap-Fill-Questions-Easily",
-                        "vurl": "https://www.youtube.com/watch?v=dp5HWUOIFMk&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=2"
+                        "vurl": "https://www.youtube.com/watch?v=dp5HWUOIFMk&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=2",
+                        "_id": "6373293050141026ab15b8ab"
                     }
-                ]
+                ],
             },
             {
                 "title": "Lesson 02",
@@ -295,14 +297,16 @@ export const AllCoursesData = [
                     {
                         "name": "IELTS Reading 7+ Strategies | Matching Paragraph Information এর উত্তর দেওয়ার Easy উপায়!",
                         "fileName": "Matching-Paragraph-Information",
-                        "vurl": "https://www.youtube.com/watch?v=2nj8GS9fYpw&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=3"
+                        "vurl": "https://www.youtube.com/watch?v=2nj8GS9fYpw&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=3",
+                        "_id": "6373293050141026ab15b8ad"
                     },
                     {
                         "name": "IELTS Reading Test এ MCQ-এর সহজ সমাধান 🔥 Solve IELTS MCQ Questions in Minutes!",
                         "fileName": "Solve-IELTS-MCQ-Questions",
-                        "vurl": "https://www.youtube.com/watch?v=OjWoAp8KCdI&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=4"
+                        "vurl": "https://www.youtube.com/watch?v=OjWoAp8KCdI&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=4",
+                        "_id": "6373293050141026ab15b8ae"
                     }
-                ]
+                ],
             },
             {
                 "title": "Lesson 03",
@@ -310,17 +314,208 @@ export const AllCoursesData = [
                     {
                         "name": "IELTS Reading - True/False/Not Given প্রশ্ন আর ভুল হবে না",
                         "fileName": "True/False/Not-Given",
-                        "vurl": "https://www.youtube.com/watch?v=XrLHcUQpWek&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=5"
+                        "vurl": "https://www.youtube.com/watch?v=XrLHcUQpWek&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=5",
+                        "_id": "6373293050141026ab15b8b0"
                     },
                     {
                         "name": "IELTS Reading Test এ Paragraph Heading Questions আর ভুল হবে না ",
                         "fileName": "Paragraph-Heading-Questions",
-                        "vurl": "https://www.youtube.com/watch?v=Bo7KK-5PHy8&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=6"
+                        "vurl": "https://www.youtube.com/watch?v=Bo7KK-5PHy8&list=PLz49jcnhCN-j7HfDF0aupj5WF03ZYb0VZ&index=6",
+                        "_id": "6373293050141026ab15b8b1"
+                    }
+                ],
+            }
+        ],
+        "price": 5999,
+    },
+    {
+        "uname": "web-design_course_by_fahim_murshed",
+        "name": "Basic Web Design Course for beginners | Web design basic course with Fahim Murshed",
+        "level": "Beginner",
+        "badge": "Top",
+        "duration": 12,
+        "language": "Bengali",
+        "accessibility": "Lifetime",
+        "instructor": "Fahim Murshed",
+        "instructorimg": "https://fahimmurshed.com/static/968b838ef21f16d629b65d8f54c4e0fc/90823/ma-face.png",
+        "thumbimg": "https://cdn.10minuteschool.com/images/skills/Updated_Thumbnail_v3/Web-Design-Course-Thumbnail.jpg",
+        "introvdo": "https://www.youtube.com/watch?v=T7QiX12uOrs",
+        "list": "Learning",
+        "category": "Web Design",
+        "rating": {
+            "total_rating": 43,
+            "total_people": 10
+        },
+        "details": {
+            "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
+            "certificate_details": "Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.",
+            "for_whom": "Anyone interested in learning about business (only practical concepts that you can use and no boring theory + we won’t cover business topics that are common sense)."
+        },
+        "files": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "Web Design Bangla Tutorial Part-01 | Project Overview?",
+                        "fileName": "project-overview",
+                        "vurl": "https://www.youtube.com/watch?v=cjE_JZ0CcPs&list=PLlbCzwXIyJcGEdSCzUL1AaiMHAQI_9N1k"
+                    },
+                    {
+                        "name": "Web Design Bangla Tutorial Part-02 [ 2020 ] | All Helper Tools?",
+                        "fileName": "all-helper-tools",
+                        "vurl": "https://www.youtube.com/watch?v=NhdrvszPFNQ&list=PLlbCzwXIyJcGEdSCzUL1AaiMHAQI_9N1k&index=2"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "Web Design Bangla Tutorial Part-03 [ 2020 ] | install photoshop cs6?",
+                        "fileName": "install-photoshop-cs6",
+                        "vurl": "https://www.youtube.com/watch?v=bMNUFescIls&list=PLlbCzwXIyJcGEdSCzUL1AaiMHAQI_9N1k&index=3"
+                    },
+                    {
+                        "name": "Web Design Bangla Tutorial Part-04 [ 2020 ] | Define Html Structure?",
+                        "fileName": "define-html-structure",
+                        "vurl": "https://www.youtube.com/watch?v=QsPnLbKFzug&list=PLlbCzwXIyJcGEdSCzUL1AaiMHAQI_9N1k&index=4"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 03",
+                "details": [
+                    {
+                        "name": "Web Design Bangla Tutorial Part-05 [ 2020 ] | paragraph and heading tag?",
+                        "fileName": "paragraph-and-deading-tag",
+                        "vurl": "https://www.youtube.com/watch?v=0PC7qE_jNXE&list=PLlbCzwXIyJcGEdSCzUL1AaiMHAQI_9N1k&index=5"
+                    },
+                    {
+                        "name": "Web Design Bangla Tutorial Part-06 [ 2020 ] | Attributes in html?",
+                        "fileName": "attributes-in-html",
+                        "vurl": "https://www.youtube.com/watch?v=PuFRvnvL8LI&list=PLlbCzwXIyJcGEdSCzUL1AaiMHAQI_9N1k&index=6"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 04",
+                "details": [
+                    {
+                        "name": "Web Design Bangla Tutorial Part-07 [ 2020 ] | Text Formatting?",
+                        "fileName": "text-formetting",
+                        "vurl": "https://www.youtube.com/watch?v=Fs38ClWSDb0&list=PLlbCzwXIyJcGEdSCzUL1AaiMHAQI_9N1k&index=7"
+                    },
+                    {
+                        "name": "Web Design Bangla Tutorial Part-08 [ 2020 ] | Superscript and subscript?",
+                        "fileName": "superscript-and-subscript",
+                        "vurl": "https://www.youtube.com/watch?v=BE4ulwhpLyY&list=PLlbCzwXIyJcGEdSCzUL1AaiMHAQI_9N1k&index=8"
                     }
                 ]
             }
         ],
-        "price": 7500
+        "price": 4200
+    },
+    {
+        "uname": "wordpress-theme-customization-by-moshiur-rahman",
+        "name": "Wordpress Bangla Tutorial Course for beginner to advanced level |  course with Moshiur Rahman",
+        "level": "Beginner",
+        "badge": "Popular",
+        "duration": 16,
+        "language": "Bengali",
+        "accessibility": "Lifetime",
+        "instructor": "Moshiur Rahman",
+        "instructorimg": "https://yt3.ggpht.com/-JOsTN2LStmfIEGEQ_jeOgDvmq8gq5APFX9yRrJtbQluJ618byg2Vd_zRIVb5uDV9m-FU0p3yg=s900-c-k-c0x00ffffff-no-rj",
+        "thumbimg": "https://i.ytimg.com/vi/FnuW9YfbP_s/maxresdefault.jpg",
+        "introvdo": "https://www.youtube.com/watch?v=JC5MXmPwlX0",
+        "list": "Learning",
+        "category": "Web Design",
+        "rating": {
+            "total_rating": 46,
+            "total_people": 17
+        },
+        "details": {
+            "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
+            "certificate_details": "Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.",
+            "for_whom": "Anyone interested in learning about business (only practical concepts that you can use and no boring theory + we won’t cover business topics that are common sense)."
+        },
+        "files": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "WordPress Bangla Tutorial [#1] What is WordPress?",
+                        "fileName": "what-is-wordpress",
+                        "vurl": "https://www.youtube.com/watch?v=f34peQ-41Y4&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E"
+                    },
+                    {
+                        "name": "WordPress Bangla Tutorial [#2] How to install XAMPP Server on Windows?",
+                        "fileName": "how-to-install-XAMPP-Server-on-Windows",
+                        "vurl": "https://www.youtube.com/watch?v=BO4uZhXFoo0&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E&index=2"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "WordPress Bangla Tutorial [#4] How to install WordPress on localhost using XAMPP?",
+                        "fileName": "install-wordpress-on-localhost",
+                        "vurl": "https://www.youtube.com/watch?v=L_QeBd7PSXk&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E&index=4"
+                    },
+                    {
+                        "name": "WordPress Bangla Tutorial [#5] Install WordPress in Live Server using cPanel",
+                        "fileName": "install-wordpress-on-cpanel",
+                        "vurl": "https://www.youtube.com/watch?v=W3UgXb-AapI&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E&index=5"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 03",
+                "details": [
+                    {
+                        "name": "WordPress Bangla Tutorial [#7] WordPress Dashboard (Home, Updates)",
+                        "fileName": "wordpress-dashboard",
+                        "vurl": "https://www.youtube.com/watch?v=-ogBVEAi-f4&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E&index=7"
+                    },
+                    {
+                        "name": "WordPress Bangla Tutorial [#8] Creating WordPress Posts (Part-1)",
+                        "fileName": "creating-wordpress-post-1",
+                        "vurl": "https://www.youtube.com/watch?v=0LCD_VLoh58&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E&index=8"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 04",
+                "details": [
+                    {
+                        "name": "WordPress Bangla Tutorial [#9] Creating WordPress Posts (Part-2)",
+                        "fileName": "tcreating-wordpress-post-2",
+                        "vurl": "https://www.youtube.com/watch?v=KrnfhEqGZUA&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E&index=9"
+                    },
+                    {
+                        "name": "WordPress Bangla Tutorial [#10] WordPress Media Links, Pages And Comments",
+                        "fileName": "pages-and-comments",
+                        "vurl": "https://www.youtube.com/watch?v=ILenHnpYM_M&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E&index=10"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 05",
+                "details": [
+                    {
+                        "name": "WordPress Bangla Tutorial [#11] How to create a Menu in WordPress?",
+                        "fileName": "menu-in-wordpress",
+                        "vurl": "https://www.youtube.com/watch?v=gNVgXNxmX5M&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E&index=11"
+                    },
+                    {
+                        "name": "WordPress Bangla Tutorial [#12] WordPress Widgets",
+                        "fileName": "wordpress-widget",
+                        "vurl": "https://www.youtube.com/watch?v=LZVRjE95jO8&list=PLm64fbD5Onxti7DiUkX3UX3P2tuiEw30E&index=12"
+                    }
+                ]
+            }
+        ],
+        "price": 4850
     },
 
 ]
