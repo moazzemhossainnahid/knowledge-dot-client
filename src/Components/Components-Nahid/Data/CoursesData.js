@@ -417,7 +417,7 @@ export const AllCoursesData = [
     },
     {
         "uname": "wordpress-theme-customization-by-moshiur-rahman",
-        "name": "Wordpress Bangla Tutorial Course for beginner to advanced level |  course with Moshiur Rahman",
+        "name": "Wordpress Bangla Tutorial Course for beginner to advanced level | course with Moshiur Rahman",
         "level": "Beginner",
         "badge": "Popular",
         "duration": 16,
@@ -517,5 +517,160 @@ export const AllCoursesData = [
         ],
         "price": 4850
     },
+    {
+        "uname": "how-to-become-a-graphic-designer-with-full-information",
+        "name": "How to become a graphic designer with full information | course with MD.NAHID",
+        "level": "Beginner",
+        "badge": "Normal",
+        "duration": 12,
+        "language": "Bengali",
+        "accessibility": "Lifetime",
+        "instructor": "MD. NAHID",
+        "instructorimg": "https://i.ibb.co/dMgYbwW/nahid.jpg",
+        "thumbimg": "https://uylab.org/wp-content/uploads/2020/08/GD-869x439.png",
+        "introvdo": "https://www.youtube.com/watch?v=hqhVxEEK9g4",
+        "list": "Design",
+        "category": "Graphics Design",
+        "rating": {
+            "total_rating": 47,
+            "total_people": 22
+        },
+        "details": {
+            "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
+            "certificate_details": "Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.",
+            "for_whom": "Anyone interested in learning about business (only practical concepts that you can use and no boring theory + we won’t cover business topics that are common sense)."
+        },
+        "files": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "Graphic Design Bangla Tutorial | Graphic Design Full Course | গ্রাফিক্স ডিজাইন টিউটোরিয়াল ",
+                        "fileName": "gd-full-course",
+                        "vurl": "https://www.youtube.com/watch?v=mBkvMgBYJ90&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ"
+                    },
+                    {
+                        "name": "Clipping Path Bangla Tutorial | Background Remove Photoshop Bangla Tutorial | Freelancing",
+                        "fileName": "background-removal",
+                        "vurl": "https://www.youtube.com/watch?v=2aYPlxXLUFw&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=2"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "Business Card Design Bangla Tutorial | বিজনেস কার্ড ডিজাইন | Visiting Card Design",
+                        "fileName": "business-card-design",
+                        "vurl": "https://www.youtube.com/watch?v=SXRAKTb1LyM&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=3"
+                    },
+                    {
+                        "name": "ID Card Design Bangla Tutorial | আইডি কার্ড ডিজাইন | How to Make Company ID Card In Illustrator",
+                        "fileName": "id-card-design",
+                        "vurl": "https://www.youtube.com/watch?v=dwcX7VNtCEQ&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=4"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 03",
+                "details": [
+                    {
+                        "name": "Letterhead Design in Photoshop Tutorial For GraphicRiver | How to Design A Letterhead Template",
+                        "fileName": "latterhead-design",
+                        "vurl": "https://www.youtube.com/watch?v=i2MsnWVFK4Y&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=5"
+                    },
+                    {
+                        "name": "Wall Calendar Design 2020 Bangla Tutorial | ক্যালেন্ডার ডিজাইন | Design A Calendar For GraphicRiver",
+                        "fileName": "wall-calender-design",
+                        "vurl": "https://www.youtube.com/watch?v=QxvkSsga1Gc&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=6"
+                    },
+                    {
+                        "name": "How to Make Rubber Stamp Seal Design in Bangla Tutorial | সিল/স্টাম্প Illustrator Tutorial",
+                        "fileName": "make-rubber-stamp",
+                        "vurl": "https://www.youtube.com/watch?v=mMkVTgAXIKA&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=7"
+                    }
+                ]
+            },
+        ],
+        "price": 6790
+    },
+    {
+        "uname": "how-to-become",
+        "name": "How to become a graphic designer with full information | course with MD.NAHID",
+        "level": "Beginner",
+        "badge": "Normal",
+        "duration": 12,
+        "language": "Bengali",
+        "accessibility": "Lifetime",
+        "instructor": "MD. NAHID",
+        "instructorimg": "https://i.ibb.co/dMgYbwW/nahid.jpg",
+        "thumbimg": "https://uylab.org/wp-content/uploads/2020/08/GD-869x439.png",
+        "introvdo": "https://www.youtube.com/watch?v=hqhVxEEK9g4",
+        "list": "Design",
+        "category": "Graphics Design",
+        "rating": {
+            "total_rating": 47,
+            "total_people": 22
+        },
+        "details": {
+            "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
+            "certificate_details": "Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.",
+            "for_whom": "Anyone interested in learning about business (only practical concepts that you can use and no boring theory + we won’t cover business topics that are common sense)."
+        },
+        "files": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "Graphic Design Bangla Tutorial | Graphic Design Full Course | গ্রাফিক্স ডিজাইন টিউটোরিয়াল ",
+                        "fileName": "gd-full-course",
+                        "vurl": "https://www.youtube.com/watch?v=mBkvMgBYJ90&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ"
+                    },
+                    {
+                        "name": "Clipping Path Bangla Tutorial | Background Remove Photoshop Bangla Tutorial | Freelancing",
+                        "fileName": "background-removal",
+                        "vurl": "https://www.youtube.com/watch?v=2aYPlxXLUFw&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=2"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "Business Card Design Bangla Tutorial | বিজনেস কার্ড ডিজাইন | Visiting Card Design",
+                        "fileName": "business-card-design",
+                        "vurl": "https://www.youtube.com/watch?v=SXRAKTb1LyM&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=3"
+                    },
+                    {
+                        "name": "ID Card Design Bangla Tutorial | আইডি কার্ড ডিজাইন | How to Make Company ID Card In Illustrator",
+                        "fileName": "id-card-design",
+                        "vurl": "https://www.youtube.com/watch?v=dwcX7VNtCEQ&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=4"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 03",
+                "details": [
+                    {
+                        "name": "Letterhead Design in Photoshop Tutorial For GraphicRiver | How to Design A Letterhead Template",
+                        "fileName": "latterhead-design",
+                        "vurl": "https://www.youtube.com/watch?v=i2MsnWVFK4Y&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=5"
+                    },
+                    {
+                        "name": "Wall Calendar Design 2020 Bangla Tutorial | ক্যালেন্ডার ডিজাইন | Design A Calendar For GraphicRiver",
+                        "fileName": "wall-calender-design",
+                        "vurl": "https://www.youtube.com/watch?v=QxvkSsga1Gc&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=6"
+                    },
+                    {
+                        "name": "How to Make Rubber Stamp Seal Design in Bangla Tutorial | সিল/স্টাম্প Illustrator Tutorial",
+                        "fileName": "make-rubber-stamp",
+                        "vurl": "https://www.youtube.com/watch?v=mMkVTgAXIKA&list=PL5P7zxlCaWX-Fo-BhrMGNjCp-xFoW9wFZ&index=7"
+                    }
+                ]
+            },
+        ],
+        "price": 6790
+    },
+
 
 ]
