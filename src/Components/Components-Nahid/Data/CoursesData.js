@@ -763,6 +763,78 @@ export const AllCoursesData = [
         ],
         "price": 5100
     },
+    {
+        "uname": "learn-degital-marketing-by-md.nahid",
+        "name": "What Is Digital Marketing? | Learn Digital Marketing | course with MD. NAHID",
+        "level": "Expert",
+        "badge": "Popular",
+        "duration": 12,
+        "language": "Bengali",
+        "accessibility": "Lifetime",
+        "instructor": "MD. NAHID",
+        "instructorimg": "https://i.ibb.co/dMgYbwW/nahid.jpg",
+        "thumbimg": "https://cdn.toshost.com/tosupdate/blog-image/digital-marketing.jpg",
+        "introvdo": "https://www.youtube.com/watch?v=bixR-KIJKYM",
+        "list": "Learning",
+        "category": "Others",
+        "rating": {
+            "total_rating": 45,
+            "total_people": 49
+        },
+        "details": {
+            "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
+            "certificate_details": "Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.",
+            "for_whom": "Anyone interested in learning about business (only practical concepts that you can use and no boring theory + we won’t cover business topics that are common sense)."
+        },
+        "files": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "How To Find Target Audience | Digital Marketing Course",
+                        "fileName": "how-to-find-target-audience",
+                        "vurl": "https://www.youtube.com/watch?v=oKQmOV4vGhg&list=PLfnPrteubcKnvcwwja8aW8B1GHPwJSwUh"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "Keyword Research | Digital Marketing Course",
+                        "fileName": "keyword-research",
+                        "vurl": "https://www.youtube.com/watch?v=t5EWRnHg78I&list=PLfnPrteubcKnvcwwja8aW8B1GHPwJSwUh&index=2"
+                    },
+                    {
+                        "name": "Google Ads Tutorial 2023 | Digital Marketing Course",
+                        "fileName": "google-ad-tutorial",
+                        "vurl": "https://www.youtube.com/watch?v=9yGnrDTgOHg&list=PLfnPrteubcKnvcwwja8aW8B1GHPwJSwUh&index=3"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 03",
+                "details": [
+                    {
+                        "name": "How to Earn Money with Google Ads Extensions | Digital Marketing Course",
+                        "fileName": "earn-money-with-google-ad",
+                        "vurl": "https://www.youtube.com/watch?v=fqbT0wzZj90&list=PLfnPrteubcKnvcwwja8aW8B1GHPwJSwUh&index=4"
+                    },
+                    {
+                        "name": "The Concept Of Ad Groups In Google Ads | Digital Marketing Course",
+                        "fileName": "ad-group-in-google-ad",
+                        "vurl": "https://www.youtube.com/watch?v=aFsTChMdpY0&list=PLfnPrteubcKnvcwwja8aW8B1GHPwJSwUh&index=5"
+                    },
+                    {
+                        "name": "How To Create Google Ads Account | Digital Marketing Course",
+                        "fileName": "create-google-ads-account",
+                        "vurl": "https://www.youtube.com/watch?v=WNRWjEFUkMk&list=PLfnPrteubcKnvcwwja8aW8B1GHPwJSwUh&index=6"
+                    }
+                ]
+            },
+        ],
+        "price": 5750
+    },
 
 
 ]
