@@ -1,26 +1,22 @@
 export const CoursesCategoryData = [
     {
-        name: 'All Courses',
+        name: 'Web Design',
         index: 'collapseOne',
     },
     {
-        name: 'Web Design',
+        name: 'Web Development',
         index: 'collapseTwo',
     },
     {
-        name: 'Web Development',
+        name: 'Graphics Design',
         index: 'collapseThree',
     },
     {
-        name: 'Graphics Design',
+        name: 'Spoken English',
         index: 'collapseFour',
     },
     {
-        name: 'Spoken English',
-        index: 'collapseFive',
-    },
-    {
         name: 'Others',
-        index: 'collapseSix',
+        index: 'collapseFive',
     },
 ]

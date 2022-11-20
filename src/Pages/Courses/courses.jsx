@@ -25,7 +25,7 @@ const Courses = () => {
       course?.category?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.list?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.language?.toLowerCase().includes(searchText.toLowerCase())
-      );
+    );
     setSearch(result);
   }
 
