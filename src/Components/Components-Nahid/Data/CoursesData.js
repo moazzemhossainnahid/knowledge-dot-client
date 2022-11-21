@@ -835,6 +835,101 @@ export const AllCoursesData = [
         ],
         "price": 5750
     },
-
-
+    {
+        "uname": "spoken_english_course_by_munzereen_shahid",
+        "name": " ঘরে বসে Spoken English |Course With Munzereen Shahid",
+        "level": "Expert",
+        "badge": "Top",
+        "duration": 12,
+        "language": "Bengali",
+        "accessibility": "Lifetime",
+        "instructor": "Munzereen Shahid ",
+        "instructorimg": "https://yt3.ggpht.com/ytc/AMLnZu8KJFJ3jMafPIqfjNbJGPsORFk4Np8rj9sysZU-=s176-c-k-c0x00ffffff-no-rj",
+        "thumbimg": "https://10mspromo.com/wp-content/uploads/2022/09/Ghore-boshe-Spoken-English-Course-Thumbnail.jpg",
+        "introvdo": "https://www.youtube.com/watch?v=PO58e0Z4dbE&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY",
+        "list": "Learning",
+        "category": "Spoken English",
+        "rating": {
+            "total_rating": 45,
+            "total_people": 30
+        },
+        "details": {
+            "description": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket.",
+            "certificate_details": "Effortless comfortable full leather lining eye-catching unique detail to the toe low ‘cut-away’ sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design slingback strap mid kitten heel this ladylike design.",
+            "for_whom": "Anyone interested in learning about business (only practical concepts that you can use and no boring theory + we won’t cover business topics that are common sense)."
+        },
+        "files": [
+            {
+                "title": "Lesson 01",
+                "details": [
+                    {
+                        "name": "How to Introduce Yourself in English | ঘরে বসে Spoken English | Munzereen Shahid",
+                        "fileName": "how-to-introduce-yourself",
+                        "vurl": "https://www.youtube.com/watch?v=ud3brruUDzg&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=5"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 02",
+                "details": [
+                    {
+                        "name": "How to Get to Know New People | ঘরে বসে Spoken English | Munzereen Shahid",
+                        "fileName": "get-to-know-new-people",
+                        "vurl": "https://www.youtube.com/watch?v=eBju4p2OXeY&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=6"
+                    },
+                    {
+                        "name": "৯ মিনিটে শিখুন ৫০টি পরিচিত ইংরেজি বাক্য | ঘরে বসে Spoken English | Munzereen Shahid",
+                        "fileName": "known-vocabulary",
+                        "vurl": "https://www.youtube.com/watch?v=T5Spgwegpbo&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=7"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 03",
+                "details": [
+                    {
+                        "name": "মাত্র ৪টি ধাপে শিখুন কীভাবে ইংরেজিতে প্রশ্ন করতে হয় | ঘরে বসে Spoken English",
+                        "fileName": "4-step-to-ask-question",
+                        "vurl": "https://www.youtube.com/watch?v=I9_Yenz0NUA&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=8"
+                    },
+                    {
+                        "name": "৬টি ধাপে ইংরেজিতে বর্ণনা করুন যেকোনো ব্যক্তিকে | ঘরে বসে Spoken English | Munzereen Shahid",
+                        "fileName": "6-step-to-explain-anything",
+                        "vurl": "https://www.youtube.com/watch?v=kixwhWqVYsI&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=9"
+                    },
+                    {
+                        "name": "কীভাবে ইংরেজিতে নিজের দেশের বাড়ির বর্ণনা দিবেন | ঘরে বসে Spoken English | Munzereen Shahid",
+                        "fileName": "how-to-explain-your-hometown-info",
+                        "vurl": "https://www.youtube.com/watch?v=y6rHk0OALLo&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=10"
+                    }
+                ]
+            },
+            {
+                "title": "Lesson 04",
+                "details": [
+                    {
+                        "name": "কীভাবে ইংরেজিতে নিজের চাকরি নিয়ে কথা বলবেন | ঘরে বসে Spoken English | Munzereen Shahid",
+                        "fileName": "describe-your-job",
+                        "vurl": "https://www.youtube.com/watch?v=WjQ-AOjv4v8&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=11"
+                    },
+                    {
+                        "name": "কীভাবে ইংরেজিতে Daily Routine নিয়ে কথা বলবেন | ঘরে বসে Spoken English | Munzereen Shahid",
+                        "fileName": "describe-daily-rotine",
+                        "vurl": "https://www.youtube.com/watch?v=wnhvBTw026E&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=12"
+                    },
+                    {
+                        "name": "কীভাবে মায়ের সাথে ইংরেজিতে কথা বলবেন | ঘরে বসে Spoken English | Munzereen Shahid",
+                        "fileName": "how-to-speak-in-english-with-your-mother",
+                        "vurl": "https://www.youtube.com/watch?v=9h4JrcswVsg&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=13"
+                    },
+                    {
+                        "name": "কীভাবে ইংরেজিতে দরদাম করবেন | ঘরে বসে Spoken English | Munzereen Shahid",
+                        "fileName": "how-to-speak-in-english-with-shopkeepers",
+                        "vurl": "https://www.youtube.com/watch?v=tCEU2Xtz4X8&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY&index=14"
+                    }
+                ]
+            },
+        ],
+        "price": 6250
+    },
 ]
