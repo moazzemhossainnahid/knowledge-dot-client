@@ -1,32 +1,27 @@
 export const PopulerCategoryData = [
     {
         icon: 'http://edukon.codexcoder.com/assets/images/category/icon/01.jpg',
-        title: 'Computer Science',
+        title: 'Web Design',
         course: '24'
     },
     {
         icon: 'http://edukon.codexcoder.com/assets/images/category/icon/02.jpg',
-        title: 'Civil Engeneering',
+        title: 'Web Development',
         course: '04'
     },
     {
         icon: 'http://edukon.codexcoder.com/assets/images/category/icon/03.jpg',
-        title: 'Business Analycis',
+        title: 'Graphics Design',
         course: '27'
     },
     {
         icon: 'http://edukon.codexcoder.com/assets/images/category/icon/04.jpg',
-        title: 'Data Science Analycis',
+        title: 'Spoken English',
         course: '28'
     },
     {
         icon: 'http://edukon.codexcoder.com/assets/images/category/icon/05.jpg',
-        title: 'Learning Management',
+        title: 'Others',
         course: '78'
     },
-    {
-        icon: 'http://edukon.codexcoder.com/assets/images/category/icon/06.jpg',
-        title: 'Computer Engineering',
-        course: '38'
-    },
-]
+];
