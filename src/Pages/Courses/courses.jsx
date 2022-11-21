@@ -117,7 +117,6 @@ const Courses = () => {
                       </option>
                       <option>Web Development</option>
                       <option>Graphics Design</option>
-                      <option>Wordpress Design</option>
                       <option>Spoken English</option>
                       <option>Others</option>
                     </select>

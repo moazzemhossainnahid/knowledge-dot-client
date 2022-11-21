@@ -33,12 +33,13 @@ const BookingSuccess = () => {
           <FaCheckCircle className="text-7xl text-success" />
         </div>
         <h2 className="text-3xl py-5 text-center">
-          Appointment booked Successfully!
+          You'r Successfully booked Of
         </h2>
         <p className="max-w-sm text-lg mx-auto text-center mb-5">
-          Appointment booked with <b>{course?.instructor} </b> on{" "}
-          {new Date().getDate()} {month} {new Date().getFullYear()} 5:00PM to
-          6:00PM
+          {" "}
+          <b>{course?.name} </b>
+          at <b>{course?.instructor} </b> on {new Date().getDate()} {month}{" "}
+          {new Date().getFullYear()} 5:00PM to 6:00PM
         </p>
         <div className="flex justify-center">
           <button className="btn btn-success">

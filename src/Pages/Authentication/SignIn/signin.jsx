@@ -27,13 +27,14 @@ const SignIn = () => {
   let from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
-    if (token) {
-      navigate(from, { replace: true });
+    if (user || gUser) {
+      // from, { replace: true };
+      navigate("/");
     }
-  }, [token, from, navigate]);
+  }, [user || gUser, navigate]);
 
   if (loading || gLoading) {
-    return <Loading/>;
+    return <Loading />;
   }
 
   if (error || gError) {

@@ -1,5 +1,7 @@
 import React from "react";
 import { MdLocationPin } from "react-icons/md";
+import { AiOutlineArrowRight } from "react-icons/ai";
+
 import RupiSymple from "./RupiSymple";
 
 const CheckoutCourseDetails = ({ course }) => {
@@ -32,14 +34,18 @@ const CheckoutCourseDetails = ({ course }) => {
     const strTime = hours + ":" + minutes + " " + ampm;
     return strTime;
   };
-  // console.log("dfsdf", ratings);
+  console.log(course);
   return (
     <div className=" relative">
       <div className="border sticky top-20 px-4   shadow-lg rounded-sm">
         <div className="py-4 ">
-          <h3 className="text-xl text-black text-opacity-90">
-            Booking Summary
+          <h3 className="text-2xl text-black text-opacity-90 ">
+            Booking Summary :
           </h3>
+          <h2 className="text-lg text-semibold text-gray-600 flex items-center gap-x-2">
+            <AiOutlineArrowRight />
+            {course?.name}
+          </h2>
         </div>
         <hr />
         <div>

@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import Loading from "../../SharedPages/Loading";
 import { Link, useNavigate } from "react-router-dom";
 import useToken from "../../../Hooks/useToken";
+import { useEffect } from "react";
 
 const SignUp = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -22,7 +23,14 @@ const SignUp = () => {
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-  const [token] = useToken(user || gUser);
+  // const [token] = useToken(user || gUser);
+  const userCreate = user || gUser;
+  useEffect(() => {
+    const email = userCreate?.user?.email;
+    if (email) {
+      console.log(email);
+    }
+  }, [userCreate]);
 
   const navigate = useNavigate();
 
@@ -42,8 +50,8 @@ const SignUp = () => {
     );
   }
 
-  if (token) {
-    navigate("/appointment");
+  if (user || gUser) {
+    navigate("/");
   }
 
   const onSubmit = async (data) => {
