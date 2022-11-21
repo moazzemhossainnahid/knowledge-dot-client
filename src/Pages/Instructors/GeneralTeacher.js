@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const GeneralTeacher = ({ instructor }) => {
-  const { name, img, profession, social_link, dec } = instructor;
+  const { name, img, profession, social_link } = instructor;
   return (
     <div className="p-10 rounden dark:text-slate-200 flex justify-evenly items-center shadow-sm ">
       <div className="h-40 w-40">
