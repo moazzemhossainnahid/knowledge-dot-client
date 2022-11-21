@@ -1,0 +1,9 @@
+#############
+
+Design Material : https://docs.google.com/document/d/1nAvxHd3bGC5m1fwvGXnynIEfLXurdjMSHf8lwCSaUf8/edit
+
+Server Github : https://github.com/JaznanOfficial/knowledge-dot-server
+Root Server :   https://knowledge-dot-server-production.up.railway.app/
+user: /api/v1/users
+instructor : /api/v1/instructors
+Courses : /api/v1/courses

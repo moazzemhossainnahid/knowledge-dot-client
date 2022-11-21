@@ -1,17 +1,17 @@
 import axios from "axios";
 import { signOut } from "firebase/auth";
-import auth from "../firebase.init";
+import auth from "../Firebase/Firebase.init";
 
-const primaryAxios = axios.create({
-  baseURL: "https://localhost:5000/",
+const BaseURL = axios.create({
+  baseURL: "https://knowledge-dot-server-production.up.railway.app/",
 });
 
 // request interceptor
-primaryAxios.interceptors.request.use(
+BaseURL.interceptors.request.use(
   function (config) {
     if (!config.headers.authorization) {
       config.headers.authorization = `Bearer ${localStorage.getItem(
-        "authorizationToken"
+        "accessToken"
       )}`;
     }
     return config;
@@ -22,17 +22,17 @@ primaryAxios.interceptors.request.use(
 );
 
 // response interceptor
-primaryAxios.interceptors.response.use(
+BaseURL.interceptors.response.use(
   function (response) {
     return response;
   },
   function (error) {
     if (error.response.status === 403 || error.response.status === 401) {
       signOut(auth);
-      localStorage.removeItem("authorizationToken");
+      localStorage.removeItem("accessToken");
     }
     return Promise.reject(error);
   }
 );
 
-export default primaryAxios;
+export default BaseURL;

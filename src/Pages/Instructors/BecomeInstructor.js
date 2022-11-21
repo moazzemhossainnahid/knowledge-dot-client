@@ -1,9 +1,12 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import svg1 from "../../Assets/Images/svg1.png";
 import svg2 from "../../Assets/Images/svg2.png";
 import svg3 from "../../Assets/Images/svg3.png";
 
 const BecomeInstructor = () => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <div className=" w-full mx-auto py-20 text-slate-800 mb-20 ">
       <div className="text-center mb-20">
@@ -135,11 +138,12 @@ const BecomeInstructor = () => {
               Start creating an online video course and earn money by teaching
               people.
             </p>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 className=" block w-full h-10 pl-2 border-2 border-[#d8dada] my-5"
                 type="text"
-                name=""
+                {...register("instructorName")}
+                name="name"
                 id=""
                 placeholder="Your Name"
               />
@@ -147,7 +151,8 @@ const BecomeInstructor = () => {
               <input
                 className=" block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5"
                 type="email"
-                name=""
+                {...register("email")}
+                name="email"
                 id=""
                 placeholder="Email address"
               />
@@ -155,7 +160,8 @@ const BecomeInstructor = () => {
               <input
                 className=" block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5"
                 type="number"
-                name=""
+                {...register("phoneNumber")}
+                name="phoneNumber"
                 id=""
                 placeholder="Phone Number"
               />
@@ -163,7 +169,8 @@ const BecomeInstructor = () => {
               <textarea
                 className=" block w-full h-32 pl-2 border-2 border-[#d8dada] mb-5"
                 type="text"
-                name=""
+                {...register("dec")}
+                name="dec"
                 id=""
                 placeholder="Professional Experiences"
               />
