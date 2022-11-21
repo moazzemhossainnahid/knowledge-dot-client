@@ -9,9 +9,10 @@ const Courses = () => {
 
   const { Courses } = useCourses();
   const [search, setSearch] = useState([]);
+  const [categoryCourse, setCategoryCourse] = useState([]);
   const [checkboxFilter, setCheckboxFilter] = useState([]);
   const [reviewFilter, setReviewFilter] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState([]);
+
 
   /* ----------------------------------------------------------------*/
   /*                     Filter By Name Search                       */
@@ -24,7 +25,7 @@ const Courses = () => {
       course?.list?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.language?.toLowerCase().includes(searchText.toLowerCase())
     );
-    setCheckboxFilter([]);
+    setCategoryCourse([]);
     setCheckboxFilter([]);
     setReviewFilter([]);
     setSearch(result);
@@ -36,13 +37,13 @@ const Courses = () => {
   const filterByCategory = (e) => {
     const Category = e.target.value;
     if (Category === "All Courses") {
-      setCheckboxFilter(Courses)
+      setCategoryCourse(Courses)
     };
     const result = Courses?.filter(course => course?.category === Category);
     setSearch([]);
     setCheckboxFilter([]);
     setReviewFilter([]);
-    setCheckboxFilter(result);
+    setCategoryCourse(result);
   };
 
   /* ----------------------------------------------------------------*/
@@ -52,19 +53,17 @@ const Courses = () => {
     const Category = e.target.value;
 
     if (e.target.checked) {
-      setSelectedCategory([...selectedCategory, Category])
+      setCheckboxFilter([...checkboxFilter, Category]);
     } else {
-      setSelectedCategory(selectedCategory?.filter(category => category !== e.target.value));
+      setCheckboxFilter(checkboxFilter?.filter(category => category !== e.target.value));
     };
 
-    // console.log(result);
     setSearch([]);
     setReviewFilter([]);
-    setCheckboxFilter([]);
+    setCategoryCourse([]);
   };
 
-  const selectedResult = Courses?.filter(({ category }) => selectedCategory?.includes(category));
-  // console.log(selectedCategory);
+  const selectedResult = Courses?.filter(({ category }) => checkboxFilter?.includes(category));
 
   /* ----------------------------------------------------------------*/
   /*                       Filter By Ratings                         */
@@ -73,7 +72,7 @@ const Courses = () => {
     if (num) {
       const filterData = Courses?.filter((cData) => Math.ceil(cData?.rating?.total_rating / cData?.rating?.total_people) === parseInt(num));
       setSearch([]);
-      setCheckboxFilter([]);
+      setCategoryCourse([]);
       setCheckboxFilter([]);
       setReviewFilter(filterData);
     }
@@ -84,8 +83,8 @@ const Courses = () => {
   // Load Courses By Filter Type
   let loadCourses;
 
-  if (checkboxFilter?.length > 0) {
-    loadCourses = checkboxFilter
+  if (categoryCourse?.length > 0) {
+    loadCourses = categoryCourse
   }
   else if (selectedResult?.length > 0) {
     loadCourses = selectedResult
