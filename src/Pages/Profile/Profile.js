@@ -9,6 +9,7 @@ import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPhoneAl
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Profile = () => {
   const [user] = useAuthState(auth);
+  console.log(user);
   return (
     <div className="mb-10">
       <div
@@ -23,7 +24,7 @@ const Profile = () => {
         <div className="bg-opacity-70 hero-overlay"></div>
         <div className="text-left text-warning lg:pt-32 lg:pb-60 px-4 pt-20 pb-52">
           <h1 className="text-left text-5xl font-bold">
-            Hello, {user?.data?.name ? user?.data?.name : "- - -"}
+            Hello, {user?.displayName ? user?.displayName : "- - -"}
           </h1>
           <p className="my-5 font-serif text-lg">
             This is your profile page. You can see the progress you've made with
@@ -51,16 +52,16 @@ const Profile = () => {
               <div className="items-center form-control">
                 <div>
                   <img
-                    src={`${user?.data?.image
-                        ? user?.data?.image
+                    src={`${user?.photoURL
+                        ? user?.photoURL
                         : "https://cdn3d.iconscout.com/3d/premium/thumb/profile-5590850-4652486.png"
                       }`}
                       className="w-32 h-32 rounded-full m-2"
                     alt=""/>
                 </div>
-                <h1 className="text-2xl font-bold">{user?.data?.name ? user?.data?.name : "- - -"}{user?.data?.gender === 'Male' && (<i className="fa-solid fa-mars text-primary ml-2"></i>)}{user?.data?.gender === 'Female' && (<i className="fa-solid fa-venus text-secondary ml-2"></i>)}</h1>
-                <h1 className="text-sm opacity-60">{user?.data?.email ? user?.data?.email : "- - -"}</h1>
-                <h1 className="text-lg">{user?.data?.profession ? user?.data?.profession : "- - -"}</h1>
+                <h1 className="text-2xl font-bold">{user?.displayName ? user?.displayName : "- - -"}{user?.data?.gender === 'Male' && (<i className="fa-solid fa-mars text-primary ml-2"></i>)}{user?.data?.gender === 'Female' && (<i className="fa-solid fa-venus text-secondary ml-2"></i>)}</h1>
+                <h1 className="text-sm opacity-60">{user?.email ? user?.email : "- - -"}</h1>
+                <h1 className="text-lg">{user?.profession ? user?.profession : "- - -"}</h1>
                 <div className="stats form-control">
                   <div className="stat place-items-center">
                     <div className="stat-value">1</div>
