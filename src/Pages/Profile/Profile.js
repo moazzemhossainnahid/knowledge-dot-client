@@ -9,7 +9,7 @@ import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPhoneAl
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Profile = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
+  // console.log(user);
   return (
     <div className="mb-10">
       <div

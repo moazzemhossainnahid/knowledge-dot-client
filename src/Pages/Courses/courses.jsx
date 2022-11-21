@@ -9,11 +9,30 @@ const Courses = () => {
 
   const { Courses } = useCourses();
   const [search, setSearch] = useState([]);
-  const [categoryCourse, setCategoryCourse] = useState([]);
   const [checkboxFilter, setCheckboxFilter] = useState([]);
   const [reviewFilter, setReviewFilter] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState([]);
   const [err, setErr] = useState(false);
 
+
+  const [genre, setGenre] = useState([""]);
+  const [filteredGenre, setFilteredGenre] = useState([""]);
+
+  // const handleChange = e => {
+  //   if (e.target.checked) {
+  //     setGenre([...genre, e.target.value]);
+  //   } else {
+  //     setGenre(genre.filter(id => id !== e.target.value));
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   setFilteredGenre(
+  //     movieData.filter(movie =>
+  //       genre.some(category => category === movie.genre)
+  //     )
+  //   );
+  // }, [genre]);
 
   /* ----------------------------------------------------------------*/
   /*                     Filter By Name Search                       */
@@ -24,8 +43,11 @@ const Courses = () => {
       course?.name?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.category?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.list?.toLowerCase().includes(searchText.toLowerCase()) ||
-      course?.language?.toLowerCase().includes(searchText.toLowerCase()) 
+      course?.language?.toLowerCase().includes(searchText.toLowerCase())
     );
+    setCheckboxFilter([]);
+    setCheckboxFilter([]);
+    setReviewFilter([]);
     setSearch(result);
   }
 
@@ -35,10 +57,13 @@ const Courses = () => {
   const filterByCategory = (e) => {
     const Category = e.target.value;
     if (Category === "All Courses") {
-      setCategoryCourse(Courses)
+      setCheckboxFilter(Courses)
     };
     const result = Courses?.filter(course => course?.category === Category);
-    setCategoryCourse(result);
+    setSearch([]);
+    setCheckboxFilter([]);
+    setReviewFilter([]);
+    setCheckboxFilter(result);
   };
 
   /* ----------------------------------------------------------------*/
@@ -46,11 +71,21 @@ const Courses = () => {
   /* ----------------------------------------------------------------*/
   const handleFilterByCheckbox = (e) => {
     const Category = e.target.value;
-    const result = Courses?.filter(course => course?.category === Category);
+
+    if (e.target.checked) {
+      setSelectedCategory([...selectedCategory, Category])
+    } else {
+      setSelectedCategory(selectedCategory?.filter(id => id !== e.target.value));
+    };
+
     // console.log(result);
-    setCheckboxFilter(result)
+    setSearch([]);
+    setReviewFilter([]);
+    setCheckboxFilter([]);
   };
 
+  const selectedResult = Courses?.filter(({ category }) => selectedCategory?.includes(category));
+  // console.log(selectedCategory);
 
   /* ----------------------------------------------------------------*/
   /*                       Filter By Ratings                         */
@@ -58,6 +93,9 @@ const Courses = () => {
   const handleReviewFilter = (num) => {
     if (num) {
       const filterData = Courses?.filter((cData) => Math.ceil(cData?.rating?.total_rating / cData?.rating?.total_people) === parseInt(num));
+      setSearch([]);
+      setCheckboxFilter([]);
+      setCheckboxFilter([]);
       setReviewFilter(filterData);
     }
   };
@@ -67,11 +105,11 @@ const Courses = () => {
   // Load Courses By Filter Type
   let loadCourses;
 
-  if (categoryCourse?.length > 0) {
-    loadCourses = categoryCourse
-  }
-  else if (checkboxFilter?.length > 0) {
+  if (checkboxFilter?.length > 0) {
     loadCourses = checkboxFilter
+  }
+  else if (selectedResult?.length > 0) {
+    loadCourses = selectedResult
   }
   else if (search?.length > 0) {
     loadCourses = search
