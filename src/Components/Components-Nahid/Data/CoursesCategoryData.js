@@ -1,7 +1,7 @@
 export const CoursesCategoryData = [
     {
         name: 'Web Design',
-        index: 'collapseSix',
+        index: 'collapseOne',
     },
     {
         name: 'Web Development',
@@ -13,10 +13,10 @@ export const CoursesCategoryData = [
     },
     {
         name: 'Spoken English',
-        index: 'collapseFive',
+        index: 'collapseFour',
     },
     {
         name: 'Others',
-        index: 'collapseSeven',
+        index: 'collapseFive',
     },
 ]

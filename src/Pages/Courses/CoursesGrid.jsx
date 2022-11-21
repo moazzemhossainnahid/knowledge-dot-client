@@ -9,7 +9,7 @@ const CoursesGrid = ({ course }) => {
   const ratings = Math.ceil(rating?.total_rating / rating?.total_people);
   const navigate = useNavigate();
   return (
-    <div onClick={() => navigate(`/course/${_id}`)} className="mb-8 border cursor-pointer hover:shadow-md rounded-xl">
+    <div onClick={() => navigate(`/course/${_id}`)} className="mb-8 border cursor-pointer hover:shadow-md hover:-mt-3 duration-150 scroll-smooth rounded-xl">
 
       <div className="h-44 relative overflow-hidden rounded-xl">
         <img className="h-44 w-full relative rounded-xl hover:scale-110 duration-200" src={thumbimg} alt="Shoes" />

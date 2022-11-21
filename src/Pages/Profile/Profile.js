@@ -5,10 +5,11 @@ import { NavHashLink } from "react-router-hash-link";
 import "./Profile.css";
 import auth from "../../Firebase/Firebase.init";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPhoneAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPenToSquare, faPhoneAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Profile = () => {
   const [user] = useAuthState(auth);
+  // console.log(user);
   return (
     <div className="mb-10">
       <div
@@ -23,14 +24,14 @@ const Profile = () => {
         <div className="bg-opacity-70 hero-overlay"></div>
         <div className="text-left text-warning lg:pt-32 lg:pb-60 px-4 pt-20 pb-52">
           <h1 className="text-left text-5xl font-bold">
-            Hello, {user?.data?.name ? user?.data?.name : "- - -"}
+            Hello, {user?.displayName ? user?.displayName : "- - -"}
           </h1>
           <p className="my-5 font-serif text-lg">
             This is your profile page. You can see the progress you've made with
             your work and manage your projects or assigned tasks
           </p>
           <NavHashLink
-            to={"/profile/update#profile"}
+            to={"/profile/update"}
             className="mt-5 btn btn-primary rounded-md"
           >
             Edit profile
@@ -41,26 +42,26 @@ const Profile = () => {
         <div className=" lg:w-4/12 w-11/12 md:w-10/12 mx-auto mt-[-170px] mb-6">
           <div className="card shadow-2xl bg-base-100">
             <NavHashLink
-              to={"/profile/update#profile"}
+              to={"/profile/update"}
             >
               <p className="text-right pr-3 pt-2">
-                <i className="fa-solid fa-pen-to-square"></i>
+                <FontAwesomeIcon icon={faPenToSquare}/>
               </p>
             </NavHashLink>
             <div>
               <div className="items-center form-control">
                 <div>
                   <img
-                    src={`${user?.data?.image
-                        ? user?.data?.image
+                    src={`${user?.photoURL
+                        ? user?.photoURL
                         : "https://cdn3d.iconscout.com/3d/premium/thumb/profile-5590850-4652486.png"
                       }`}
                       className="w-32 h-32 rounded-full m-2"
                     alt=""/>
                 </div>
-                <h1 className="text-2xl font-bold">{user?.data?.name ? user?.data?.name : "- - -"}{user?.data?.gender === 'Male' && (<i className="fa-solid fa-mars text-primary ml-2"></i>)}{user?.data?.gender === 'Female' && (<i className="fa-solid fa-venus text-secondary ml-2"></i>)}</h1>
-                <h1 className="text-sm opacity-60">{user?.data?.email ? user?.data?.email : "- - -"}</h1>
-                <h1 className="text-lg">{user?.data?.profession ? user?.data?.profession : "- - -"}</h1>
+                <h1 className="text-2xl font-bold">{user?.displayName ? user?.displayName : "- - -"}{user?.data?.gender === 'Male' && (<i className="fa-solid fa-mars text-primary ml-2"></i>)}{user?.data?.gender === 'Female' && (<i className="fa-solid fa-venus text-secondary ml-2"></i>)}</h1>
+                <h1 className="text-sm opacity-60">{user?.email ? user?.email : "- - -"}</h1>
+                <h1 className="text-lg">{user?.profession ? user?.profession : "- - -"}</h1>
                 <div className="stats form-control">
                   <div className="stat place-items-center">
                     <div className="stat-value">1</div>

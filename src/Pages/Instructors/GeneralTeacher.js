@@ -15,8 +15,8 @@ const GeneralTeacher = ({ instructor }) => {
         <img src={img} alt="t" />
       </div>
       <div className="">
-        <h1 className="text-xl font-bold">{name}</h1>
-        <p className="text-sm  my-4">{profession} </p>
+        <h1 className="text-xl text-gray-700 font-bold">{name}</h1>
+        <p className="text-sm text-gray-500 my-4">{profession} </p>
         <div className="flex items-center gap-4 text-gray-700 mt-5 text-xl shadow-md">
           <a href={social_link.facebook} target="_blank">
             <FontAwesomeIcon icon={faFacebook} />

@@ -24,8 +24,7 @@ const CoursesSidebar = ({
                     focus:ring-red-400 "
                 name="city"
                 type="text"
-                placeholder="Find By Name"
-              />
+                placeholder="Find By Name" />
             </form>
           </div>
         </div>
@@ -34,44 +33,28 @@ const CoursesSidebar = ({
           <div class="accordion pt-3" id="accordionExample5">
             <div class="accordion-item bg-white ">
               <h2 class="accordion-header mb-0" id="headingOne5">
-                <button
-                  class=" accordion-button relative flex justify-between font-bold items-center w-full py-4 px-5 text-xl text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none "
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne5"
-                  aria-expanded="true"
-                  aria-controls="collapseOne5"
-                >
+                <button class=" accordion-button relative flex justify-between font-bold items-center w-full py-4 px-5 text-xl text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true"
+                  aria-controls="collapseOne5">
                   <span className="text-gray-600 pr-28">Category</span>
                 </button>
               </h2>
-              <div
-                id="collapseOne5"
-                class="accordion-collapse collapse show"
-                aria-labelledby="headingOne5"
-              >
+              <div id="collapseOne5" class="accordion-collapse collapse show" aria-labelledby="headingOne5">
                 <div class="accordion-body py-4 px-5">
                   <div class="flex justify-center">
                     <div>
-                      {CoursesCategoryData.map((course) => (
-                        <div class="form-check w-full flex justify-between items-center py-1 gap-2">
-                          <div className="pr-7">
-                            <input
-                              class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                              type="checkbox"
-                              value=""
-                              id="flexCheckChecked"
-                            />
-                            <label
-                              class="form-check-label inline-block text-gray-800"
-                              for="flexCheckChecked"
-                            >
-                              {course.name}
-                            </label>
+                      {
+                        CoursesCategoryData?.map(course => (
+                          <div key={course?.index} class="form-check w-full flex justify-between items-center py-1 gap-2">
+                            <div className="pr-7">
+                              <input onChange={handleFilterByCheckbox} value={course?.name} class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" id={course?.index} />
+                              <label class="form-check-label inline-block text-gray-800" for={course?.index}>
+                                {course?.name}
+                              </label>
+                            </div>
+                            <h3 className="text-gray-500 font-semibold">(15)</h3>
                           </div>
-                          <h3 className="text-gray-500 font-semibold">(15)</h3>
-                        </div>
-                      ))}
+                        ))
+                      }
                     </div>
                   </div>
                 </div>
@@ -84,22 +67,12 @@ const CoursesSidebar = ({
           <div class="accordion pt-3" id="accordionExample6">
             <div class="accordion-item bg-white ">
               <h2 class="accordion-header mb-0" id="headingTwo5">
-                <button
-                  class=" accordion-button relative flex justify-between font-bold items-center w-full py-4 px-5 text-xl text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none "
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo5"
-                  aria-expanded="true"
-                  aria-controls="collapseTwo5"
-                >
+                <button class=" accordion-button relative flex justify-between font-bold items-center w-full py-4 px-5 text-xl text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo5" aria-expanded="true"
+                  aria-controls="collapseTwo5">
                   <span className="text-gray-600 pr-32">Ratings</span>
                 </button>
               </h2>
-              <div
-                id="collapseTwo5"
-                class="accordion-collapse collapse show"
-                aria-labelledby="headingTwo5"
-              >
+              <div id="collapseTwo5" class="accordion-collapse collapse show" aria-labelledby="headingTwo5">
                 <div class="accordion-body py-4 px-5">
                   <div class="flex justify-center">
                     <div>
@@ -124,9 +97,7 @@ const CoursesSidebar = ({
                               value={5}
                             />
                           </label>
-                          <div className="ml-auto pl-10 text-gray-600 text-sm">
-                            (5)
-                          </div>
+                          <div className="ml-auto pl-10 text-gray-600 text-sm">(5)</div>
                         </div>
                         <div className="flex items-center">
                           <input
@@ -148,9 +119,7 @@ const CoursesSidebar = ({
                               value={4}
                             />
                           </label>
-                          <div className="ml-auto text-gray-600 text-sm">
-                            (4)
-                          </div>
+                          <div className="ml-auto text-gray-600 text-sm">(4)</div>
                         </div>
                         <div className="flex items-center">
                           <input
@@ -172,9 +141,7 @@ const CoursesSidebar = ({
                               value={3}
                             />
                           </label>
-                          <div className="ml-auto text-gray-600 text-sm">
-                            (3)
-                          </div>
+                          <div className="ml-auto text-gray-600 text-sm">(3)</div>
                         </div>
                         <div className="flex items-center">
                           <input
@@ -196,9 +163,7 @@ const CoursesSidebar = ({
                               value={2}
                             />
                           </label>
-                          <div className="ml-auto text-gray-600 text-sm">
-                            (2)
-                          </div>
+                          <div className="ml-auto text-gray-600 text-sm">(2)</div>
                         </div>
                         <div className="flex items-center">
                           <input
@@ -220,9 +185,7 @@ const CoursesSidebar = ({
                               value={1}
                             />
                           </label>
-                          <div className="ml-auto text-gray-600 text-sm">
-                            (1)
-                          </div>
+                          <div className="ml-auto text-gray-600 text-sm">(1)</div>
                         </div>
                       </div>
                     </div>
