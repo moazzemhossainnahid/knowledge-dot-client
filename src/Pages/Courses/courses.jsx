@@ -12,27 +12,6 @@ const Courses = () => {
   const [checkboxFilter, setCheckboxFilter] = useState([]);
   const [reviewFilter, setReviewFilter] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState([]);
-  const [err, setErr] = useState(false);
-
-
-  const [genre, setGenre] = useState([""]);
-  const [filteredGenre, setFilteredGenre] = useState([""]);
-
-  // const handleChange = e => {
-  //   if (e.target.checked) {
-  //     setGenre([...genre, e.target.value]);
-  //   } else {
-  //     setGenre(genre.filter(id => id !== e.target.value));
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   setFilteredGenre(
-  //     movieData.filter(movie =>
-  //       genre.some(category => category === movie.genre)
-  //     )
-  //   );
-  // }, [genre]);
 
   /* ----------------------------------------------------------------*/
   /*                     Filter By Name Search                       */
@@ -75,7 +54,7 @@ const Courses = () => {
     if (e.target.checked) {
       setSelectedCategory([...selectedCategory, Category])
     } else {
-      setSelectedCategory(selectedCategory?.filter(id => id !== e.target.value));
+      setSelectedCategory(selectedCategory?.filter(category => category !== e.target.value));
     };
 
     // console.log(result);
