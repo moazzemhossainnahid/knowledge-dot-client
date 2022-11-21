@@ -50,7 +50,7 @@ const ProfileData = () => {
       </div>
       <Link to={'/mycourse'} className="my-4 w-36 mx-auto btn-primary btn btn-outline">See All Course</Link>
       <h1 className="text-2xl mb-3">Books</h1>
-      <div className="grid sm:grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 mb-10">
+      {/* <div className="grid sm:grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 mb-10">
         <Link to={"/audiobooks"}>
           <div className="card w-full mx-auto bg-base-200 border border-neutral">
             <figure className="px-3 pt-3">
@@ -79,7 +79,7 @@ const ProfileData = () => {
             </div>
           </div>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
