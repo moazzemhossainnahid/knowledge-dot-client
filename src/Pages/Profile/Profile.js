@@ -74,14 +74,14 @@ const Profile = () => {
                   </div>
 
                   <div className="stat place-items-center">
-                    <div className="stat-value">50</div>
-                    <div className="stat-desc">Quiz</div>
+                    <div className="stat-value text-info">50</div>
+                    <div className="stat-desc text-info">Quiz</div>
                   </div>
                 </div>
               </div>
               <div className="grid gap-1 m-4">
-                <button className="btn btn-info btn-xs mb-4">Message</button>
-                <button className="btn btn-info btn-xs">Connect</button>
+                <button className="btn bg-rose-600 text-white py-1 hover:bg-indigo-800 btn-xs mb-4">Message</button>
+                <button className="btn bg-teal-700 text-white py-1 hover:bg-cyan-800 btn-xs">Connect</button>
               </div>
             </div>
             <div className="card-body py-2 flex-row">
@@ -115,9 +115,9 @@ const Profile = () => {
               <p>{user?.data?.bio ? user?.data?.bio : "- - -"}</p>
             </div>
             <div className="card-body flex-row gap-5 justify-center py-5 text-2xl">
-              <a href={user?.data?.facebookLink ? user?.data?.facebookLink : "- - -"} target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
-              <a href={user?.data?.instaLink ? user?.data?.instaLink : "- - -"} target='_blank'><FontAwesomeIcon icon={faInstagram} /></a>
-              <a href={user?.data?.linkedInLink ? user?.data?.linkedInLink : "- - -"} target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
+              <a className="text-[#1877F2]"  href={user?.data?.facebookLink ? user?.data?.facebookLink : "- - -"} target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
+              <a className="text-[#E4405F]" href={user?.data?.instaLink ? user?.data?.instaLink : "- - -"} target='_blank'><FontAwesomeIcon icon={faInstagram} /></a>
+              <a className="text-[#0A66C2]"  href={user?.data?.linkedInLink ? user?.data?.linkedInLink : "- - -"} target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
             </div>
           </div>
         </div>
