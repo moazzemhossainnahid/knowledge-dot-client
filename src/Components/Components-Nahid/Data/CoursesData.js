@@ -846,7 +846,7 @@ export const AllCoursesData = [
         "instructor": "Munzereen Shahid ",
         "instructorimg": "https://yt3.ggpht.com/ytc/AMLnZu8KJFJ3jMafPIqfjNbJGPsORFk4Np8rj9sysZU-=s176-c-k-c0x00ffffff-no-rj",
         "thumbimg": "https://10mspromo.com/wp-content/uploads/2022/09/Ghore-boshe-Spoken-English-Course-Thumbnail.jpg",
-        "introvdo": "https://www.youtube.com/watch?v=PO58e0Z4dbE&list=PL1pf33qWCkmgk3SMf7P9EXiXwCTc1CnxY",
+        "introvdo": "https://www.youtube.com/watch?v=PO58e0Z4dbE&t=47s",
         "list": "Learning",
         "category": "Spoken English",
         "rating": {

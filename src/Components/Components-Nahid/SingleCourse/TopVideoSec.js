@@ -23,6 +23,17 @@ const TopVideoSec = ({ course }) => {
                                 light={true}
                                 url={course?.introvdo}
                                 playing
+                                config={{
+                                    youtube: {
+                                        playerVars: {
+                                            showinfo: 0,
+                                            fs: 0,
+                                        },
+                                        modestbranding: 1,
+                                        preload: true,
+                                        rel: 0
+                                    },
+                                }}
                             />
                         ) : (
                             <div className="w-full h-full bg-slate-300 rounded">
