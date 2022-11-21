@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import 'react-toastify/dist/ReactToastify.css';
 import Home from "./Pages/Home/Home";
 import LeftSideMenu from "./Components/Components-Nahid/LeftSideMenu/LeftSideMenu";
 import Curriculum from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Curriculum";
@@ -19,6 +20,9 @@ import Footer from "./Pages/SharedPages/Footer/Footer";
 import Navbar from "./Pages/SharedPages/Header/Navbar";
 import ForgetPassword from "./Pages/Authentication/SignIn/ForgetPassword";
 import Profile from "./Pages/Profile/Profile";
+import ProfileData from "./Pages/Profile/ProfileData";
+import UpdateProfile from "./Pages/Profile/UpdateProfile";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -43,11 +47,15 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} >
+            <Route index element={<ProfileData></ProfileData>}></Route>
+            <Route path="/profile/update" element={<UpdateProfile></UpdateProfile>}></Route>
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

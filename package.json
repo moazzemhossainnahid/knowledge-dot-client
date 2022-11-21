@@ -36,6 +36,7 @@
     "react-spinners": "^0.13.6",
     "react-stars": "^2.2.5",
     "react-timer-hook": "^3.0.5",
+    "react-toastify": "^9.1.1",
     "sweetalert2": "^11.6.5",
     "tailwind-scrollbar-hide": "^1.1.7",
     "tw-elements": "^1.0.0-alpha12",

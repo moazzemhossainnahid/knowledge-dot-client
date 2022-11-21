@@ -5,7 +5,7 @@ import { NavHashLink } from "react-router-hash-link";
 import "./Profile.css";
 import auth from "../../Firebase/Firebase.init";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPhoneAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark, faClock, faGraduationCap, faHeart, faLocationDot, faPenToSquare, faPhoneAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Profile = () => {
   const [user] = useAuthState(auth);
@@ -31,7 +31,7 @@ const Profile = () => {
             your work and manage your projects or assigned tasks
           </p>
           <NavHashLink
-            to={"/profile/update#profile"}
+            to={"/profile/update"}
             className="mt-5 btn btn-primary rounded-md"
           >
             Edit profile
@@ -42,10 +42,10 @@ const Profile = () => {
         <div className=" lg:w-4/12 w-11/12 md:w-10/12 mx-auto mt-[-170px] mb-6">
           <div className="card shadow-2xl bg-base-100">
             <NavHashLink
-              to={"/profile/update#profile"}
+              to={"/profile/update"}
             >
               <p className="text-right pr-3 pt-2">
-                <i className="fa-solid fa-pen-to-square"></i>
+                <FontAwesomeIcon icon={faPenToSquare}/>
               </p>
             </NavHashLink>
             <div>

@@ -1,10 +1,10 @@
 import React from "react";
-import { PacmanLoader } from "react-spinners";
+import { RingLoader } from "react-spinners";
 
 const Loading = () => {
   return (
-    <div className="flex justify-center items-center mt-2 w-full h-full py-20">
-      <PacmanLoader color="#137c38" size={70} cssOverride />
+    <div className="flex justify-center items-center w-full h-screen py-20">
+      <RingLoader color="#137c38" size={80} cssOverride />
     </div>
   );
 };
