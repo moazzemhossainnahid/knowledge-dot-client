@@ -9,8 +9,10 @@ const useCourses = () => {
         BaseURL.get(`/api/v1/courses`)
     );
 
+    console.log(AllCoursesData);
+
     useEffect(() => {
-        setCourses(AllCoursesData && AllCoursesData?.data);
+        setCourses(AllCoursesData && AllCoursesData?.data?.data);
     }, [AllCoursesData])
 
     if (isLoading) {
