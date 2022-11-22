@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import BestInstructor from "./BestInstructor";
 import GeneralTeacher from "./GeneralTeacher";
 import InstructorCarousel from "./InstructorCarousel";
+import BaseURL from "../../Hooks/BaseURL";
 
 const Instructors = () => {
   const [instructors, setInstructors] = useState([]);
+
   useEffect(() => {
-    axios
+    BaseURL
       .get(
-        "https://knowledge-dot-server-production.up.railway.app/api/v1/instructors"
+        "/api/v1/instructors"
       )
       .then((data) => setInstructors(data.data));
   }, []);
