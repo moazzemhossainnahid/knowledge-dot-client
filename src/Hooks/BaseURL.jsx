@@ -3,7 +3,7 @@ import { signOut } from "firebase/auth";
 import auth from "../Firebase/Firebase.init";
 
 const BaseURL = axios.create({
-  baseURL: "https://knowledge-dot-server-production.up.railway.app/",
+  baseURL: "https://knowledge-dot-server1.vercel.app/",
 });
 
 // request interceptor

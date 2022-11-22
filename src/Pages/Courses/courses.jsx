@@ -137,7 +137,7 @@ const Courses = () => {
                     </select>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
                   {loadCourses?.length ?
                     loadCourses?.map((data, index) => (
                       <CoursesGrid course={data} key={index} />
