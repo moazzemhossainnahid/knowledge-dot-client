@@ -14,6 +14,23 @@ const Courses = () => {
   const [reviewFilter, setReviewFilter] = useState([]);
 
 
+
+
+  /* ----------------------------------------------------------------*/
+  /*                  Courses Category wise Length                   */
+  /* ----------------------------------------------------------------*/
+
+  const WebDesign = Courses?.filter(course => course?.category === "Web Design");
+  const WebDevelopment = Courses?.filter(course => course?.category === "Web Development");
+  const GraphicsDesign = Courses?.filter(course => course?.category === "Graphics Design");
+  const SpokenEnglish = Courses?.filter(course => course?.category === "Spoken English");
+  const Others = Courses?.filter(course => course?.category === "Others");
+
+
+
+
+
+
   /* ----------------------------------------------------------------*/
   /*                     Filter By Name Search                       */
   /* ----------------------------------------------------------------*/
@@ -115,7 +132,7 @@ const Courses = () => {
                 <div className="sticky top-20">
                   <aside>
                     <div className="md:mb-3 pb-10">
-                      <Sidebar handleSearchResult={handleSearchResult} handleFilterByCheckbox={handleFilterByCheckbox} handleReviewFilter={handleReviewFilter} />
+                      <Sidebar WebDesign={WebDesign} WebDevelopment={WebDevelopment} GraphicsDesign={GraphicsDesign} SpokenEnglish={SpokenEnglish} Others={Others} handleSearchResult={handleSearchResult} handleFilterByCheckbox={handleFilterByCheckbox} handleReviewFilter={handleReviewFilter} />
                     </div>
                   </aside>
                 </div>

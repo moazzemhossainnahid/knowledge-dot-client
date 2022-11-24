@@ -1,11 +1,8 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { CoursesCategoryData } from "../Data/CoursesCategoryData";
-const CoursesSidebar = ({
-  handleSearchResult,
-  handleFilterByCheckbox,
-  handleReviewFilter
-}) => {
+const CoursesSidebar = ({ handleSearchResult, handleFilterByCheckbox, handleReviewFilter, WebDesign, WebDevelopment, GraphicsDesign, SpokenEnglish, Others }) => {
+console.log(Others);
   return (
     <div className=" bg-white px-4 pb-6 mt-3 shadow-lg border rounded-md overflow-hidden">
       <div className="divide-y divide-gray-200 space-y-5">
@@ -51,7 +48,7 @@ const CoursesSidebar = ({
                                 {course?.name}
                               </label>
                             </div>
-                            <h3 className="text-gray-500 font-semibold">(15)</h3>
+                            <h3 className="text-gray-500 font-semibold">{course?.length}</h3>
                           </div>
                         ))
                       }
