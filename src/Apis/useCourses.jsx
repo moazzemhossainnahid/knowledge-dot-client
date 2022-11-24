@@ -16,7 +16,7 @@ const useCourses = () => {
     useEffect(() => {
 
         const data = AllCoursesData && AllCoursesData?.data?.data?.result;
-        console.log(data);
+        // console.log(data);
 
         if (window.location.pathname === '/courses/Web%20Design') {
             const othersCourse = data?.filter(courses => courses?.category === "Web Design");
@@ -40,8 +40,6 @@ const useCourses = () => {
         }else{
             setCourses(data)
         };
-
-        console.log(window.location.pathname);
         
     }, [AllCoursesData, navigate]);
 
