@@ -6,13 +6,13 @@ import Loading from '../Pages/SharedPages/Loading';
 const useCourses = () => {
     const [Courses, setCourses] = useState();
     const { data: AllCoursesData, isLoading } = useQuery(["AllCoursesData"], () =>
-        BaseURL.get(`/api/v1/courses`)
+        BaseURL.get(`/api/v1/courses/?sort=-price`)
     );
 
     console.log(AllCoursesData);
 
     useEffect(() => {
-        setCourses(AllCoursesData && AllCoursesData?.data?.data);
+        setCourses(AllCoursesData && AllCoursesData?.data?.data?.result);
     }, [AllCoursesData])
 
     if (isLoading) {

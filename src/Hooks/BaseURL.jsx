@@ -3,7 +3,7 @@ import { signOut } from "firebase/auth";
 import auth from "../Firebase/Firebase.init";
 
 const BaseURL = axios.create({
-  baseURL: "http://localhost:5000/",
+  baseURL: "https://knowledge-dot-server-ii.vercel.app/",
 });
 
 // request interceptor
