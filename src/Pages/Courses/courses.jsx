@@ -15,7 +15,6 @@ const Courses = () => {
 
 
 
-
   /* ----------------------------------------------------------------*/
   /*                  Courses Category wise Length                   */
   /* ----------------------------------------------------------------*/
@@ -25,9 +24,6 @@ const Courses = () => {
   const GraphicsDesign = Courses?.filter(course => course?.category === "Graphics Design");
   const SpokenEnglish = Courses?.filter(course => course?.category === "Spoken English");
   const Others = Courses?.filter(course => course?.category === "Others");
-
-
-
 
 
 
@@ -117,7 +113,7 @@ const Courses = () => {
   };
 
   return (
-    <div className="">
+    <div className="w-full">
       <div className="py-3">
         <h3 className="text-4xl font-bold text-center py-4">
           User Interface Courses
@@ -154,12 +150,15 @@ const Courses = () => {
                     </select>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
+                <div className="w-full grid grid-cols-1 gap-6 sm:grid-cols-1 justify-center md:grid-cols-2 lg:grid-cols-3 mx-auto">
                   {loadCourses?.length ?
                     loadCourses?.map((data, index) => (
                       <CoursesGrid course={data} key={index} />
                     )) :
-                    <Loading />}
+                    <div className="w-screen -ml-28 lg:-ml-44 -mt-20 flex justify-center mx-auto">
+                      <Loading />
+                    </div>
+                  }
                 </div>
               </div>
             </div>
