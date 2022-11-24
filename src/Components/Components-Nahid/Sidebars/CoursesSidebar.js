@@ -1,20 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { CoursesCategoryData } from "../Data/CoursesCategoryData";
 const CoursesSidebar = ({ handleSearchResult, handleFilterByCheckbox, handleReviewFilter, WebDesign, WebDevelopment, GraphicsDesign, SpokenEnglish, Others }) => {
-  const [dataCount, setDataCount] = useState();
-
-  // console.log(WebDesign?.map(courses => courses?.includes(category)));
-  const data = CoursesCategoryData?.map(ct => ct?.name);
-
-  // useEffect(() => {
-  //   if (data === "Web Design") {
-  //     setDataCount(WebDesign)
-  //   }
-  // }, [data, WebDesign]);
-
-
-  console.log(dataCount);
 
   return (
     <div className=" bg-white px-4 pb-6 mt-3 shadow-lg border rounded-md overflow-hidden">
@@ -61,13 +48,11 @@ const CoursesSidebar = ({ handleSearchResult, handleFilterByCheckbox, handleRevi
                                 {course?.name}
                               </label>
                             </div>
-                            {course &&
-                              <h3 className="text-gray-500 font-semibold">( {(course?.name === "Web Design" && WebDesign?.length) || (course?.name === "Web Development" && WebDevelopment?.length) || (course?.name === "Graphics Design" && GraphicsDesign?.length) || (course?.name === "Spoken English" && SpokenEnglish?.length) || (course?.name === "Others" && Others?.length) } )</h3>
-                            }
-                          </div>
-                        )
 
-                        )
+                            <h3 className="text-gray-500 font-semibold">( {(course?.name === "Web Design" && WebDesign?.length) || (course?.name === "Web Development" && WebDevelopment?.length) || (course?.name === "Graphics Design" && GraphicsDesign?.length) || (course?.name === "Spoken English" && SpokenEnglish?.length) || (course?.name === "Others" && Others?.length)} )</h3>
+
+                          </div>
+                        ))
                       }
                     </div>
                   </div>
