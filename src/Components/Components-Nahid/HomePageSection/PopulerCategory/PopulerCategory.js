@@ -15,7 +15,7 @@ const PopulerCategory = () => {
                 {
                     PopulerCategoryData?.map((data, idx) => {
                         return (
-                            <div onClick={() => navigate(`/courses`)} className='text-center group cursor-pointer hover:-mt-7 duration-300 rounded py-10 p-5 shadow-md gap-5 w-full mx-auto' key={idx}>
+                            <div onClick={() => navigate(`/courses/${data?.title}`)} className='text-center group cursor-pointer hover:-mt-7 duration-300 rounded py-10 p-5 shadow-md gap-5 w-full mx-auto' key={idx}>
                                 <img className='w-20 h-20 mx-auto' src={data?.icon} alt="" />
                                 <h3 className="text-xl py-2 font-semibold font-sans">{data?.title}</h3>
                                 <p className="text-xl group-hover:text-green-700 text-orange-500">{data?.course} Course</p>

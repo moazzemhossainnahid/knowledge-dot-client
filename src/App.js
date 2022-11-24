@@ -34,6 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:category" element={<Courses />} />
           <Route path="/course/:id" element={<SingleCourse />}>
             <Route index element={<Overview />} />
             <Route path="overview" element={<Overview />} />
