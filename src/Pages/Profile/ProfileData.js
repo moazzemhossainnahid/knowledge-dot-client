@@ -8,21 +8,22 @@ import Loading from "../SharedPages/Loading";
 
 const ProfileData = () => {
   const [user] = useAuthState(auth);
-  const {
-    data: myCourse,
-    isLoading,
-    refetch,
-  } = useQuery(["myCourses", user?.email], () =>
-    BaseURL.get(`/mycourse?email=${user?.email}`)
-  );
-  if (isLoading) {
-    return <Loading></Loading>;
-  }
+  const myCourse = [];
+  // const {
+  //   data: myCourse,
+  //   isLoading,
+  //   refetch,
+  // } = useQuery(["myCourses", user?.email], () =>
+  //   BaseURL.get(`/mycourse?email=${user?.email}`)
+  // );
+  // if (isLoading) {
+  //   return <Loading></Loading>;
+  // }
   return (
     <div className="card p-6 shadow-2xl h-full bg-base-100">
       <h1 className="text-2xl mb-3">Courses</h1>
       <div className="grid sm:grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
-        {myCourse?.data?.slice(0,3)?.map((allcard) => (
+        {myCourse?.map((allcard) => (
           <Link
             to={"/mycourse"}
             data-tip={allcard?.name}
