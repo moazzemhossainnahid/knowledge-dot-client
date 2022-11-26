@@ -36,6 +36,7 @@ const Courses = () => {
       course?.name?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.category?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.list?.toLowerCase().includes(searchText.toLowerCase()) ||
+      course?.instructor?.toLowerCase().includes(searchText.toLowerCase()) ||
       course?.language?.toLowerCase().includes(searchText.toLowerCase())
     );
     setCategoryCourse([]);
