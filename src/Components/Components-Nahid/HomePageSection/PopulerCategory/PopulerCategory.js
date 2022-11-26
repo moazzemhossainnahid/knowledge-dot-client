@@ -26,7 +26,7 @@ const PopulerCategory = () => {
                             <div onClick={() => navigate(`/courses/${data?.title}`)} className='text-center group cursor-pointer hover:-mt-7 duration-300 rounded py-10 p-5 shadow-md gap-5 w-full mx-auto' key={idx}>
                                 <img className='w-20 h-20 mx-auto' src={data?.icon} alt="" />
                                 <h3 className="text-xl py-2 font-semibold font-sans">{data?.title}</h3>
-                                <h3 className="text-xl group-hover:text-green-700 text-orange-500">{(data?.title === "Web Design" && WebDesign?.length) || (data?.title === "Web Development" && WebDevelopment?.length) || (data?.title === "Graphics Design" && GraphicsDesign?.length) || (data?.title === "Spoken English" && SpokenEnglish?.length) || (data?.title === "Others" && Others?.length)} Course</h3>
+                                <h3 className="text-xl group-hover:text-green-700 text-orange-500"> <span className="font-bold">{(data?.title === "Web Design" && WebDesign?.length) || (data?.title === "Web Development" && WebDevelopment?.length) || (data?.title === "Graphics Design" && GraphicsDesign?.length) || (data?.title === "Spoken English" && SpokenEnglish?.length) || (data?.title === "Others" && Others?.length)}</span> Course</h3>
                             </div>
                         );
                     })
