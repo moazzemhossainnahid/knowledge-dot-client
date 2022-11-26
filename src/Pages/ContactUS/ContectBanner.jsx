@@ -30,7 +30,7 @@ const ContectBanner = () => {
 
                         <input className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="text" name="" id="" placeholder="Subject" />
 
-                        <textarea className=' block w-full h-32 pl-2 border-2 border-[#d8dada] mb-5' type="text" name="" id="" placeholder="Your message" />
+                        <textarea className=' block w-full h-32 resize-none pl-2 border-2 border-[#d8dada] mb-5' type="text" name="" id="" placeholder="Your message" />
 
                         <input className=' block h-10 px-7 bg-[#015abd] text-white uppercase my-4' type="submit" value="Send now" />
                     </form>
