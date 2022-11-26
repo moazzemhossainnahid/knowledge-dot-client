@@ -221,7 +221,7 @@ const CheckoutCourseDetails = ({ course }) => {
             <div className="flex justify-between text-lg text-black text-opacity-90  my-2">
               <p>Video Calling</p>
               <p>
-                <RupiSymple /> 300
+                <RupiSymple /> 200
               </p>
             </div>
             <div className="py-5">
@@ -230,7 +230,7 @@ const CheckoutCourseDetails = ({ course }) => {
             <div className="flex justify-between text-lg text-black text-opacity-90  my-2 mb-10">
               <p className="text-xl font-semibold ">Total</p>
               <p className="text-xl font-semibold ">
-                = <RupiSymple /> {course?.price + 100 + 300}
+                = <RupiSymple /> {course?.price + 100 + 200}
               </p>
             </div>
           </div>
