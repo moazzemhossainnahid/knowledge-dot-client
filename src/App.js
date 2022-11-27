@@ -62,7 +62,7 @@ function App() {
         </Routes>
       </div>
       <MessengerCustomerChat
-          pageId="103385817990523"
+          pageId="100064403992991"
           appId="594155188895748"
         />
       <Footer />
