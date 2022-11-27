@@ -5,6 +5,7 @@ import { AiOutlinePhone } from 'react-icons/ai';
 import { BsClock } from 'react-icons/bs';
 
 const ContactApply = () => {   
+
     return (
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-28 lg:mx-44 my-24 mx-6'>
             <div>
