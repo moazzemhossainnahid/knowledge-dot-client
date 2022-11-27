@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import 'react-toastify/dist/ReactToastify.css';
 import Home from "./Pages/Home/Home";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 import LeftSideMenu from "./Components/Components-Nahid/LeftSideMenu/LeftSideMenu";
 import Curriculum from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Curriculum";
 import Instructor from "./Components/Components-Nahid/SingleCourse/nestedTabPage/Instructor";
@@ -60,6 +61,10 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
+      <MessengerCustomerChat
+          pageId="100087757433830"
+          appId="2444817992323671"
+        />
       <Footer />
       <ToastContainer />
     </div>
