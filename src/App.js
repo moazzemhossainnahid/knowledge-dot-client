@@ -26,6 +26,7 @@ import BookingSuccess from "./Pages/Checkout/BookingSuccess";
 import ProfileData from "./Pages/Profile/ProfileData";
 import UpdateProfile from "./Pages/Profile/UpdateProfile";
 import { ToastContainer } from "react-toastify";
+import MyCourse from "./Pages/MyCourse/MyCourse";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="/checkout/:id" element={<Checkout />} />
           <Route path="/booking/:id" element={<BookingSuccess />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/mycourse" element={<MyCourse />} />
           <Route path="/profile" element={<Profile />} >
             <Route index element={<ProfileData></ProfileData>}></Route>
             <Route path="/profile/update" element={<UpdateProfile></UpdateProfile>}></Route>

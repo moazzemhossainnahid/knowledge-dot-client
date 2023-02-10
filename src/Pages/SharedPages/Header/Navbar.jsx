@@ -203,7 +203,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to={"mycourse"} className="hover:rounded-none">
+                <NavLink to={"/mycourse"} className="hover:rounded-none">
                 <FontAwesomeIcon icon={faBolt} />My Courses
                 </NavLink>
               </li>
