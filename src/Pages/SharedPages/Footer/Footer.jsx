@@ -38,15 +38,15 @@ const Footer = () => {
                         <div className="flex justify-center bg-black cursor-pointer hover:bg-blue-500 px-5 py-2 rounded items-center gap-3">
                             <FontAwesomeIcon className='text-5xl' icon={faApple} />
                             <div className="">
+                                <p className="">Available Now on</p>
                                 <h3 className="text-xl">App Store</h3>
-                                <p className="">Available Now on The</p>
                             </div>
                         </div>
                         <div className="flex justify-center bg-black cursor-pointer hover:bg-blue-500 px-5 py-2 rounded items-center gap-3">
                             <FontAwesomeIcon className='text-4xl' icon={faGooglePlay} />
                             <div className="">
+                                <p className="">Available Now on</p>
                                 <h3 className="text-xl">Play Store</h3>
-                                <p className="">Available Now on The</p>
                             </div>
                         </div>
                     </div>
