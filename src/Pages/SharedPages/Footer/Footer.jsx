@@ -79,7 +79,7 @@ const Footer = () => {
             </footer>
             <footer class="footer px-10 py-4 flex justify-center items-center bg-black">
                 <div class="items-center justify-center grid-flow-col">
-                    <p className="text-gray-300 text-center">Copyright © 2022 Theme by I Mern Tech. All Rights Reserved.</p>
+                    <p className="text-gray-300 text-center">Copyright © 2023 Theme by I Mern Tech. All Rights Reserved.</p>
                 </div>
             </footer>
         </div>
