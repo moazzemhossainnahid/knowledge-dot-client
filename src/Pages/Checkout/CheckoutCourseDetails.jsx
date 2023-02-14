@@ -3,6 +3,8 @@ import { MdLocationPin } from "react-icons/md";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 import RupiSymple from "./RupiSymple";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBangladeshiTakaSign } from "@fortawesome/free-solid-svg-icons";
 
 const CheckoutCourseDetails = ({ course }) => {
   const ratings = Math.ceil(
@@ -42,7 +44,7 @@ const CheckoutCourseDetails = ({ course }) => {
           <h3 className="text-2xl text-black text-opacity-90 ">
             Booking Summary :
           </h3>
-          <h2 className="text-lg text-semibold text-gray-600 flex items-center gap-x-2">
+          <h2 className="text-sm text-semibold text-gray-600 flex items-center gap-x-2">
             <AiOutlineArrowRight />
             {course?.name}
           </h2>
@@ -209,19 +211,19 @@ const CheckoutCourseDetails = ({ course }) => {
             <div className="flex justify-between text-lg text-black text-opacity-90  my-2">
               <p>Course Fee</p>
               <p>
-                <RupiSymple /> {course?.price}
+                <FontAwesomeIcon icon={faBangladeshiTakaSign} /> {course?.price}
               </p>
             </div>
             <div className="flex justify-between text-lg text-black text-opacity-90  my-2">
               <p>Booking Fee</p>
               <p>
-                <RupiSymple /> 100
+              <FontAwesomeIcon icon={faBangladeshiTakaSign} /> 100
               </p>
             </div>
             <div className="flex justify-between text-lg text-black text-opacity-90  my-2">
               <p>Video Calling</p>
               <p>
-                <RupiSymple /> 200
+              <FontAwesomeIcon icon={faBangladeshiTakaSign} /> 200
               </p>
             </div>
             <div className="py-5">
@@ -230,7 +232,7 @@ const CheckoutCourseDetails = ({ course }) => {
             <div className="flex justify-between text-lg text-black text-opacity-90  my-2 mb-10">
               <p className="text-xl font-semibold ">Total</p>
               <p className="text-xl font-semibold ">
-                = <RupiSymple /> {course?.price + 100 + 200}
+                = <FontAwesomeIcon icon={faBangladeshiTakaSign} /> {course?.price + 100 + 200}
               </p>
             </div>
           </div>
