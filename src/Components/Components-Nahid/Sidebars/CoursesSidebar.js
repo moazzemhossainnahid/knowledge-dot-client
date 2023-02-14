@@ -44,12 +44,12 @@ const CoursesSidebar = ({ handleSearchResult, handleFilterByCheckbox, handleRevi
                           <div key={course?.index} class="form-check w-full flex justify-between items-center py-1 gap-2">
                             <div className="pr-7">
                               <input onChange={handleFilterByCheckbox} value={course?.name} class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" id={course?.index} />
-                              <label class="form-check-label inline-block text-gray-800" for={course?.index}>
+                              <label class="form-check-label inline-block text-sm text-gray-800" for={course?.index}>
                                 {course?.name}
                               </label>
                             </div>
 
-                            <h3 className="text-gray-500 font-semibold">( {(course?.name === "Web Design" && WebDesign?.length) || (course?.name === "Web Development" && WebDevelopment?.length) || (course?.name === "Graphics Design" && GraphicsDesign?.length) || (course?.name === "Spoken English" && SpokenEnglish?.length) || (course?.name === "Others" && Others?.length)} )</h3>
+                            <h3 className="text-gray-500 text-sm font-semibold">( {(course?.name === "Web Design" && WebDesign?.length) || (course?.name === "Web Development" && WebDevelopment?.length) || (course?.name === "Graphics Design" && GraphicsDesign?.length) || (course?.name === "Spoken English" && SpokenEnglish?.length) || (course?.name === "Others" && Others?.length)} )</h3>
 
                           </div>
                         ))
