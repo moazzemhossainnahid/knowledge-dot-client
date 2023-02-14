@@ -27,6 +27,7 @@ import ProfileData from "./Pages/Profile/ProfileData";
 import UpdateProfile from "./Pages/Profile/UpdateProfile";
 import { ToastContainer } from "react-toastify";
 import MyCourse from "./Pages/MyCourse/MyCourse";
+import TermsAndConditions from "./Pages/Others/TermsAndConditions";
 
 function App() {
   return (
@@ -54,7 +55,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/checkout/:id" element={<Checkout />} />
           <Route path="/booking/:id" element={<BookingSuccess />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/tandc" element={<TermsAndConditions />} />
           <Route path="/mycourse" element={<MyCourse />} />
           <Route path="/profile" element={<Profile />} >
             <Route index element={<ProfileData></ProfileData>}></Route>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/Firebase.init";
 
@@ -240,9 +240,9 @@ const CheckoutForm = ({ course }) => {
             />
             <span className="ml-2">
               I have read and accepted{" "}
-              <a href="#!" className="text-[#009DA6] font-semibold font-sans">
+              <Link to="/tandc" className="text-[#009DA6] font-semibold font-sans">
                 Terms & Conditions
-              </a>
+              </Link>
             </span>
           </div>
           <div>
