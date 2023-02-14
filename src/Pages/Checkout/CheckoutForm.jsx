@@ -1,8 +1,22 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutForm = ({ course }) => {
   const navigate = useNavigate();
+  const [isChecked, setIsChecked] = useState(false);
+
+  
+  const handleChecked = (event) => {
+    if (event.target.checked) {
+      setIsChecked(true);
+    } else {
+      setIsChecked(false);
+    }
+  };
+
+
+
   const BookSuccess = (event) => {
     event.preventDefault();
     navigate(`/booking/${course?._id}`);
@@ -187,6 +201,7 @@ const CheckoutForm = ({ course }) => {
           <div className="py-4">
             <input
               type="checkbox"
+              onChange={handleChecked}
               name=""
               id=""
               className="checkbox checkbox-sm border-2 checkbox-success"
@@ -201,6 +216,7 @@ const CheckoutForm = ({ course }) => {
           <div>
             <input
               type="submit"
+              disabled={!isChecked}
               className="btn text-white bg-[#009DA6] hover:bg-[#007bff]"
               value="Confirm and Pay"
             />
