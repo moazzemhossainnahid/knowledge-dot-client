@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../Firebase/Firebase.init";
 
 const CheckoutForm = ({ course }) => {
   const navigate = useNavigate();
   const [isChecked, setIsChecked] = useState(false);
-
+  const [user] = useAuthState(auth);
   
   const handleChecked = (event) => {
     if (event.target.checked) {
@@ -15,7 +17,36 @@ const CheckoutForm = ({ course }) => {
     }
   };
 
+  const confirmToPay = (event) => {
 
+    event.preventDefault();
+
+    const info = {
+      item_name: course?.name,
+      item_desc: course?.desc,
+      item_category: course?.category,
+      item_badge: course?.badge,
+      item_image: course?.img,
+      total_amount: (course?.price + course?.price / 100 * 7 + course?.price / 100 * 5).toFixed(2),
+      cus_name: user?.displayName,
+      cus_email: user?.email
+
+    }
+
+    // console.log(info);
+
+    // axios.post(`https://khadok-server.vercel.app/init`, info)
+    //   .then(res => {
+    //     if(res?.data){
+    //       window.location = res?.data
+    //     }
+    //   })
+
+    // if (urlData?.data) {
+    //   window.location.href = urlData?.data
+    // }
+
+  };
 
   const BookSuccess = (event) => {
     event.preventDefault();
@@ -28,25 +59,26 @@ const CheckoutForm = ({ course }) => {
         Personal Information
       </h2>
       <form onSubmit={BookSuccess}>
-        <div className=" grid md:grid-cols-2 grid-cols-1 justify-items-stretch  gap-5  ">
           <div>
             <label className="relative cursor-pointer">
               <input
                 type="text"
                 placeholder="Input"
-                className="h-[50px]  w-full  px-6 text-2xl   border rounded-sm outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
-                name="firstName"
+                className="h-[50px] w-full px-6 text-xl border rounded-sm outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
+                name="name"
               />
-              <span className=" text-sm bg-white te text-opacity-80 absolute left-2 px-2 top-[-30px]  transition duration-200 input-text">
-                First Name
+              <span className="text-sm bg-white te text-opacity-80 absolute left-2 px-2 top-[-30px]  transition duration-200 input-text">
+                Name
               </span>
             </label>
           </div>
-          <div>
+        <div className=" grid md:grid-cols-2 grid-cols-1 justify-items-stretch pt-5 gap-5  ">
+          {/* <div>
             <label className="relative cursor-pointer">
               <input
                 type="text"
                 placeholder="Input"
+                defaultValue={user?.displayName}
                 className="h-[50px]  w-full   px-6 text-xl   border rounded-sm outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
                 name="lastName"
               />
@@ -54,7 +86,7 @@ const CheckoutForm = ({ course }) => {
                 Last Name
               </span>
             </label>
-          </div>
+          </div> */}
           <div>
             <label className="relative cursor-pointer">
               <input
