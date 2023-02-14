@@ -14,8 +14,8 @@ const UPEventDetails = ({ course }) => {
                     <h6>{course.month}</h6>
                 </div>
                 <div className='text-[#192f59] border-l-2 border-[#0067DA] group-hover:border-white pl-3 group-hover:text-white'>
-                    <h2 className=' text-xl font-semibold pb-2'>{course.name}</h2>
-                    <p className='text-sm'>{course.description}</p>
+                    <h2 className=' text-md font-semibold pb-2'>{course.name}</h2>
+                    <p className='text-xs'>{course.description}</p>
                 </div>  
 
                 <div></div>
