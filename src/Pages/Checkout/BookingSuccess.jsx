@@ -2,8 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import useCourses from "../../Apis/useCourses";
 import { FaCheckCircle } from "react-icons/fa";
-import { Button } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 const BookingSuccess = () => {

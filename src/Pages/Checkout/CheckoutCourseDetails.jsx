@@ -2,7 +2,6 @@ import React from "react";
 import { MdLocationPin } from "react-icons/md";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-import RupiSymple from "./RupiSymple";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBangladeshiTakaSign } from "@fortawesome/free-solid-svg-icons";
 
@@ -36,7 +35,7 @@ const CheckoutCourseDetails = ({ course }) => {
     const strTime = hours + ":" + minutes + " " + ampm;
     return strTime;
   };
-  console.log(course);
+  // console.log(course);
   return (
     <div className=" relative">
       <div className="border sticky top-20 px-4   shadow-lg rounded-sm">
@@ -58,7 +57,7 @@ const CheckoutCourseDetails = ({ course }) => {
               </div>
             </div>
             <div className="flex flex-col justify-around">
-              <h1>{course?.instructor}</h1>
+              <h1 className="font-semibold">{course?.instructor}</h1>
 
               {/* Rating add  */}
               <div className="flex gap-2 items-center">

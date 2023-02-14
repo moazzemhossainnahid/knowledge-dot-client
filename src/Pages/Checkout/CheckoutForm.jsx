@@ -67,18 +67,32 @@ const CheckoutForm = ({ course }) => {
               </span>
             </label>
           </div>
+
         </div>
-        <div>
+        <div className="pt-5">
+            <label className="relative w-full cursor-pointer">
+              <input
+                type="text"
+                placeholder="Input"
+                className="h-[70px] w-full px-6 text-md border rounded-sm outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
+                name="address"
+              />
+              <span className=" text-sm bg-white te text-opacity-80 absolute left-2 px-2 top-[-30px]  transition duration-200 input-text">
+                Address
+              </span>
+            </label>
+          </div>
+        {/* <div>
           <h3 className="py-4">
             Existing Customer?{" "}
             <NavLink to="/" className="text-[#009DA6] font-semibold font-sans">
               Click here to login
             </NavLink>{" "}
           </h3>
-        </div>
+        </div> */}
         <div>
           <hr />
-          <div className="mt-5">
+          {/* <div className="mt-5">
             <input
               type="radio"
               name="paymentOption"
@@ -89,8 +103,8 @@ const CheckoutForm = ({ course }) => {
             <span className="text-2xl text-black font-bold text-opacity-95 ml-4">
               Credit Card
             </span>
-          </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 justify-items-stretch   gap-5 py-5">
+          </div> */}
+          {/* <div className="grid md:grid-cols-2 grid-cols-1 justify-items-stretch   gap-5 py-5">
             <div>
               <label className="relative cursor-pointer">
                 <input
@@ -117,8 +131,8 @@ const CheckoutForm = ({ course }) => {
                 </span>
               </label>
             </div>
-          </div>
-          <div className="grid md:grid-cols-3 grid-cols-1 justify-items-stretch   gap-5 py-5">
+          </div> */}
+          {/* <div className="grid md:grid-cols-3 grid-cols-1 justify-items-stretch   gap-5 py-5">
             <div>
               <label className="relative cursor-pointer">
                 <input
@@ -158,8 +172,8 @@ const CheckoutForm = ({ course }) => {
                 </span>
               </label>
             </div>
-          </div>
-          <div className="mt-5">
+          </div> */}
+          {/* <div className="mt-5">
             <input
               type="radio"
               name="paymentOption"
@@ -169,7 +183,7 @@ const CheckoutForm = ({ course }) => {
             <span className="text-2xl text-black font-bold text-opacity-95 ml-4">
               Paypal
             </span>
-          </div>
+          </div> */}
           <div className="py-4">
             <input
               type="checkbox"
@@ -179,7 +193,7 @@ const CheckoutForm = ({ course }) => {
             />
             <span className="ml-2">
               I have read and accepted{" "}
-              <a href="#" className="text-[#009DA6] font-semibold font-sans">
+              <a href="#!" className="text-[#009DA6] font-semibold font-sans">
                 Terms & Conditions
               </a>
             </span>
