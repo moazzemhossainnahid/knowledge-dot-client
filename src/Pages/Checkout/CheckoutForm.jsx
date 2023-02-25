@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/Firebase.init";
+import axios from "axios";
+import BaseURL from "../../Hooks/BaseURL";
 
 const CheckoutForm = ({ course }) => {
   const navigate = useNavigate();
@@ -35,12 +37,12 @@ const CheckoutForm = ({ course }) => {
 
     // console.log(info);
 
-    // axios.post(`https://khadok-server.vercel.app/init`, info)
-    //   .then(res => {
-    //     if(res?.data){
-    //       window.location = res?.data
-    //     }
-    //   })
+    axios.post(`${BaseURL}/init`, info)
+      .then(res => {
+        if(res?.data){
+          window.location = res?.data
+        }
+      })
 
     // if (urlData?.data) {
     //   window.location.href = urlData?.data
@@ -53,12 +55,13 @@ const CheckoutForm = ({ course }) => {
     navigate(`/booking/${course?._id}`);
     console.log();
   };
+  
   return (
     <div className="border  px-5 col-span-2  shadow-sm py-5">
       <h2 className="py-5 text-3xl text-black text-opacity-75">
         Personal Information
       </h2>
-      <form onSubmit={BookSuccess}>
+      <form onSubmit={confirmToPay}>
           <div>
             <label className="relative cursor-pointer">
               <input

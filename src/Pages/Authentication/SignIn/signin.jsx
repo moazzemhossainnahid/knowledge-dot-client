@@ -5,6 +5,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../../Firebase/Firebase.init";
 import useToken from "../../../Hooks/useToken";
 import Loading from "../../SharedPages/Loading";
@@ -15,6 +16,7 @@ const SignIn = () => {
     register,
     formState: { errors },
     handleSubmit,
+    reset
   } = useForm();
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
@@ -26,15 +28,14 @@ const SignIn = () => {
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
-  useEffect(() => {
-    if (user || gUser) {
-      // from, { replace: true };
-      navigate("/");
-    }
-  }, [user || gUser, navigate]);
 
   if (loading || gLoading) {
     return <Loading />;
+  }
+
+  if (token) {
+    navigate(from, { replace: true });
+    toast.success("Signin User Successfully")
   }
 
   if (error || gError) {
@@ -45,9 +46,22 @@ const SignIn = () => {
     );
   }
 
-  const onSubmit = (data) => {
-    signInWithEmailAndPassword(data.email, data.password);
-  };
+  
+  const handleSigninform = async (data) => {
+    const email = data.email;
+    const password = data.password;
+    await signInWithEmailAndPassword(email, password)
+        .then(() => {
+            reset();
+        })
+}
+
+
+const handleGoogleSignin = async () => {
+    await signInWithGoogle()
+}
+
+
   return (
     <div className="flex h-screen justify-center items-center">
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -55,7 +69,7 @@ const SignIn = () => {
           <h2 className="text-center text-2xl font-bold">
             Knowledge Dot Login
           </h2>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(handleSigninform)}>
             <div className="form-control w-full max-w-xs">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -141,7 +155,7 @@ const SignIn = () => {
             Forgot Password?
           </Link>
           <button
-            onClick={() => signInWithGoogle()}
+            onClick={handleGoogleSignin}
             className="btn btn-outline"
           >
             Continue with Google

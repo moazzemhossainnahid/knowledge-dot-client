@@ -7,7 +7,7 @@ const useToken = (user) => {
     const currentUser = { email: email };
     if (email) {
       fetch(`http://localhost:5000/api/v1/users/${email}`, {
-        method: "POST",
+        method: "PUT",
         headers: {
           "content-type": "application/json",
         },
