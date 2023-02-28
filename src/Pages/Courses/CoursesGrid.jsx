@@ -84,20 +84,20 @@ const CoursesGrid = ({ course }) => {
 
         </div>
         <p className="text-xl px-4 font-header h-20">{name}</p>
-        <div className="px-4 text-md">
+        <div className="px-4 text-md pt-3">
           <div class="card-actions flex-col mx-auto gap-3 justify-center py-5">
             <div className="flex justify-around items-center gap-2">
               <div className="flex text-sm items-center justify-center gap-1 ">
                 <FontAwesomeIcon icon={faBook} />
-                <h3 className="text-sm">{files?.length} Lessons</h3>
+                <h3 className="text-xs">{files?.length} Lessons</h3>
               </div>
               <div className="flex text-sm items-center justify-center gap-1 ">
                 <FontAwesomeIcon icon={faClock} />
-                <h3 className="text-sm">3h 56m</h3>
+                <h3 className="text-xs">3h 56m</h3>
               </div>
               <div className="flex text-sm items-center justify-center gap-1 ">
                 <FontAwesomeIcon icon={faChartColumn} />
-                <h3 className="text-sm">{level}</h3>
+                <h3 className="text-xs">{level}</h3>
               </div>
             </div>
           </div>
