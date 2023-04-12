@@ -7,15 +7,23 @@ import { useNavigate } from 'react-router-dom';
 const useCourses = () => {
     const navigate = useNavigate();
     const [Courses, setCourses] = useState();
-    const { data: AllCoursesData, isLoading } = useQuery(["AllCoursesData"], () =>
+    // const { data: AllCoursesData, isLoading } = useQuery(["AllCoursesData"], () =>
+    //     BaseURL.get(`/api/v1/courses/?sort=-price`)
+    // );
+    const [AllCoursesData, setAllCoursesData] = useState();
+
+    useEffect(() => {
         BaseURL.get(`/api/v1/courses/?sort=-price`)
-    );
+          .then((data) => setAllCoursesData(data.data));
+      }, []);
+
+      console.log(AllCoursesData);
 
     // console.log(AllCoursesData);
 
     useEffect(() => {
 
-        const data = AllCoursesData && AllCoursesData?.data?.data?.result;
+        const data = AllCoursesData && AllCoursesData;
         // console.log(data);
 
         if (window.location.pathname === '/courses/Web%20Design') {
@@ -43,12 +51,12 @@ const useCourses = () => {
         
     }, [AllCoursesData, navigate]);
 
-    if (isLoading) {
-        return <Loading />;
-    };
+    // if (isLoading) {
+    //     return <Loading />;
+    // };
 
 
-    // console.log(Courses);
+    console.log(Courses);
 
     return { Courses };
 };

@@ -16,7 +16,7 @@ const Instructors = () => {
       )
       .then((data) => setInstructors(data.data));
   }, []);
-  // console.log(instructors);
+  console.log(instructors);
 
   const navigate = useNavigate();
   return (
