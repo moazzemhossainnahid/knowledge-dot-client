@@ -10,6 +10,13 @@ const useCourses = () => {
     const { data: AllCoursesData, isLoading } = useQuery(["AllCoursesData"], () =>
         BaseURL.get(`/api/v1/courses/?sort=-price`)
     );
+    // const [AllCoursesData, setAllCoursesData] = useState();
+
+    // useEffect(() => {
+    //     BaseURL.get(`/api/v1/courses/?sort=-price`)
+    //       .then((data) => setAllCoursesData(data.data));
+    //   }, [data]);
+
 
     // console.log(AllCoursesData);
 
@@ -21,34 +28,37 @@ const useCourses = () => {
         if (window.location.pathname === '/courses/Web%20Design') {
             const othersCourse = data?.filter(courses => courses?.category === "Web Design");
             setCourses(othersCourse);
-        }else if (window.location.pathname === '/courses/Web%20Development') {
+        } else if (window.location.pathname === '/courses/Web%20Development') {
             const othersCourse = data?.filter(courses => courses?.category === "Web Development");
             setCourses(othersCourse);
-        }else if (window.location.pathname === '/courses/Graphics%20Design') {
+        } else if (window.location.pathname === '/courses/Graphics%20Design') {
             const othersCourse = data?.filter(courses => courses?.category === "Graphics Design");
             setCourses(othersCourse);
-        }else if (window.location.pathname === '/courses/Spoken%20English') {
+        } else if (window.location.pathname === '/courses/Spoken%20English') {
             const othersCourse = data?.filter(courses => courses?.category === "Spoken English");
             setCourses(othersCourse);
-        }else if (window.location.pathname === '/courses/Others') {
+        } else if (window.location.pathname === '/courses/Others') {
             const othersCourse = data?.filter(courses => courses?.category === "Others");
             setCourses(othersCourse);
-        }else if (window.location.pathname === '/courses') {
+        } else if (window.location.pathname === '/courses') {
             const othersCourse = data;
             navigate(1);
             setCourses(othersCourse)
-        }else{
+        } else {
             setCourses(data)
         };
-        
+
     }, [AllCoursesData, navigate]);
+
+
 
     if (isLoading) {
         return <Loading />;
     };
 
 
-    // console.log(Courses);
+    console.log(AllCoursesData);
+    console.log(Courses);
 
     return { Courses };
 };
